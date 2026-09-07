@@ -1,0 +1,650 @@
+/**
+ * ===================================================================
+ *  DIÁRIO DO TREINADOR — arquivo de conteúdo (multi-idioma)
+ * ===================================================================
+ *  Edite SOMENTE os valores entre aspas " " abaixo para atualizar
+ *  nomes, textos e links do site.
+ *
+ *  O site agora tem 4 idiomas: pt (Português), en (Inglês),
+ *  es (Espanhol) e ar (Árabe) — cada um é um bloco separado abaixo.
+ *  Links, e-mails e telefones são os MESMOS em todos os idiomas —
+ *  só o texto muda. Se editar um link, edite em todos os 4 blocos.
+ *
+ *  Estrutura da Página 1 (index.html):
+ *    hero → grupo1 (Newsletter + Podcast) → agenda → contato →
+ *    ecosystem (card que leva pra Página 2) → footer
+ *  Estrutura da Página 2 (diario-do-treinador.html):
+ *    grupo2 (WhatsApp, Mentoria, Best Sellers, Youtube, Suporte)
+ *
+ *  ⚠️ As traduções de inglês e espanhol foram feitas automaticamente
+ *  e devem ser revisadas. A tradução em árabe É ESPECIALMENTE
+ *  recomendável revisar com um falante nativo antes de divulgar,
+ *  por ser um idioma com estrutura muito diferente do português.
+ * ===================================================================
+ */
+
+const SUPORTE_URL = "https://wa.me/5551991736138";
+const PORTFOLIO_URL = SUPORTE_URL; // Portfólio PRO usa o mesmo link do Sttudio11WD
+
+const SITE_DATA = {
+
+  // ================================================================
+  // PORTUGUÊS (padrão)
+  // ================================================================
+  pt: {
+    ui: {
+      eyebrow: "Ecossistema",
+      inscreverSe: "Inscreva-se Aqui!",
+      agendaTitulo: "Agenda",
+      agendaHeading: "Palestras, Cursos e Eventos",
+      footerFeitoPor: "Feito por",
+      footerPortfolio: "Portfólio PRO",
+      grupo1Titulo: "Acompanhe",
+      grupo1Subtitulo: "Artigos e podcasts sobre desenvolvimento Profissional e Pessoal"
+    },
+    hero: {
+      avatar: "images/avatar.jpg",
+      nome: "Gabriel Bussinger",
+      roleLines: [
+        "Coordenador Técnico Geral no Vasco da Gama SAF",
+        "Mentor de Profissionais do Futebol",
+        "Autor do Podcast Diário do Treinador"
+      ],
+      badges: [
+        { label: "Instrutor", org: "CONMEBOL" },
+        { label: "Instrutor", org: "CBF" }
+      ]
+    },
+    socialRow: [
+      { icone: "linkedin", url: "https://www.linkedin.com/in/gabriel-bussinger-66132370/" },
+      { icone: "instagram", url: "https://www.instagram.com/gabrielbussinger/" },
+      { icone: "spotify", url: "https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o" },
+      { icone: "mail", url: "mailto:gabrieltreinador33@gmail.com" }
+    ],
+    grupo1: {
+      links: [
+        {
+          titulo: 'Assinar <span class="accent-word">Newsletter</span>',
+          descricao: "Acompanhe no LinkedIn",
+          url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7462991799133855744",
+          icone: "linkedin"
+        },
+        {
+          titulo: '<span class="accent-word">Podcast</span> Diário do Treinador',
+          descricao: "Salve salve amantes do futebol! Esse é um Podcast sobre reflexões de um treinador e sua prática, confira!",
+          url: "https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o",
+          icone: "spotify"
+        }
+      ]
+    },
+    agenda: {
+      eventos: [
+        {
+          dia: "07",
+          mes: "SET",
+          tema: "Metodologia Centrada no Atleta",
+          local: "Federação Gaúcha de Futebol",
+          cidadePais: "Porto Alegre, Brasil", // opcional — útil sobretudo para eventos no exterior
+          horario: "19:00",
+          formato: "Físico",
+          url: "https://SUBSTITUA-LINK-DE-INSCRICAO"
+        }
+      ]
+    },
+    contato: {
+      titulo: '<span class="accent-word">Palestras</span> e Eventos',
+      descricao: "Entre em contato e verifique a disponibilidade de agenda",
+      url: "mailto:gabrieltreinador33@gmail.com",
+      icone: "mail"
+    },
+    ecosystem: {
+      eyebrow: "Acesse aqui",
+      titulo: "Mentoria, Cursos e Conteúdos",
+      subtitulo: "Conheça o Diário do Treinador, nossos canais para a formação integral de treinadores e profissionais do futebol",
+      descricao: "",
+      url: "index.html",
+      icone: "books",
+      featured: true,
+      centered: true,
+      cta: "Entrar no Ecossistema",
+      internal: true
+    },
+    grupo2: {
+      titulo: "Diário do Treinador",
+      slogan: "Formando e Desenvolvendo Integralmente Profissionais que trabalham no Futebol",
+      marquee: ["Mindset", "Desenvolvimento Profissional", "Desenvolvimento Pessoal", "Leitura", "Network", "Autoconhecimento"],
+      itens: [
+        {
+          titulo: '<span class="accent-word">Mentoria</span> Diário do Treinador',
+          badge: "Temporada 2026",
+          badgeStatus: "Inscrições abertas",
+          subtitulo: "Conheça, aplique e transforme",
+          descricao: "Desenvolvimento Profissional e Pessoal para Treinadores e profissionais do futebol",
+          url: "mentoria.html",
+          icone: "target",
+          featured: true,
+          internal: true
+        },
+        {
+          titulo: '<span class="accent-word">Best Sellers</span> Aplicados ao Futebol',
+          badge: "Cursos on-line",
+          subtitulo: "Com Gabriel Bussinger",
+          descricao: "Acesse os insights de grandes mentes da literatura mundial e aplique ao futebol",
+          url: "bestsellers.html",
+          icone: "play",
+          featured: true,
+          internal: true,
+          livros: [
+            { titulo: "Os 7 Hábitos das Pessoas Altamente Eficazes", autor: "Stephen R. Covey", capa: "images/livros/capa-7habitos.jpg" },
+            { titulo: "O Poder da Ação", autor: "Paulo Vieira", capa: "images/livros/capa-poderdaacao.jpg" },
+            { titulo: "Mindset", autor: "Carol S. Dweck", capa: "images/livros/capa-mindset.jpg" },
+            { titulo: "A Coragem de Ser Imperfeito", autor: "Brené Brown", capa: "images/livros/capa-coragemimperfeito.jpg" },
+            { titulo: "Comece pelo Porquê", autor: "Simon Sinek", capa: "images/livros/capa-comecepeloporque.jpg" },
+            { titulo: "Como Fazer Amigos & Influenciar Pessoas", autor: "Dale Carnegie", capa: "images/livros/capa-comofazeramigos.jpg" },
+            { titulo: "O Monge e o Executivo", autor: "James C. Hunter", capa: "images/livros/capa-mongeexecutivo.jpg" }
+          ]
+        },
+        {
+          titulo: '<span class="accent-word">Banco</span> de Profissionais',
+          badge: "Em breve!",
+          descricao: "Acesse aqui profissionais formados pela Metodologia Diário do Treinador",
+          url: "#",
+          icone: "people"
+        },
+        {
+          titulo: 'Canal do <span class="accent-word">Youtube</span>',
+          descricao: "Palestras, Podcasts e conteúdos aprofundados, para profissionais do futebol",
+          url: "https://www.youtube.com/@gabrielbussinger3386",
+          icone: "youtube"
+        },
+        {
+          titulo: 'Grupo Aberto no <span class="accent-word">WhatsApp</span>',
+          descricao: "Comunidade do Diário do Treinador",
+          url: "https://chat.whatsapp.com/Gy7ilSwjdTG2no4LeDbzgm",
+          icone: "whatsapp"
+        },
+        {
+          titulo: '<span class="accent-word">Suporte</span>',
+          descricao: "Precisa de ajuda? Tem dúvida? Chama aqui e vamos conversar!",
+          url: SUPORTE_URL,
+          icone: "whatsapp"
+        }
+      ]
+    },
+    footer: {
+      nome: "Gabriel Bussinger",
+      ecossistema: "Ecossistema Diário do Treinador",
+      devLabel: "Feito por",
+      devNome: "Sttudio11WD",
+      devUrl: SUPORTE_URL,
+      devMensagem: "Olá Luis, gostaria de saber sobre seus serviços",
+      portfolioLabel: "Portfólio PRO",
+      portfolioUrl: PORTFOLIO_URL
+    }
+  },
+
+  // ================================================================
+  // ENGLISH
+  // ================================================================
+  en: {
+    ui: {
+      eyebrow: "Ecosystem",
+      inscreverSe: "Sign Up Here!",
+      agendaTitulo: "Agenda",
+      agendaHeading: "Talks, Courses & Events",
+      footerFeitoPor: "Built by",
+      footerPortfolio: "PRO Portfolio",
+      grupo1Titulo: "Follow",
+      grupo1Subtitulo: "Articles and podcasts on Professional and Personal development"
+    },
+    hero: {
+      avatar: "images/avatar.jpg",
+      nome: "Gabriel Bussinger",
+      roleLines: [
+        "General Technical Coordinator at Vasco da Gama SAF",
+        "Mentor for Football Professionals",
+        "Author of the Coach's Diary Podcast"
+      ],
+      badges: [
+        { label: "Instructor", org: "CONMEBOL" },
+        { label: "Instructor", org: "CBF" }
+      ]
+    },
+    socialRow: [
+      { icone: "linkedin", url: "https://www.linkedin.com/in/gabriel-bussinger-66132370/" },
+      { icone: "instagram", url: "https://www.instagram.com/gabrielbussinger/" },
+      { icone: "spotify", url: "https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o" },
+      { icone: "mail", url: "mailto:gabrieltreinador33@gmail.com" }
+    ],
+    grupo1: {
+      links: [
+        {
+          titulo: 'Subscribe to my <span class="accent-word">Newsletter</span>',
+          descricao: "Follow on LinkedIn",
+          url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7462991799133855744",
+          icone: "linkedin"
+        },
+        {
+          titulo: `<span class="accent-word">Podcast</span> — Coach's Diary`,
+          descricao: "Hey football lovers! This is a podcast with a coach's reflections on the job — check it out!",
+          url: "https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o",
+          icone: "spotify"
+        }
+      ]
+    },
+    agenda: {
+      eventos: [
+        {
+          dia: "07",
+          mes: "SEP",
+          tema: "Athlete-Centered Methodology",
+          local: "Rio Grande do Sul Football Federation",
+          cidadePais: "Porto Alegre, Brazil",
+          horario: "19:00",
+          formato: "In-person",
+          url: "https://SUBSTITUA-LINK-DE-INSCRICAO"
+        }
+      ]
+    },
+    contato: {
+      titulo: '<span class="accent-word">Talks</span> & Events',
+      descricao: "Get in touch and check my availability",
+      url: "mailto:gabrieltreinador33@gmail.com",
+      icone: "mail"
+    },
+    ecosystem: {
+      eyebrow: "Access here",
+      titulo: "Mentorship, Courses and Content",
+      subtitulo: "Discover the Coach's Diary, our channels for the full development of coaches and football professionals",
+      descricao: "",
+      url: "index.html",
+      icone: "books",
+      featured: true,
+      centered: true,
+      cta: "Enter the Ecosystem",
+      internal: true
+    },
+    grupo2: {
+      titulo: "Coach's Diary",
+      slogan: "Fully training and developing professionals who work in football",
+      marquee: ["Mindset", "Professional Development", "Personal Development", "Reading", "Network", "Self-Knowledge"],
+      itens: [
+        {
+          titulo: `<span class="accent-word">Mentorship</span> — Coach's Diary`,
+          badge: "2026 Season",
+          badgeStatus: "Enrollment open",
+          subtitulo: "Learn it, apply it, transform",
+          descricao: "Professional and personal development for coaches and football professionals",
+          url: "mentoria.html",
+          icone: "target",
+          featured: true,
+          internal: true
+        },
+        {
+          titulo: '<span class="accent-word">Best Sellers</span> Applied to Football',
+          badge: "Online courses",
+          subtitulo: "With Gabriel Bussinger",
+          descricao: "Access insights from great minds of world literature and apply them to football",
+          url: "bestsellers.html",
+          icone: "play",
+          featured: true,
+          internal: true,
+          livros: [
+            { titulo: "The 7 Habits of Highly Effective People", autor: "Stephen R. Covey", capa: "images/livros/capa-7habitos.jpg" },
+            { titulo: "The Power of Action", autor: "Paulo Vieira", capa: "images/livros/capa-poderdaacao.jpg" },
+            { titulo: "Mindset", autor: "Carol S. Dweck", capa: "images/livros/capa-mindset.jpg" },
+            { titulo: "The Gifts of Imperfection", autor: "Brené Brown", capa: "images/livros/capa-coragemimperfeito.jpg" },
+            { titulo: "Start With Why", autor: "Simon Sinek", capa: "images/livros/capa-comecepeloporque.jpg" },
+            { titulo: "How to Win Friends & Influence People", autor: "Dale Carnegie", capa: "images/livros/capa-comofazeramigos.jpg" },
+            { titulo: "The Servant", autor: "James C. Hunter", capa: "images/livros/capa-mongeexecutivo.jpg" }
+          ]
+        },
+        {
+          titulo: '<span class="accent-word">Professional</span> Directory',
+          badge: "Coming soon!",
+          descricao: "Find professionals trained through the Coach's Diary Methodology",
+          url: "#",
+          icone: "people"
+        },
+        {
+          titulo: 'YouTube <span class="accent-word">Channel</span>',
+          descricao: "Talks, podcasts and in-depth content for football professionals",
+          url: "https://www.youtube.com/@gabrielbussinger3386",
+          icone: "youtube"
+        },
+        {
+          titulo: 'Open <span class="accent-word">WhatsApp</span> Group',
+          descricao: "Coach's Diary community",
+          url: "https://chat.whatsapp.com/Gy7ilSwjdTG2no4LeDbzgm",
+          icone: "whatsapp"
+        },
+        {
+          titulo: '<span class="accent-word">Support</span>',
+          descricao: "Need help? Have a question? Reach out and let's talk!",
+          url: SUPORTE_URL,
+          icone: "whatsapp"
+        }
+      ]
+    },
+    footer: {
+      nome: "Gabriel Bussinger",
+      ecossistema: "Coach's Diary Ecosystem",
+      devLabel: "Built by",
+      devNome: "Sttudio11WD",
+      devUrl: SUPORTE_URL,
+      devMensagem: "Hi Luis, I'd like to know more about your services",
+      portfolioLabel: "PRO Portfolio",
+      portfolioUrl: PORTFOLIO_URL
+    }
+  },
+
+  // ================================================================
+  // ESPAÑOL
+  // ================================================================
+  es: {
+    ui: {
+      eyebrow: "Ecosistema",
+      inscreverSe: "¡Inscríbete Aquí!",
+      agendaTitulo: "Agenda",
+      agendaHeading: "Charlas, Cursos y Eventos",
+      footerFeitoPor: "Desarrollado por",
+      footerPortfolio: "Portafolio PRO",
+      grupo1Titulo: "Sígueme",
+      grupo1Subtitulo: "Artículos y podcasts sobre desarrollo Profesional y Personal"
+    },
+    hero: {
+      avatar: "images/avatar.jpg",
+      nome: "Gabriel Bussinger",
+      roleLines: [
+        "Coordinador Técnico General en Vasco da Gama SAF",
+        "Mentor de Profesionales del Fútbol",
+        "Autor del Podcast Diario del Entrenador"
+      ],
+      badges: [
+        { label: "Instructor", org: "CONMEBOL" },
+        { label: "Instructor", org: "CBF" }
+      ]
+    },
+    socialRow: [
+      { icone: "linkedin", url: "https://www.linkedin.com/in/gabriel-bussinger-66132370/" },
+      { icone: "instagram", url: "https://www.instagram.com/gabrielbussinger/" },
+      { icone: "spotify", url: "https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o" },
+      { icone: "mail", url: "mailto:gabrieltreinador33@gmail.com" }
+    ],
+    grupo1: {
+      links: [
+        {
+          titulo: 'Suscribirme al <span class="accent-word">Newsletter</span>',
+          descricao: "Sígueme en LinkedIn",
+          url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7462991799133855744",
+          icone: "linkedin"
+        },
+        {
+          titulo: '<span class="accent-word">Podcast</span> Diario del Entrenador',
+          descricao: "¡Hola, amantes del fútbol! Este es un podcast sobre las reflexiones de un entrenador y su práctica, ¡échale un vistazo!",
+          url: "https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o",
+          icone: "spotify"
+        }
+      ]
+    },
+    agenda: {
+      eventos: [
+        {
+          dia: "07",
+          mes: "SEP",
+          tema: "Metodología Centrada en el Atleta",
+          local: "Federación Gaúcha de Fútbol",
+          cidadePais: "Porto Alegre, Brasil",
+          horario: "19:00",
+          formato: "Presencial",
+          url: "https://SUBSTITUA-LINK-DE-INSCRICAO"
+        }
+      ]
+    },
+    contato: {
+      titulo: '<span class="accent-word">Charlas</span> y Eventos',
+      descricao: "Contáctame y consulta la disponibilidad de agenda",
+      url: "mailto:gabrieltreinador33@gmail.com",
+      icone: "mail"
+    },
+    ecosystem: {
+      eyebrow: "Accede aquí",
+      titulo: "Mentoría, Cursos y Contenidos",
+      subtitulo: "Conoce el Diario del Entrenador, nuestros canales para la formación integral de entrenadores y profesionales del fútbol",
+      descricao: "",
+      url: "index.html",
+      icone: "books",
+      featured: true,
+      centered: true,
+      cta: "Entrar al Ecosistema",
+      internal: true
+    },
+    grupo2: {
+      titulo: "Diario del Entrenador",
+      slogan: "Formando y desarrollando integralmente a los profesionales que trabajan en el fútbol",
+      marquee: ["Mentalidad", "Desarrollo Profesional", "Desarrollo Personal", "Lectura", "Red de Contactos", "Autoconocimiento"],
+      itens: [
+        {
+          titulo: '<span class="accent-word">Mentoría</span> Diario del Entrenador',
+          badge: "Temporada 2026",
+          badgeStatus: "Inscripciones abiertas",
+          subtitulo: "Conoce, aplica, transforma",
+          descricao: "Desarrollo profesional y personal para entrenadores y profesionales del fútbol",
+          url: "mentoria.html",
+          icone: "target",
+          featured: true,
+          internal: true
+        },
+        {
+          titulo: '<span class="accent-word">Best Sellers</span> Aplicados al Fútbol',
+          badge: "Cursos en línea",
+          subtitulo: "Con Gabriel Bussinger",
+          descricao: "Accede a los conocimientos de grandes mentes de la literatura mundial y aplícalos al fútbol",
+          url: "bestsellers.html",
+          icone: "play",
+          featured: true,
+          internal: true,
+          livros: [
+            { titulo: "Los 7 Hábitos de la Gente Altamente Efectiva", autor: "Stephen R. Covey", capa: "images/livros/capa-7habitos.jpg" },
+            { titulo: "El Poder de la Acción", autor: "Paulo Vieira", capa: "images/livros/capa-poderdaacao.jpg" },
+            { titulo: "Mindset", autor: "Carol S. Dweck", capa: "images/livros/capa-mindset.jpg" },
+            { titulo: "Los Dones de la Imperfección", autor: "Brené Brown", capa: "images/livros/capa-coragemimperfeito.jpg" },
+            { titulo: "Empieza con el Porqué", autor: "Simon Sinek", capa: "images/livros/capa-comecepeloporque.jpg" },
+            { titulo: "Cómo Ganar Amigos e Influir sobre las Personas", autor: "Dale Carnegie", capa: "images/livros/capa-comofazeramigos.jpg" },
+            { titulo: "El Monje que Vendió su Ferrari... El Sirviente", autor: "James C. Hunter", capa: "images/livros/capa-mongeexecutivo.jpg" }
+          ]
+        },
+        {
+          titulo: '<span class="accent-word">Banco</span> de Profesionales',
+          badge: "¡Próximamente!",
+          descricao: "Encuentra profesionales formados con la Metodología Diario del Entrenador",
+          url: "#",
+          icone: "people"
+        },
+        {
+          titulo: 'Canal de <span class="accent-word">YouTube</span>',
+          descricao: "Charlas, podcasts y contenidos a profundidad, para profesionales del fútbol",
+          url: "https://www.youtube.com/@gabrielbussinger3386",
+          icone: "youtube"
+        },
+        {
+          titulo: 'Grupo Abierto de <span class="accent-word">WhatsApp</span>',
+          descricao: "Comunidad del Diario del Entrenador",
+          url: "https://chat.whatsapp.com/Gy7ilSwjdTG2no4LeDbzgm",
+          icone: "whatsapp"
+        },
+        {
+          titulo: '<span class="accent-word">Soporte</span>',
+          descricao: "¿Necesitas ayuda? ¿Tienes una duda? ¡Escríbeme y conversemos!",
+          url: SUPORTE_URL,
+          icone: "whatsapp"
+        }
+      ]
+    },
+    footer: {
+      nome: "Gabriel Bussinger",
+      ecossistema: "Ecosistema Diario del Entrenador",
+      devLabel: "Desarrollado por",
+      devNome: "Sttudio11WD",
+      devUrl: SUPORTE_URL,
+      devMensagem: "Hola Luis, me gustaría saber sobre tus servicios",
+      portfolioLabel: "Portafolio PRO",
+      portfolioUrl: PORTFOLIO_URL
+    }
+  },
+
+  // ================================================================
+  // العربية (ARABIC) — ⚠️ revisar com falante nativo antes de publicar
+  // ================================================================
+  ar: {
+    ui: {
+      eyebrow: "منظومة",
+      inscreverSe: "سجّل هنا الآن!",
+      agendaTitulo: "الأجندة",
+      agendaHeading: "محاضرات ودورات وفعاليات",
+      footerFeitoPor: "تطوير",
+      footerPortfolio: "معرض الأعمال PRO",
+      grupo1Titulo: "تابعني",
+      grupo1Subtitulo: "مقالات وبودكاست عن التطور المهني والشخصي"
+    },
+    hero: {
+      avatar: "images/avatar.jpg",
+      nome: "غابرييل بوسينجر",
+      roleLines: [
+        "المنسق الفني العام في فاسكو دا جاما SAF",
+        "موجّه لمحترفي كرة القدم",
+        "مؤلّف بودكاست يوميات المدرب"
+      ],
+      badges: [
+        { label: "مدرب", org: "CONMEBOL" },
+        { label: "مدرب", org: "CBF" }
+      ]
+    },
+    socialRow: [
+      { icone: "linkedin", url: "https://www.linkedin.com/in/gabriel-bussinger-66132370/" },
+      { icone: "instagram", url: "https://www.instagram.com/gabrielbussinger/" },
+      { icone: "spotify", url: "https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o" },
+      { icone: "mail", url: "mailto:gabrieltreinador33@gmail.com" }
+    ],
+    grupo1: {
+      links: [
+        {
+          titulo: 'اشترك في <span class="accent-word">النشرة الإخبارية</span>',
+          descricao: "تابعني على LinkedIn",
+          url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7462991799133855744",
+          icone: "linkedin"
+        },
+        {
+          titulo: '<span class="accent-word">بودكاست</span> يوميات المدرب',
+          descricao: "أهلاً بمحبي كرة القدم! هذا بودكاست حول تأملات مدرب وممارسته المهنية، استمع إليه!",
+          url: "https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o",
+          icone: "spotify"
+        }
+      ]
+    },
+    agenda: {
+      eventos: [
+        {
+          dia: "07",
+          mes: "سبتمبر",
+          tema: "منهجية محورها الرياضي",
+          local: "اتحاد كرة القدم لولاية ريو غراندي دو سول",
+          cidadePais: "بورتو أليغري، البرازيل",
+          horario: "19:00",
+          formato: "حضوري",
+          url: "https://SUBSTITUA-LINK-DE-INSCRICAO"
+        }
+      ]
+    },
+    contato: {
+      titulo: '<span class="accent-word">محاضرات</span> وفعاليات',
+      descricao: "تواصل معي واستفسر عن مواعيد الأجندة",
+      url: "mailto:gabrieltreinador33@gmail.com",
+      icone: "mail"
+    },
+    ecosystem: {
+      eyebrow: "ادخل من هنا",
+      titulo: "الإرشاد والدورات والمحتوى",
+      subtitulo: "تعرّف على يوميات المدرب، قنواتنا للتطوير الشامل لمدربي ومحترفي كرة القدم",
+      descricao: "",
+      url: "index.html",
+      icone: "books",
+      featured: true,
+      centered: true,
+      cta: "ادخل إلى المنظومة",
+      internal: true
+    },
+    grupo2: {
+      titulo: "يوميات المدرب",
+      slogan: "تكوين وتطوير شامل للمحترفين العاملين في كرة القدم",
+      marquee: ["العقلية", "التطور المهني", "التطور الشخصي", "القراءة", "شبكة العلاقات", "معرفة الذات"],
+      itens: [
+        {
+          titulo: '<span class="accent-word">الإرشاد</span> — يوميات المدرب',
+          badge: "موسم 2026",
+          badgeStatus: "التسجيل متاح",
+          subtitulo: "تعرّف، طبّق، تحوّل",
+          descricao: "تطور مهني وشخصي للمدربين ومحترفي كرة القدم",
+          url: "mentoria.html",
+          icone: "target",
+          featured: true,
+          internal: true
+        },
+        {
+          titulo: '<span class="accent-word">أفضل الكتب مبيعاً</span> المطبّقة على كرة القدم',
+          badge: "دورات عبر الإنترنت",
+          subtitulo: "مع غابرييل بوسينجر",
+          descricao: "اطّلع على أفكار كبار مفكري الأدب العالمي وطبّقها على كرة القدم",
+          url: "bestsellers.html",
+          icone: "play",
+          featured: true,
+          internal: true,
+          livros: [
+            { titulo: "العادات السبع للناس الأكثر فعالية", autor: "ستيفن كوفي", capa: "images/livros/capa-7habitos.jpg" },
+            { titulo: "قوة الفعل", autor: "باولو فييرا", capa: "images/livros/capa-poderdaacao.jpg" },
+            { titulo: "العقلية", autor: "كارول دويك", capa: "images/livros/capa-mindset.jpg" },
+            { titulo: "هدايا النقص", autor: "برينيه براون", capa: "images/livros/capa-coragemimperfeito.jpg" },
+            { titulo: "ابدأ بالسؤال: لماذا", autor: "سايمون سينك", capa: "images/livros/capa-comecepeloporque.jpg" },
+            { titulo: "كيف تكسب الأصدقاء وتؤثر في الناس", autor: "ديل كارنيجي", capa: "images/livros/capa-comofazeramigos.jpg" },
+            { titulo: "الراهب والمدير التنفيذي", autor: "جيمس هانتر", capa: "images/livros/capa-mongeexecutivo.jpg" }
+          ]
+        },
+        {
+          titulo: '<span class="accent-word">دليل</span> المحترفين',
+          badge: "قريباً!",
+          descricao: "تعرّف على المحترفين المتخرجين من منهجية يوميات المدرب",
+          url: "#",
+          icone: "people"
+        },
+        {
+          titulo: 'قناة <span class="accent-word">يوتيوب</span>',
+          descricao: "محاضرات وبودكاست ومحتوى معمّق لمحترفي كرة القدم",
+          url: "https://www.youtube.com/@gabrielbussinger3386",
+          icone: "youtube"
+        },
+        {
+          titulo: 'مجموعة <span class="accent-word">واتساب</span> مفتوحة',
+          descricao: "مجتمع يوميات المدرب",
+          url: "https://chat.whatsapp.com/Gy7ilSwjdTG2no4LeDbzgm",
+          icone: "whatsapp"
+        },
+        {
+          titulo: '<span class="accent-word">الدعم</span>',
+          descricao: "تحتاج مساعدة؟ لديك سؤال؟ تواصل معنا هنا!",
+          url: SUPORTE_URL,
+          icone: "whatsapp"
+        }
+      ]
+    },
+    footer: {
+      nome: "غابرييل بوسينجر",
+      ecossistema: "منظومة يوميات المدرب",
+      devLabel: "تطوير",
+      devNome: "Sttudio11WD",
+      devUrl: SUPORTE_URL,
+      devMensagem: "مرحباً لويس، أود معرفة المزيد عن خدماتك",
+      portfolioLabel: "معرض الأعمال PRO",
+      portfolioUrl: PORTFOLIO_URL
+    }
+  }
+};
