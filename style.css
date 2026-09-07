@@ -35,7 +35,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: linear-gradient(160deg, #0d1730 0%, #060a18 100%);
+  background: radial-gradient(ellipse 90% 50% at 50% 0%, rgba(20,255,227,0.09) 0%, transparent 60%), linear-gradient(160deg, #0d1730 0%, #060a18 100%);
   color: var(--support);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -328,13 +328,6 @@ button { font: inherit; }
   padding: 6px 4px 4px 0;
   animation: heroIn 1s var(--ease) 0.1s both;
 }
-.signature-img {
-  display: block;
-  height: clamp(96px, 22vw, 140px);
-  width: auto;
-  max-width: 100%;
-  filter: drop-shadow(0 0 10px rgba(20, 255, 227, 0.25));
-}
 .signature-img-footer {
   height: 70px;
   margin: 0 auto;
@@ -383,10 +376,37 @@ button { font: inherit; }
 }
 
 .hero-info-panel {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-top: 56px;
+}
+.hero-avatar-overlap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+.hero-avatar-overlap .avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.signature-img {
+  display: block;
+  margin: 0 auto;
+  height: clamp(78px, 18vw, 112px);
+  width: auto;
+  max-width: 100%;
+  filter: drop-shadow(0 0 10px rgba(20, 255, 227, 0.25));
 }
 .cred-badges {
   display: flex;
@@ -548,10 +568,12 @@ button { font: inherit; }
   max-width: var(--col-max);
   margin-top: 32px;
   padding: 32px 24px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  box-shadow: 0 24px 48px rgba(0,0,0,0.5);
+  border-radius: 26px;
+  background: rgba(40, 70, 130, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.15) inset, 0 30px 60px rgba(0,0,0,0.55), 0 0 40px rgba(20,255,227,0.06);
 }
 .panel-header {
   margin-bottom: 20px;
