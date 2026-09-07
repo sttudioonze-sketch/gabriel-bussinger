@@ -540,12 +540,12 @@ button { font: inherit; }
 .content-panel {
   width: 100%;
   max-width: var(--col-max);
-  margin-top: 28px;
-  padding: 26px 20px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.13);
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 20px 40px rgba(0,0,0,0.45);
+  margin-top: 32px;
+  padding: 32px 24px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.19);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 24px 48px rgba(0,0,0,0.5);
 }
 .panel-header {
   margin-bottom: 20px;
@@ -1813,3 +1813,4 @@ button { font: inherit; }
   color: var(--accent);
 }
 .plano-cta-secondary:hover { background: rgba(20, 255, 227, 0.08); }
+
