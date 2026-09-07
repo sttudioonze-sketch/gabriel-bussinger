@@ -225,7 +225,7 @@
 
   // Limpa os containers dinâmicos antes de re-renderizar (troca de idioma)
   function clearContainers() {
-    ["#hero-roles", "#social-row", "#grupo1-lista", "#agenda-lista", "#brand-track",
+    ["#hero-roles", "#hero-roles-secondary", "#social-row", "#grupo1-lista", "#agenda-lista", "#brand-track",
      "#grupo2-lista", "#grupo3-lista", "#grupo4-lista", "#footer-social"]
       .forEach((sel) => { const el = $(sel); if (el) el.innerHTML = ""; });
   }
@@ -261,12 +261,15 @@
       heroNomeEl.innerHTML = `<img src="images/assinatura-gabriel.png" alt="${d.hero.nome}" class="signature-img" />`;
 
       const rolesHost = $("#hero-roles");
-      rolesHost.innerHTML = (d.hero.roleLines || [])
-        .map((line, i) => {
-          if (i === 0) return `<p class="role-line is-primary">${line}</p>`;
-          return `<p class="role-line"><span class="role-dot"></span>${line}</p>`;
-        })
-        .join("");
+      const rolesSecHost = $("#hero-roles-secondary");
+      const lines = d.hero.roleLines || [];
+      if (rolesHost) rolesHost.innerHTML = lines[0] ? `<p class="role-line is-primary">${lines[0]}</p>` : "";
+      if (rolesSecHost) {
+        rolesSecHost.innerHTML = lines
+          .slice(1)
+          .map((line) => `<p class="role-line"><span class="role-dot"></span>${line}</p>`)
+          .join("");
+      }
 
       const badgesHost = $("#cred-badges");
       if (badgesHost) {
@@ -366,7 +369,7 @@
         devHref += sep + "text=" + encodeURIComponent(d.footer.devMensagem);
       }
       const devEl = $("#footer-dev");
-      devEl.innerHTML = `${d.footer.devLabel} <a href="${devHref}" target="_blank" rel="noopener noreferrer">${d.footer.devNome}</a> | <a href="${d.footer.portfolioUrl}" target="_blank" rel="noopener noreferrer">${d.footer.portfolioLabel}</a>`;
+      devEl.innerHTML = `${d.footer.devLabel} <a href="${devHref}" target="_blank" rel="noopener noreferrer">${d.footer.devNome}</a>`;
     }
 
     // Efeito de entrada ao rolar a página
