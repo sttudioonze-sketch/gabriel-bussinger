@@ -43,6 +43,55 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.content-panel, .curso-section .curso-card {
+  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.content-panel:nth-of-type(2) { animation-delay: 0.05s; }
+.content-panel:nth-of-type(3) { animation-delay: 0.1s; }
+.content-panel:nth-of-type(4) { animation-delay: 0.15s; }
+.content-panel:nth-of-type(5) { animation-delay: 0.2s; }
+.metodologia-card, .faq-item {
+  animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.metodologia-card:nth-child(2) { animation-delay: 0.08s; }
+.metodologia-card:nth-child(3) { animation-delay: 0.16s; }
+.faq-item:nth-child(2) { animation-delay: 0.06s; }
+.faq-item:nth-child(3) { animation-delay: 0.12s; }
+.faq-item:nth-child(4) { animation-delay: 0.18s; }
+.faq-item:nth-child(5) { animation-delay: 0.24s; }
+.title-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.title-row .mentoria-title { margin-bottom: 0; }
+.title-icon {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(8,145,178,0.1);
+  color: var(--accent);
+}
+.title-icon svg { width: 22px; height: 22px; }
+@media (min-width: 640px) {
+  .title-row {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content: flex-start;
+  }
+}
 .pitch-svg, .pitch-light, .light-orb { display: none; }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -1303,8 +1352,8 @@ button { font: inherit; }
 }
 .footer-social .social-btn svg { width: 12px; height: 12px; }
 .footer-social .social-btn {
-  background: #171326;
-  border-color: #171326;
+  background: #0d1330;
+  border-color: #0d1330;
   color: #14ffe3;
 }
 .site-footer strong {
@@ -1333,8 +1382,8 @@ button { font: inherit; }
   max-width: 480px;
   margin: 0 auto 26px;
   border-radius: 999px;
-  background: #171326;
-  border: 1px solid #171326;
+  background: #0d1330;
+  border: 1px solid #0d1330;
   overflow: hidden;
 }
 .page2-topbar > * {
@@ -1552,7 +1601,7 @@ button { font: inherit; }
   display: flex;
   flex-direction: column;
   gap: 26px;
-  background: #171326;
+  background: #0d1330;
   border-radius: 24px;
   padding: 28px 22px;
 }
@@ -1623,7 +1672,7 @@ button { font: inherit; }
   height: 26px;
   border-radius: 50%;
   background: #14ffe3;
-  color: #171326;
+  color: #0d1330;
   font-size: 13px;
   font-weight: 700;
 }
@@ -1655,7 +1704,7 @@ button { font: inherit; }
   padding: 15px 20px;
   border-radius: 999px;
   background: #14ffe3;
-  color: #171326;
+  color: #0d1330;
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 17px;
@@ -1836,7 +1885,7 @@ button { font: inherit; }
 .metodologia-card {
   padding: 18px;
   border-radius: var(--radius);
-  background: #171326;
+  background: #0d1330;
   border: none;
 }
 .metodologia-parte {
@@ -1846,7 +1895,7 @@ button { font: inherit; }
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #171326;
+  color: #0d1330;
   background: #14ffe3;
   padding: 4px 12px;
   border-radius: 999px;
@@ -2064,7 +2113,7 @@ button { font: inherit; }
   width: 100%;
   padding: 14px 20px;
   border-radius: 999px;
-  background: #171326;
+  background: #0d1330;
   color: #fff;
   font-family: var(--font-body);
   font-weight: 700;
@@ -2079,3 +2128,4 @@ button { font: inherit; }
   color: var(--accent);
 }
 .plano-cta-secondary:hover { background: rgba(20, 255, 227, 0.08); }
+
