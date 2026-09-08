@@ -242,4 +242,108 @@
   <script src="js/icons.js?v=2"></script>
   <script src="js/main.js?v=2"></script>
 </body>
+</html><link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css?v=2" />
+</head>
+<body>
+
+  <div class="flow-bg" aria-hidden="true">
+    <svg class="pitch-svg" viewBox="0 0 800 1200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect x="60" y="40" width="680" height="1120" rx="4" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <line x1="60" y1="600" x2="740" y2="600" stroke="currentColor" stroke-width="3.2"/>
+      <circle cx="400" cy="600" r="110" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <circle cx="400" cy="600" r="5" fill="currentColor"/>
+      <!-- área grande superior -->
+      <rect x="220" y="40" width="360" height="180" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <rect x="310" y="40" width="180" height="70" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <path d="M290 220 A110 110 0 0 0 510 220" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <circle cx="400" cy="160" r="5" fill="currentColor"/>
+      <!-- área grande inferior -->
+      <rect x="220" y="980" width="360" height="180" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <rect x="310" y="1090" width="180" height="70" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <path d="M290 980 A110 110 0 0 1 510 980" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <circle cx="400" cy="1040" r="5" fill="currentColor"/>
+      <!-- escanteios -->
+      <path d="M60 65 A25 25 0 0 0 85 40" fill="none" stroke="currentColor" stroke-width="3"/>
+      <path d="M715 40 A25 25 0 0 0 740 65" fill="none" stroke="currentColor" stroke-width="3"/>
+      <path d="M740 1135 A25 25 0 0 0 715 1160" fill="none" stroke="currentColor" stroke-width="3"/>
+      <path d="M85 1160 A25 25 0 0 0 60 1135" fill="none" stroke="currentColor" stroke-width="3"/>
+    </svg>
+    <div class="pitch-light pitch-light-1"></div>
+    <div class="pitch-light pitch-light-2"></div>
+    <div class="bg-video-overlay"></div>
+    <div class="light-orb light-orb-1"></div>
+    <div class="light-orb light-orb-2"></div>
+    <div class="light-orb light-orb-3"></div>
+  </div>
+
+  <main class="page">
+
+    <!-- ================= PAINEL 1 — GABRIEL BUSSINGER ================= -->
+    <section class="hero-v2">
+      <div class="hero-video-block">
+        <div class="hero-bg-video">
+          <video autoplay muted loop playsinline>
+            <source src="gabriel-bg.mp4" type="video/mp4">
+          </video>
+          <div class="hero-bg-video-overlay"></div>
+        </div>
+      </div>
+
+      <div class="content-panel hero-info-panel">
+        <div class="hero-avatar-overlap">
+          <img id="hero-avatar" class="avatar-img" src="" alt="Gabriel Bussinger" />
+        </div>
+        <h1 id="hero-nome"></h1>
+        <div class="role-lines" id="hero-roles"></div>
+        <div class="cred-badges" id="cred-badges"></div>
+        <div class="role-lines" id="hero-roles-secondary"></div>
+        <div class="lang-switcher" id="lang-switcher" aria-label="Selecionar idioma"></div>
+      </div>
+    </section>
+
+    <!-- ================= CAIXA 1 — NEWSLETTER + PODCAST ================= -->
+    <section class="content-panel">
+      <div class="panel-header">
+        <span class="panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.73 21a2 2 0 01-3.46 0" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div>
+          <span class="panel-title" id="grupo1-titulo"></span>
+          <p class="panel-subtitle" id="grupo1-subtitulo"></p>
+        </div>
+      </div>
+      <ul class="link-list" id="grupo1-lista"></ul>
+    </section>
+
+    <!-- ================= CAIXA 2 — AGENDA + PALESTRAS E EVENTOS ================= -->
+    <section class="content-panel">
+      <div class="panel-header">
+        <span class="panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="15" rx="2.2"/><path d="M3.5 9.6h17M8 3v4M16 3v4" stroke-linecap="round"/><circle cx="8.1" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="15.9" cy="14" r="1" fill="currentColor" stroke="none"/></svg></span>
+        <div>
+          <span class="panel-title" id="agenda-titulo"></span>
+          <p class="panel-subtitle" id="agenda-heading"></p>
+        </div>
+      </div>
+      <ul class="agenda-list-flat" id="agenda-lista"></ul>
+      <ul class="link-list" id="grupo3-lista"></ul>
+    </section>
+
+    <!-- ================= CAIXA 4 — ECOSSISTEMA (leva pra página 2) ================= -->
+    <section class="content-panel">
+      <ul class="link-list" id="grupo4-lista"></ul>
+    </section>
+
+    <footer class="site-footer">
+      <strong id="footer-nome"></strong>
+      <div class="footer-social" id="footer-social"></div>
+      <span id="footer-ecossistema"></span>
+      <span id="footer-dev"></span>
+    </footer>
+
+  </main>
+
+  <script src="data/links.js?v=2"></script>
+  <script src="js/icons.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+</body>
 </html>
