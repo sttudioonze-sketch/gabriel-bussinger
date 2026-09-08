@@ -79,10 +79,10 @@ button { font: inherit; }
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../images/bg-grid.jpg");
-  background-repeat: repeat;
-  background-size: 320px 568px;
-  filter: contrast(2) brightness(0.75);
+  background-image: url("../images/bg-vignette.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   opacity: 1;
 }
 .flow-bg::after {
@@ -2079,4 +2079,3 @@ button { font: inherit; }
   color: var(--accent);
 }
 .plano-cta-secondary:hover { background: rgba(20, 255, 227, 0.08); }
-
