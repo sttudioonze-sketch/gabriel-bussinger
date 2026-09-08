@@ -43,20 +43,17 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-body::before, body::after {
+body::before {
   content: "";
   position: fixed;
-  width: 90px;
-  height: 90px;
+  inset: 0;
   background-image:
-    linear-gradient(45deg, transparent 48%, rgba(8,145,178,0.16) 49%, rgba(8,145,178,0.16) 51%, transparent 52%),
-    linear-gradient(-45deg, transparent 48%, rgba(8,145,178,0.16) 49%, rgba(8,145,178,0.16) 51%, transparent 52%);
-  background-size: 18px 18px;
+    linear-gradient(rgba(15,31,61,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,31,61,0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
   z-index: 0;
 }
-body::before { top: 6%; right: 4%; }
-body::after { bottom: 10%; left: 3%; }
 .pitch-svg, .pitch-light, .light-orb { display: none; }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -1652,9 +1649,8 @@ button { font: inherit; }
   transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
 }
 .curso-comprar:hover { opacity: 0.9; transform: translateY(-1px); }
-.curso-card-video {
-  width: 100%;
-}
+.curso-card-info { order: 2; }
+.curso-card-video { width: 100%; order: 1; }
 .curso-card-video .page2-video-frame {
   padding-top: 100%;
   background: #fff;
@@ -1789,8 +1785,8 @@ button { font: inherit; }
 .metodologia-card {
   padding: 18px;
   border-radius: var(--radius);
-  background: var(--glass);
-  border: 1px solid var(--border);
+  background: #171326;
+  border: none;
 }
 .metodologia-parte {
   display: inline-block;
@@ -1799,8 +1795,8 @@ button { font: inherit; }
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #fff;
-  background: #171326;
+  color: #171326;
+  background: #14ffe3;
   padding: 4px 12px;
   border-radius: 999px;
   margin-bottom: 10px;
@@ -1810,12 +1806,12 @@ button { font: inherit; }
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 15.5px;
-  color: var(--support);
+  color: #14ffe3;
   margin-bottom: 8px;
 }
 .metodologia-card p {
   margin: 0;
-  color: var(--muted);
+  color: rgba(255,255,255,0.75);
   font-size: 13px;
   line-height: 1.55;
 }
@@ -2032,4 +2028,3 @@ button { font: inherit; }
   color: var(--accent);
 }
 .plano-cta-secondary:hover { background: rgba(20, 255, 227, 0.08); }
-
