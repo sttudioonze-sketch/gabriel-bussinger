@@ -43,20 +43,6 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-body::before, body::after {
-  content: "";
-  position: fixed;
-  width: 90px;
-  height: 90px;
-  background-image:
-    linear-gradient(45deg, transparent 48%, rgba(8,145,178,0.16) 49%, rgba(8,145,178,0.16) 51%, transparent 52%),
-    linear-gradient(-45deg, transparent 48%, rgba(8,145,178,0.16) 49%, rgba(8,145,178,0.16) 51%, transparent 52%);
-  background-size: 18px 18px;
-  pointer-events: none;
-  z-index: 0;
-}
-body::before { top: 6%; right: 4%; }
-body::after { bottom: 10%; left: 3%; }
 .pitch-svg, .pitch-light, .light-orb { display: none; }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -87,11 +73,25 @@ button { font: inherit; }
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
+}
+.flow-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/bg-grid.jpg");
+  background-repeat: repeat;
+  background-size: 320px 568px;
+  opacity: 0.9;
+}
+.flow-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background:
     radial-gradient(ellipse 70% 45% at 50% 0%, rgba(8,145,178,0.08), transparent 60%),
     radial-gradient(ellipse 60% 40% at 85% 100%, rgba(8,145,178,0.05), transparent 60%),
-    linear-gradient(180deg, #ffffff 0%, var(--bg) 55%, var(--bg-1) 100%);
-  overflow: hidden;
+    linear-gradient(180deg, rgba(255,255,255,0.4) 0%, var(--bg) 55%, var(--bg-1) 100%);
 }
 .pitch-svg {
   position: absolute;
@@ -1085,7 +1085,7 @@ button { font: inherit; }
   align-items: center;
   gap: 10px;
   padding: 0 16px;
-  border-right: 1px solid rgba(245, 245, 245, 0.16);
+  border-right: 1px solid rgba(15, 31, 61, 0.12);
   white-space: nowrap;
 }
 .mini-item:last-child { border-right: none; }
@@ -1106,13 +1106,13 @@ button { font: inherit; }
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 11.5px;
-  color: rgba(245, 245, 245, 0.85);
+  color: var(--support);
 }
 .mini-autor {
   font-family: var(--font-body);
   font-weight: 400;
   font-size: 10px;
-  color: rgba(245, 245, 245, 0.5);
+  color: var(--muted);
 }
 @keyframes miniMarquee {
   from { transform: translateX(0); }
@@ -1652,9 +1652,8 @@ button { font: inherit; }
   transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
 }
 .curso-comprar:hover { opacity: 0.9; transform: translateY(-1px); }
-.curso-card-video {
-  width: 100%;
-}
+.curso-card-info { order: 2; }
+.curso-card-video { width: 100%; order: 1; }
 .curso-card-video .page2-video-frame {
   padding-top: 100%;
   background: #fff;
@@ -1693,12 +1692,12 @@ button { font: inherit; }
   animation: marquee 30s linear infinite;
 }
 .livros-carousel-track:hover { animation-play-state: paused; }
-.livros-carousel-track img {
-  height: 100px;
+.livros-carousel-track img.mini-capa {
+  height: 56px;
   width: auto;
-  border-radius: 6px;
+  border-radius: 4px;
   flex: none;
-  box-shadow: 0 8px 20px rgba(15,31,61,0.14);
+  box-shadow: 0 6px 14px rgba(15,31,61,0.16);
 }
 .accent-word-inline { color: var(--accent); font-weight: 700; }
 
@@ -1789,8 +1788,8 @@ button { font: inherit; }
 .metodologia-card {
   padding: 18px;
   border-radius: var(--radius);
-  background: var(--glass);
-  border: 1px solid var(--border);
+  background: #171326;
+  border: none;
 }
 .metodologia-parte {
   display: inline-block;
@@ -1799,8 +1798,8 @@ button { font: inherit; }
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #fff;
-  background: #171326;
+  color: #171326;
+  background: #14ffe3;
   padding: 4px 12px;
   border-radius: 999px;
   margin-bottom: 10px;
@@ -1810,12 +1809,12 @@ button { font: inherit; }
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 15.5px;
-  color: var(--support);
+  color: #14ffe3;
   margin-bottom: 8px;
 }
 .metodologia-card p {
   margin: 0;
-  color: var(--muted);
+  color: rgba(255,255,255,0.75);
   font-size: 13px;
   line-height: 1.55;
 }
