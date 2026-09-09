@@ -1718,7 +1718,6 @@ button { font: inherit; }
   padding-top: 100%;
   background: #fff;
   border: none;
-  padding: 10px;
   height: auto;
 }
 .curso-card-video .page2-video-frame::after { display: none; }
