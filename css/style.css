@@ -1298,40 +1298,50 @@ button { font: inherit; }
 
 /* Topo da Página 2 — botão voltar + seletor de idioma */
 .page2-topbar {
+  position: relative;
   display: flex;
-  align-items: stretch;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 480px;
   margin: 0 auto 26px;
-  border-radius: 999px;
-  background: rgba(245, 245, 245, 0.05);
-  border: 1px solid var(--border);
-  overflow: hidden;
+  gap: 8px;
 }
-.page2-topbar > * {
-  flex: 1;
+.page2-back {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-right: 1px solid var(--border);
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: none;
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
 }
-.page2-topbar > *:last-child { border-right: none; }
+.page2-back:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
+.page2-back svg { width: 16px; height: 16px; }
 .page2-signature {
-  padding: 10px 14px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
 }
 .signature-img-topbar {
-  height: 30px;
+  height: 28px;
   filter: brightness(0) invert(1);
 }
 .page2-topbar .lang-switcher {
   justify-content: center;
-  padding: 10px 14px;
+  padding: 6px;
   margin: 0;
-  background: none;
-  border: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  background: rgba(245, 245, 245, 0.06);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 .page2-video {
   width: 100%;
@@ -1841,4 +1851,3 @@ button { font: inherit; }
   color: var(--accent);
 }
 .plano-cta-secondary:hover { background: rgba(20, 255, 227, 0.08); }
-
