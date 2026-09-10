@@ -1725,7 +1725,7 @@ button { font: inherit; }
 .curso-card-info { order: 2; }
 .curso-card-video { width: 100%; order: 1; }
 .curso-card-video .page2-video-frame {
-  padding-top: 100%;
+  padding-top: 56.25%;
   background: #fff;
   border: none;
   height: auto;
@@ -1739,6 +1739,8 @@ button { font: inherit; }
   object-fit: contain;
   background: #000;
   border-radius: 16px;
+  border: 1.5px solid rgba(20, 255, 227, 0.5);
+  box-shadow: 0 0 18px rgba(20, 255, 227, 0.18);
 }
 @media (min-width: 760px) {
   .curso-card { flex-direction: row; align-items: stretch; gap: 32px; padding: 36px; }
@@ -1867,7 +1869,7 @@ button { font: inherit; }
   font-weight: 400;
   font-size: clamp(24px, 6.5vw, 32px);
   line-height: 1.1;
-  color: var(--accent);
+  color: var(--support);
   text-align: center;
 }
 .mentoria-body {
@@ -2152,4 +2154,3 @@ button { font: inherit; }
   color: var(--accent);
 }
 .plano-cta-secondary:hover { background: rgba(20, 255, 227, 0.08); }
-
