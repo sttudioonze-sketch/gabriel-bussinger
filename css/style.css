@@ -1310,9 +1310,10 @@ button { font: inherit; }
 .page2-back {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  height: 40px;
-  padding: 0 18px;
+  width: 112px;
+  height: 44px;
   border-radius: 999px;
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   background: none;
@@ -1321,10 +1322,11 @@ button { font: inherit; }
   font-weight: 600;
   font-size: 13px;
   box-sizing: border-box;
+  flex: none;
   transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
 }
 .page2-back:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
-.page2-back svg { width: 16px; height: 16px; flex: none; }
+.page2-back svg { width: 18px; height: 18px; flex: none; }
 .page2-signature {
   position: absolute;
   left: 50%;
@@ -1335,19 +1337,23 @@ button { font: inherit; }
   pointer-events: none;
 }
 .signature-img-topbar {
-  height: 28px;
+  height: 36px;
   filter: brightness(0) invert(1);
 }
 .page2-topbar .lang-switcher {
   justify-content: center;
   align-items: center;
-  height: 40px;
-  padding: 0 6px;
+  width: 112px;
+  height: 44px;
+  padding: 0 4px;
   margin: 0;
   box-sizing: border-box;
+  flex: none;
+  gap: 3px;
   background: rgba(245, 245, 245, 0.06);
   border: 1.5px solid rgba(255,255,255,0.35);
 }
+.page2-topbar .lang-switcher .lang-option { width: 30px; height: 30px; }
 .page2-video {
   width: 100%;
   max-width: 480px;
@@ -1842,3 +1848,4 @@ button { font: inherit; }
   color: var(--accent);
 }
 .plano-cta-secondary:hover { background: rgba(20, 255, 227, 0.08); }
+
