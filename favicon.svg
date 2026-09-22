@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Diário do Treinador">
+  <rect width="64" height="64" rx="14" fill="#00203F"/>
+  <g fill="none" stroke="#36ECDE" stroke-width="2.6">
+    <rect x="12" y="10" width="40" height="44" rx="4"/>
+    <path d="M12 32h40"/>
+    <circle cx="32" cy="32" r="8.5"/>
+    <path d="M24 10v6h16v-6M24 54v-6h16v6"/>
+  </g>
+  <circle cx="32" cy="32" r="2.4" fill="#36ECDE"/>
+</svg>
