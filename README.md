@@ -35,10 +35,6 @@ bestsellers.html --"Conheça a Mentoria"-------------> mentoria.html
 
 ## Pendências de conteúdo
 
-- `curso-comece-pelo-porque.mp4` **não está no repositório** (arquivo original tem 497 MB).
-  Reexporte em ~1080p / H.264 / ~4 Mbps (alvo 20–60 MB) e coloque na raiz, ou troque o
-  `<video>` de `bestsellers.html` por um embed do YouTube/Vimeo.
-  Enquanto isso o player mostra o poster `poster-comece-pelo-porque.jpg`.
 - `mentoria.html`: os botões do plano anual e do plano mensal apontam para a **mesma**
   oferta da Hotmart (`I103504037F?off=nhfhufix`). Falta o link do plano mensal.
 - `index.html`: o link "Suporte" usa `wa.me/5551991736138`, que é o mesmo número do
