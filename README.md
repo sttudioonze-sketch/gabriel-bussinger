@@ -39,8 +39,6 @@ bestsellers.html --"Conheça a Mentoria"-------------> mentoria.html
   Reexporte em ~1080p / H.264 / ~4 Mbps (alvo 20–60 MB) e coloque na raiz, ou troque o
   `<video>` de `bestsellers.html` por um embed do YouTube/Vimeo.
   Enquanto isso o player mostra o poster `poster-comece-pelo-porque.jpg`.
-- `gabriel-bussinger.html`: o botão "Inscreva-se" da agenda aponta para
-  `https://SUBSTITUA-LINK-DE-INSCRICAO`.
 - `mentoria.html`: os botões do plano anual e do plano mensal apontam para a **mesma**
   oferta da Hotmart (`I103504037F?off=nhfhufix`). Falta o link do plano mensal.
 - `index.html`: o link "Suporte" usa `wa.me/5551991736138`, que é o mesmo número do
