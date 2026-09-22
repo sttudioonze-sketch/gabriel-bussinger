@@ -1,121 +1,1460 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#14ffe3" />
-<title>Ecossistema Diário do Treinador | Gabriel Bussinger</title>
-<meta name="description" content="Mentoria, cursos, podcast e comunidade do Ecossistema Diário do Treinador — com Gabriel Bussinger." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#001424">
+<title>Diário do Treinador — ecossistema de formação para treinadores</title>
+<meta name="description" content="Mentoria, cursos, podcast e comunidade. O ecossistema de formação continuada de Gabriel Bussinger para treinadores de futebol.">
+<link rel="canonical" href="https://www.diariodotreinador.com.br/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png" />
-<link rel="icon" type="image/png" sizes="256x256" href="images/favicon.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-
-<!-- Compartilhamento (WhatsApp, Instagram, Facebook, etc.) -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Diário do Treinador" />
-<meta property="og:title" content="Ecossistema Diário do Treinador | Gabriel Bussinger" />
-<meta property="og:description" content="Mentoria, cursos, podcast e comunidade do Ecossistema Diário do Treinador." />
-<meta property="og:image" content="https://diariodotreinador.com.br/images/og-share.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://diariodotreinador.com.br/" />
-<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Diário do Treinador">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Diário do Treinador — ecossistema de formação para treinadores">
+<meta property="og:description" content="Mentoria, cursos, podcast e comunidade. O ecossistema de formação continuada de Gabriel Bussinger para treinadores de futebol.">
+<meta property="og:url" content="https://www.diariodotreinador.com.br/">
+<meta property="og:image" content="https://www.diariodotreinador.com.br/gabriel-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
 
-<link rel="stylesheet" href="css/style.css?v=2" />
+<style>
+  :root{
+    /* paleta — versão escura */
+    --mint:#36ECDE;
+    --mint-12:rgba(54,236,222,.10);
+    --mint-24:rgba(54,236,222,.18);
+    --teal:#36ECDE;          /* no escuro o mint puro já passa em contraste */
+    --ink:#E6E9EC;           /* tinta clara sobre fundo navy */
+    --ink-65:rgba(230,233,236,.72);
+    --ink-45:rgba(230,233,236,.55);
+    --paper:#001424;         /* fundo da página */
+    --card:#00203F;          /* Core Navy vira a superfície dos cards */
+    --borda:rgba(54,236,222,.16);
+    --borda-forte:rgba(54,236,222,.38);
+    --sombra:0 1px 3px rgba(0,0,0,.35);
+    --sombra-alta:0 14px 34px rgba(0,0,0,.45);
+    --brilho:0 14px 30px rgba(0,0,0,.45),0 0 0 1px rgba(54,236,222,.05);
+
+    /* gradientes — luz vinda de cima à esquerda, como no palco */
+    --g-card:linear-gradient(176deg,#0A2F52,#00203F 58%);
+    --g-card-alto:linear-gradient(176deg,#0D3459,#00203F 62%);
+    --g-borda:linear-gradient(155deg,rgba(54,236,222,.40),rgba(54,236,222,.05) 46%,rgba(54,236,222,.16));
+    --g-borda-fraca:linear-gradient(150deg,rgba(54,236,222,.26),rgba(54,236,222,.04));
+    --g-borda-forte:linear-gradient(150deg,rgba(54,236,222,.68),rgba(54,236,222,.12));
+    --g-mint:linear-gradient(100deg,#36ECDE,#8AF2E9);
+
+    /* tipo */
+    --display:"Outfit","Helvetica Neue",Arial,sans-serif;
+    --corpo:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif;
+
+    /* medidas */
+    --wrap:900px;
+    --gutter:18px;
+    --r-secao:26px;
+    --r-cartao:16px;
+    --r-tile:13px;
+  }
+
+  *{box-sizing:border-box}
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    pointer-events:none;
+    background:
+      radial-gradient(58% 38% at 10% 2%, rgba(54,236,222,.16), transparent 62%),
+      radial-gradient(46% 32% at 94% 24%, rgba(54,236,222,.09), transparent 64%),
+      radial-gradient(74% 42% at 50% 104%, rgba(54,236,222,.08), transparent 62%);
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--corpo);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit}
+  img,video{max-width:100%}
+
+  h1,h2,h3{
+    font-family:var(--display);
+    font-weight:600;
+    letter-spacing:-.018em;
+    line-height:1.12;
+    text-wrap:balance;
+    margin:0;
+  }
+
+  .destaque{color:var(--mint)}
+  @supports (-webkit-background-clip:text) or (background-clip:text){
+    .destaque{
+      background:linear-gradient(94deg,#36ECDE,#A6F6EF 52%,#36ECDE);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+  }
+
+  :focus-visible{
+    outline:3px solid var(--teal);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  .faixa{
+    width:100%;
+    max-width:var(--wrap);
+    margin-inline:auto;
+    padding-inline:var(--gutter);
+  }
+
+  /* ===================== TOPO COM VÍDEO ===================== */
+
+  .topo{
+    position:relative;
+    isolation:isolate;
+    padding-block:16px 0;
+  }
+
+  /* aurora mint atrás do vídeo */
+  .topo::before{
+    content:"";
+    position:absolute;
+    inset:0 0 34% 0;
+    z-index:-1;
+    background:
+      radial-gradient(72% 92% at 16% 2%, rgba(54,236,222,.24), transparent 64%),
+      radial-gradient(60% 78% at 90% 0%, rgba(54,236,222,.13), transparent 68%),
+      linear-gradient(180deg,#00395F,#002542 42%,var(--paper) 88%);
+  }
+
+  .barra-idiomas{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:14px;
+  }
+
+  .idiomas{
+    display:inline-flex;
+    gap:3px;
+    background:rgba(0,20,36,.62);
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:3px;
+    backdrop-filter:blur(6px);
+  }
+
+  .idiomas button{
+    font-family:var(--corpo);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.06em;
+    color:var(--ink-65);
+    background:transparent;
+    border:0;
+    border-radius:99px;
+    padding:6px 13px;
+    line-height:1;
+    cursor:pointer;
+    transition:background .16s ease,color .16s ease;
+  }
+  .idiomas button:hover{background:rgba(255,255,255,.08);color:var(--ink)}
+  .idiomas button[aria-pressed="true"]{background:var(--g-mint);color:#00203F}
+
+  .palco{
+    position:relative;
+    border-radius:var(--r-secao);
+    overflow:hidden;
+    background:#00203F padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+    box-shadow:var(--sombra-alta);
+    aspect-ratio:1/1;
+  }
+  @media (min-width:560px){
+    .palco{aspect-ratio:16/9}
+  }
+  .palco video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* cartão de identidade sobreposto ao vídeo */
+  .identidade{
+    position:relative;
+    z-index:2;
+    margin:-54px auto 0;
+    max-width:660px;
+    background:var(--g-card-alto) padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-secao);
+    box-shadow:var(--sombra-alta);
+    padding:0 24px 28px;
+    text-align:center;
+  }
+
+  .retrato{
+    width:96px;
+    height:96px;
+    border-radius:50%;
+    display:block;
+    margin:-48px auto 0;
+    border:4px solid var(--card);
+    background:#00203F;
+    box-shadow:0 0 0 2px var(--mint);
+  }
+
+  .assinatura{
+    display:block;
+    width:min(280px,80%);
+    height:auto;
+    margin:14px auto 0;
+  }
+
+  .slogan{
+    margin:12px auto 0;
+    max-width:40ch;
+    color:var(--ink-65);
+    font-size:15.5px;
+  }
+
+  /* ===================== CORPO ===================== */
+
+  .corpo{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding-block:24px 34px;
+  }
+
+  .secao{
+    background:var(--g-card) padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-secao);
+    box-shadow:var(--sombra);
+    padding:26px 20px;
+  }
+
+  .secao-titulo{
+    font-size:clamp(21px,4.6vw,26px);
+    text-align:center;
+  }
+
+  .secao-resumo{
+    margin:8px auto 0;
+    max-width:44ch;
+    text-align:center;
+    color:var(--ink-45);
+    font-size:14.5px;
+  }
+
+  /* --- faixa de credenciais --- */
+
+  .credenciais{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+  }
+
+  .credencial{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:8px;
+  }
+
+  .tile{
+    width:46px;
+    height:46px;
+    border-radius:var(--r-tile);
+    display:grid;
+    place-items:center;
+    flex:none;
+  }
+  .tile svg{width:22px;height:22px;display:block}
+  .tile-mint{background:linear-gradient(145deg,rgba(54,236,222,.28),rgba(54,236,222,.07));color:var(--mint)}
+  .tile-teal{background:linear-gradient(145deg,rgba(54,236,222,.18),rgba(54,236,222,.04));color:var(--mint)}
+  .tile-navy{background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.03));color:var(--ink)}
+
+  .credencial b{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15px;
+    line-height:1.2;
+  }
+  .credencial span{
+    color:var(--ink-45);
+    font-size:13px;
+    line-height:1.35;
+  }
+
+  @media (min-width:680px){
+    .credenciais{grid-template-columns:repeat(4,minmax(0,1fr))}
+  }
+
+  /* --- listas de links --- */
+
+  .links{
+    list-style:none;
+    margin:20px 0 0;
+    padding:0;
+    display:grid;
+    gap:12px;
+  }
+
+  @media (min-width:680px){
+    .links-duplo{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+
+  .link{
+    display:flex;
+    align-items:flex-start;
+    gap:13px;
+    height:100%;
+    background:var(--g-card) padding-box,var(--g-borda-fraca) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-cartao);
+    padding:15px 16px;
+    text-decoration:none;
+    transition:box-shadow .18s ease,transform .18s ease;
+  }
+  .link:hover{
+    background:var(--g-card-alto) padding-box,var(--g-borda-forte) border-box;
+    box-shadow:var(--brilho);
+    transform:translateY(-2px);
+  }
+
+  .link-texto{flex:1;min-width:0}
+
+  .link-titulo{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:16px;
+    line-height:1.25;
+  }
+
+  .link-desc{
+    display:block;
+    margin-top:3px;
+    color:var(--ink-45);
+    font-size:13.5px;
+    line-height:1.45;
+  }
+
+  .seta{
+    flex:none;
+    width:17px;
+    height:17px;
+    margin-top:3px;
+    color:var(--ink-45);
+    transition:transform .18s ease,color .18s ease;
+  }
+  .link:hover .seta{color:var(--teal);transform:translate(2px,-2px)}
+
+  /* --- agenda --- */
+
+  .evento{
+    margin-top:20px;
+    border:1px solid transparent;
+    border-radius:var(--r-cartao);
+    padding:16px;
+    background:
+      linear-gradient(168deg,rgba(54,236,222,.14),rgba(0,32,63,0) 54%) padding-box,
+      var(--g-card-alto) padding-box,
+      var(--g-borda) border-box;
+  }
+
+  .evento-topo{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+  }
+
+  .data{
+    flex:none;
+    width:60px;
+    background:linear-gradient(170deg,rgba(255,255,255,.13),rgba(255,255,255,.03));
+    border:1px solid var(--borda);
+    border-radius:var(--r-tile);
+    padding:9px 0 8px;
+    text-align:center;
+  }
+  .data .dia{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:26px;
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .data .mes{
+    display:block;
+    margin-top:3px;
+    color:var(--teal);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.09em;
+  }
+
+  .evento-tema{
+    font-size:18px;
+    margin:0;
+  }
+  .evento-local{
+    margin:4px 0 0;
+    color:var(--ink-45);
+    font-size:14px;
+  }
+
+  .detalhes{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:13px 0 0;
+    padding:0;
+  }
+  .detalhe{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    background:linear-gradient(170deg,rgba(255,255,255,.09),rgba(255,255,255,.02));
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:5px 11px;
+    font-size:12.5px;
+    color:var(--ink-65);
+    white-space:nowrap;
+  }
+  .detalhe svg{width:13px;height:13px;flex:none;color:var(--ink-45)}
+
+  .botao-inscrever{
+    display:block;
+    margin-top:15px;
+    background:var(--g-mint);
+    color:#00203F;
+    box-shadow:0 8px 22px rgba(54,236,222,.18);
+    text-align:center;
+    text-decoration:none;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15px;
+    padding:13px 18px;
+    border-radius:99px;
+    transition:opacity .18s ease,transform .18s ease;
+  }
+  .botao-inscrever:hover{opacity:.9;transform:translateY(-1px)}
+
+  /* --- banner final --- */
+
+  .banner{
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+    border-radius:var(--r-secao);
+    background:
+      radial-gradient(76% 130% at 8% -6%, rgba(255,255,255,.5), transparent 56%),
+      linear-gradient(118deg,#12CFC2 2%,#36ECDE 36%,#7BEFE5 70%,#B6F8F2 100%);
+    color:#00203F;
+    padding:34px 22px 32px;
+    text-align:center;
+  }
+
+  /* campo visto de cima: grande área em cada extremidade,
+     círculo central no meio, cortado pela linha do meio-campo */
+  .campo{
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    color:#00203F;
+    opacity:.2;
+    pointer-events:none;
+  }
+
+  /* mantém a espessura das linhas igual nos dois SVGs, que têm escalas diferentes */
+  .campo svg *{vector-effect:non-scaling-stroke}
+
+  /* mobile: campo na vertical — áreas em cima e embaixo.
+     o deslocamento de 24.07% = (altura-largura)/2·altura da caixa antes de girar,
+     que é o que encosta a linha de fundo na borda depois do rotate. */
+  .campo-area{
+    position:absolute;
+    left:50%;
+    width:26%;
+    height:auto;
+    aspect-ratio:84/162;
+  }
+  .campo-area.esq{top:0;translate:-50% -24.07%;rotate:90deg}
+  .campo-area.dir{bottom:0;translate:-50% 24.07%;rotate:-90deg}
+
+  .campo-meio{
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+    height:1.5px;
+    margin-top:-.75px;
+    background:currentColor;
+  }
+
+  .campo-circulo{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:40%;
+    height:auto;
+    aspect-ratio:1;
+    translate:-50% -50%;
+  }
+
+  /* desktop: campo na horizontal — áreas nas duas extremidades */
+  @media (min-width:560px){
+    .campo-area{left:auto;width:auto;height:80%}
+    .campo-area.esq{left:0;top:50%;translate:0 -50%;rotate:none}
+    .campo-area.dir{right:0;bottom:auto;top:50%;translate:0 -50%;rotate:none;scale:-1 1}
+
+    .campo-meio{
+      left:50%;
+      right:auto;
+      top:0;
+      bottom:0;
+      width:1.5px;
+      height:auto;
+      margin-top:0;
+      margin-left:-.75px;
+    }
+
+    .campo-circulo{width:auto;height:54%}
+  }
+
+  .banner h2{
+    font-size:clamp(25px,5.9vw,34px);
+    max-width:20ch;
+    margin-inline:auto;
+  }
+
+  .banner-lema{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(15px,3.2vw,17px);
+    letter-spacing:-.005em;
+    margin:8px auto 0;
+    color:rgba(0,32,63,.7);
+  }
+
+  .banner p{
+    margin:11px auto 0;
+    max-width:46ch;
+    color:rgba(0,32,63,.76);
+    font-size:15px;
+  }
+
+  .botao-mint{
+    display:inline-block;
+    margin-top:22px;
+    background:#00203F;
+    color:var(--mint);
+    text-decoration:none;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:16px;
+    padding:14px 30px;
+    border-radius:99px;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .botao-mint:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 24px rgba(0,32,63,.3);
+  }
+
+  /* --- rodapé --- */
+
+  .rodape{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    text-align:center;
+    padding-block:6px 34px;
+  }
+
+  .assinatura-rodape{width:min(200px,58%);height:auto;display:block;opacity:.85}
+
+  .sociais{display:flex;gap:9px}
+
+  .social{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:var(--card);
+    border:1px solid var(--borda);
+    color:var(--ink);
+    display:grid;
+    place-items:center;
+    transition:background .18s ease,color .18s ease,transform .18s ease;
+  }
+  .social svg{width:17px;height:17px;display:block}
+  .social:hover{background:var(--g-mint);color:#00203F;transform:translateY(-2px)}
+
+  .creditos{
+    font-size:13px;
+    color:var(--ink-45);
+    line-height:1.7;
+    margin:0;
+  }
+  .creditos a{color:var(--teal);font-weight:700;text-decoration:none}
+  .creditos a:hover{text-decoration:underline}
+
+  /* ===================== TOPBAR ===================== */
+
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:14px;
+  }
+
+  .voltar{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:rgba(0,20,36,.62);
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:7px 14px 7px 10px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink-65);
+    text-decoration:none;
+    backdrop-filter:blur(6px);
+    transition:color .16s ease,border-color .16s ease;
+  }
+  .voltar svg{width:16px;height:16px;flex:none}
+  .voltar:hover{color:var(--ink);border-color:var(--borda-forte)}
+
+  .palco-foto{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:58% 38%;
+    display:block;
+  }
+
+  /* ===================== MARCA DO ECOSSISTEMA ===================== */
+
+  .marca-eco{
+    width:84px;
+    height:84px;
+    border-radius:24px;
+    margin:-42px auto 0;
+    display:grid;
+    place-items:center;
+    background:var(--g-mint);
+    border:4px solid var(--card);
+    box-shadow:0 0 0 1px rgba(54,236,222,.45);
+    color:#00203F;
+  }
+  .marca-eco svg{width:38px;height:38px;display:block}
+
+  .eco-titulo{
+    font-size:clamp(27px,6.4vw,37px);
+    margin-top:14px;
+  }
+
+  /* ===================== ESTEIRAS (carrosséis) =====================
+     cada trilho tem o conteúdo duplicado; a animação anda -50%,
+     então o ponto de retorno cai exatamente sobre a cópia. */
+  .esteira{
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+  }
+  .esteira-trilho{
+    display:flex;
+    width:max-content;
+    animation:correr var(--tempo,34s) linear infinite;
+  }
+  .esteira:hover .esteira-trilho,
+  .esteira:focus-within .esteira-trilho{animation-play-state:paused}
+
+  @keyframes correr{to{transform:translateX(-50%)}}
+
+  @media (prefers-reduced-motion:reduce){
+    .esteira{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+    .esteira-trilho{animation:none;width:auto}
+  }
+
+  /* esteira 1 — pilares do método */
+  .esteira-pilares{margin-top:18px;--tempo:36s}
+
+  .pilares{list-style:none;margin:0;padding:0}
+  .pilar{
+    white-space:nowrap;
+    flex:none;
+    margin-right:8px;
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:6px 13px;
+    font-size:12.5px;
+    color:var(--ink-65);
+    background:linear-gradient(170deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+  }
+
+  /* esteira 2 — marcas do ecossistema */
+  .esteira-marcas{--tempo:30s}
+  .esteira-marcas .esteira-trilho{align-items:center;padding-block:4px}
+  .esteira-marcas img{
+    height:34px;
+    width:auto;
+    display:block;
+    flex:none;
+    margin-right:34px;
+    opacity:.85;
+  }
+
+  /* ===================== SELOS ===================== */
+
+  .selos{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:7px;
+    margin:0 0 14px;
+    padding:0;
+  }
+  .selo{
+    display:inline-flex;
+    align-items:center;
+    border-radius:99px;
+    padding:5px 12px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+  .banner .selo-solido{background:#00203F;color:var(--mint)}
+  .banner .selo-vazado{border:1px solid rgba(0,32,63,.3);color:rgba(0,32,63,.78)}
+  .secao .selo-solido{background:var(--g-mint);color:#00203F}
+  .secao .selo-vazado{border:1px solid var(--borda);color:var(--ink-65)}
+
+  /* ===================== PRATELEIRA DE LIVROS ===================== */
+
+  .esteira-livros{margin-top:18px;--tempo:52s}
+  .esteira-livros .esteira-trilho{padding-block:2px 6px}
+
+  .livro{flex:none;width:104px;margin-right:14px}
+  .livro img{
+    display:block;
+    width:104px;
+    height:148px;
+    object-fit:cover;
+    border-radius:9px;
+    border:1px solid var(--borda);
+    box-shadow:0 10px 22px rgba(0,0,0,.45);
+  }
+  .livro b{
+    display:block;
+    margin-top:9px;
+    font-size:12px;
+    font-weight:600;
+    line-height:1.3;
+  }
+  .livro span{
+    display:block;
+    margin-top:2px;
+    color:var(--ink-45);
+    font-size:11.5px;
+    line-height:1.3;
+  }
+
+  /* card sem link, para o que ainda não abriu */
+  .link.indisponivel{
+    opacity:.6;
+    cursor:default;
+  }
+  .link.indisponivel:hover{
+    background:var(--g-card) padding-box,var(--g-borda-fraca) border-box;
+    box-shadow:none;
+    transform:none;
+  }
+
+  /* ===================== AJUSTE FINO DE MOBILE =====================
+     mesma composição, tudo um passo menor: tipo, respiro, tiles e raios */
+  @media (max-width:559px){
+    :root{
+      --r-secao:20px;
+      --r-cartao:13px;
+      --r-tile:11px;
+      --gutter:16px;
+    }
+
+    .corpo{gap:14px;padding-block:18px 26px}
+    .secao{padding:20px 15px}
+    .secao-titulo{font-size:19.5px}
+    .secao-resumo{margin-top:6px;font-size:13.5px}
+
+    /* identidade */
+    .identidade{margin-top:-44px;padding:0 18px 22px}
+    .retrato{width:80px;height:80px;margin-top:-40px;border-width:3px}
+    .assinatura{width:min(230px,72%);margin-top:12px}
+    .slogan{margin-top:9px;font-size:14.5px}
+
+    /* credenciais */
+    .credenciais{gap:11px}
+    .credencial{gap:7px}
+    .credencial b{font-size:14px}
+    .credencial span{font-size:12.5px}
+
+    .tile{width:40px;height:40px}
+    .tile svg{width:19px;height:19px}
+
+    /* links */
+    .links{margin-top:16px;gap:10px}
+    .link{gap:11px;padding:12px 13px}
+    .link-titulo{font-size:15px}
+    .link-desc{font-size:13px}
+    .seta{width:16px;height:16px}
+
+    /* agenda */
+    .evento{margin-top:16px;padding:14px}
+    .evento-topo{gap:12px}
+    .data{width:52px;padding:7px 0 6px}
+    .data .dia{font-size:23px}
+    .data .mes{font-size:10.5px}
+    .evento-tema{font-size:16.5px}
+    .evento-local{font-size:13.5px}
+    .detalhes{margin-top:11px;gap:6px}
+    .detalhe{padding:4px 9px;font-size:12px}
+    .botao-inscrever{margin-top:13px;padding:12px 16px;font-size:14.5px}
+
+    /* banner */
+    .banner{padding:26px 16px 24px}
+    .banner h2{font-size:23px}
+    .banner-lema{font-size:14.5px;margin-top:6px}
+    .banner p{margin-top:9px;font-size:14px}
+    .botao-mint{margin-top:18px;padding:13px 24px;font-size:15px}
+
+    /* campo vertical: encolhe junto com o banner */
+    .campo{opacity:.17}
+    .campo-area{width:23%}
+    .campo-circulo{width:36%}
+
+    /* rodapé */
+    .rodape{gap:12px;padding-block:4px 28px}
+    .assinatura-rodape{width:min(170px,52%)}
+    .social{width:36px;height:36px}
+    .social svg{width:16px;height:16px}
+    .creditos{font-size:12.5px}
+
+    /* --- página do ecossistema --- */
+    .topbar{margin-bottom:12px}
+    .voltar{padding:6px 12px 6px 9px;font-size:12.5px}
+    .marca-eco{width:70px;height:70px;border-radius:20px;margin-top:-35px;border-width:3px}
+    .marca-eco svg{width:32px;height:32px}
+    .eco-titulo{font-size:26px;margin-top:12px}
+    .esteira-pilares{margin-top:14px}
+    .pilar{padding:5px 11px;font-size:11.5px;margin-right:6px}
+    .esteira-marcas img{height:28px;margin-right:26px}
+    .selos{gap:6px;margin-bottom:12px}
+    .selo{padding:4px 10px;font-size:11.5px}
+    .esteira-livros{margin-top:14px}
+    .livro{width:92px;margin-right:10px}
+    .livro img{width:92px;height:131px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+      animation-duration:.001ms !important;
+      transition-duration:.001ms !important;
+    }
+  }
+  /* =====================================================================
+     BREAKPOINTS — mesmo sistema da página da Mentoria
+     Mobile < 640 · Tablet 640–1023 · Desktop 1024–1439 · Widescreen ≥ 1440
+     ===================================================================== */
+
+  @media (min-width:640px) and (max-width:1023px){
+    :root{ --wrap:720px; --gutter:26px; }
+  }
+  @media (min-width:1024px){
+    :root{ --wrap:940px; --gutter:28px; }
+  }
+  @media (min-width:1440px){
+    :root{ --wrap:1120px; --gutter:34px; }
+  }
+  @media (min-width:1800px){
+    :root{ --wrap:1280px; --gutter:44px; }
+  }
+
+  @media (min-width:1440px){
+    .corpo{gap:26px;padding-block:32px 44px}
+    .secao{padding:34px 28px}
+    .secao-titulo{font-size:clamp(26px,2.2vw,32px)}
+    .secao-resumo{font-size:15.5px}
+    .eco-titulo{font-size:clamp(34px,3.2vw,44px)}
+    .slogan{font-size:17px}
+    .link{padding:18px 20px}
+    .link-titulo{font-size:17px}
+    .link-desc{font-size:14.5px}
+    .tile{width:52px;height:52px}
+    .tile svg{width:24px;height:24px}
+    .banner{padding:44px 30px 40px}
+    .livro{width:120px;margin-right:16px}
+    .livro img{width:120px;height:170px}
+    .esteira-marcas img{height:40px;margin-right:42px}
+    .pilar{font-size:13.5px;padding:7px 15px}
+  }
+
+  /* ===================== MEIO-CAMPO: divisória de seções ===================== */
+
+  .secao,
+  .rodape{position:relative;z-index:1}
+
+  .meio-campo{
+    position:relative;
+    z-index:0;
+    height:0;
+    border:0;
+    border-top:1px solid currentColor;
+    color:var(--mint);
+    opacity:.2;
+    margin-block:-6px;
+    pointer-events:none;
+  }
+  .meio-campo::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:124px;
+    height:124px;
+    border:1px solid currentColor;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+  }
+  .meio-campo::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:currentColor;
+    transform:translate(-50%,-50%);
+  }
+  @media (max-width:559px){
+    .meio-campo::after{width:92px;height:92px}
+  }
+  @media (min-width:1440px){
+    .meio-campo::after{width:156px;height:156px}
+  }
+
+
+  /* ===================== CARROSSÉIS REPOSICIONADOS ===================== */
+
+  /* logos dentro do cartão de cabeçalho: sangram até as bordas do cartão */
+  .identidade .esteira-marcas{
+    margin:20px -24px 0;
+    padding-block:2px;
+  }
+  @media (max-width:559px){
+    .identidade .esteira-marcas{margin:16px -18px 0}
+    .identidade .esteira-marcas img{height:26px;margin-right:24px}
+  }
+
+  /* palavras dentro do bloco mint: contraste invertido */
+  .banner .esteira-pilares{
+    margin:16px -22px 0;
+    --tempo:40s;
+  }
+  .banner .pilar{
+    background:rgba(255,255,255,.4);
+    border:1px solid rgba(0,32,63,.22);
+    color:rgba(0,32,63,.82);
+  }
+  .banner p{margin-top:14px}
+  @media (max-width:559px){
+    .banner .esteira-pilares{margin:14px -16px 0}
+  }
+
+
+  /* ===================== TÍTULO DE PRODUTO =====================
+     Nome em cima, qualificador embaixo: o card passa a anunciar o
+     produto em vez de descrevê-lo numa linha só. */
+
+  .titulo-produto strong{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(30px,7.4vw,42px);
+    line-height:1.02;
+    letter-spacing:-.028em;
+  }
+  .titulo-produto span{
+    display:block;
+    margin-top:5px;
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(17px,3.8vw,22px);
+    line-height:1.14;
+    letter-spacing:-.012em;
+  }
+  .banner .titulo-produto span{color:rgba(0,32,63,.72)}
+
+  @media (min-width:1440px){
+    .titulo-produto strong{font-size:48px}
+    .titulo-produto span{font-size:24px;margin-top:6px}
+  }
+  @media (max-width:559px){
+    .titulo-produto strong{font-size:29px}
+    .titulo-produto span{font-size:16.5px}
+  }
+</style>
 </head>
 <body>
+<main>
 
-  <div class="flow-bg" aria-hidden="true">
-    <svg class="pitch-svg" viewBox="0 0 800 1200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <rect x="60" y="40" width="680" height="1120" rx="4" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <line x1="60" y1="600" x2="740" y2="600" stroke="currentColor" stroke-width="3.2"/>
-      <circle cx="400" cy="600" r="110" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <circle cx="400" cy="600" r="5" fill="currentColor"/>
-      <rect x="220" y="40" width="360" height="180" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <rect x="310" y="40" width="180" height="70" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <path d="M290 220 A110 110 0 0 0 510 220" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <circle cx="400" cy="160" r="5" fill="currentColor"/>
-      <rect x="220" y="980" width="360" height="180" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <rect x="310" y="1090" width="180" height="70" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <path d="M290 980 A110 110 0 0 1 510 980" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <circle cx="400" cy="1040" r="5" fill="currentColor"/>
-      <path d="M60 65 A25 25 0 0 0 85 40" fill="none" stroke="currentColor" stroke-width="3"/>
-      <path d="M715 40 A25 25 0 0 0 740 65" fill="none" stroke="currentColor" stroke-width="3"/>
-      <path d="M740 1135 A25 25 0 0 0 715 1160" fill="none" stroke="currentColor" stroke-width="3"/>
-      <path d="M85 1160 A25 25 0 0 0 60 1135" fill="none" stroke="currentColor" stroke-width="3"/>
-    </svg>
-    <div class="pitch-light pitch-light-1"></div>
-    <div class="pitch-light pitch-light-2"></div>
-    <div class="bg-video-overlay"></div>
-    <div class="light-orb light-orb-1"></div>
-    <div class="light-orb light-orb-2"></div>
-    <div class="light-orb light-orb-3"></div>
-  </div>
+  <!-- ============ TOPO: FOTO + MARCA ============ -->
+  <header class="topo">
+    <div class="faixa">
+      <div class="topbar">
+        <a class="voltar" href="gabriel-bussinger.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 7l-5 5 5 5"/></svg>
+          <span data-i18n="voltar">Voltar</span>
+        </a>
 
-  <main class="page">
-
-    <div class="page2-topbar">
-      <a href="gabriel-bussinger.html" class="page2-back" id="page2-back">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M13 8.2l-4 3.8 4 3.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span id="page2-back-label">Voltar</span>
-      </a>
-      <div class="page2-signature">
-        <img src="images/assinatura-gabriel.png" alt="Gabriel Bussinger" class="signature-img signature-img-topbar" />
-      </div>
-      <div class="lang-switcher" id="lang-switcher" aria-label="Selecionar idioma"></div>
-    </div>
-
-    <!-- ================= VÍDEO DE APRESENTAÇÃO ================= -->
-    <!-- Cole aqui o embed do vídeo (YouTube/Vimeo) dentro de <div class="page2-video-frame">,
-         ou troque por uma tag <video> — o container já mantém a proporção 16:9 automaticamente. -->
-    <div class="page2-video">
-      <div class="page2-video-frame">
-        <!-- <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" title="Vídeo de apresentação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-      </div>
-    </div>
-
-    <!-- ================= ECOSSISTEMA DIÁRIO DO TREINADOR ================= -->
-    <section class="content-panel diario-panel">
-      <div class="diario-header">
-        <div class="diario-logo" id="diario-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="4" width="5.2" height="16" rx="0.8"/><rect x="9.5" y="4" width="5.2" height="16" rx="0.8"/><path d="M16.4 5.2l4.1-0.9 2.8 14.7-4.1 0.9z" stroke-linejoin="round"/></svg></div>
-        <div>
-          <span class="diario-eyebrow" id="diario-eyebrow">Ecossistema</span>
-          <span class="diario-title" id="grupo2-titulo"></span>
-          <p class="diario-slogan" id="grupo2-slogan"></p>
+        <div class="idiomas" role="group" aria-label="Idioma">
+          <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
         </div>
       </div>
 
-      <div class="brand-strip" aria-hidden="true">
-        <div class="brand-track" id="brand-track"></div>
+      <div class="palco">
+        <img class="palco-foto" src="gabriel-hero.jpg" width="2000" height="1333" alt="Gabriel Bussinger durante uma palestra" />
       </div>
 
-      <div class="brand-carousel" aria-hidden="true">
-        <div class="brand-carousel-track" id="brand-carousel-track"></div>
+      <div class="identidade">
+        <span class="marca-eco" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+            <rect x="3" y="3.6" width="5.4" height="16.8" rx="1"/>
+            <rect x="9.3" y="3.6" width="5.4" height="16.8" rx="1"/>
+            <path d="M16.6 5.1l4.2-.9 2.4 15.3-4.2.9z"/>
+          </svg>
+        </span>
+
+        <h1 class="eco-titulo" data-i18n="ecoTitulo">Diário do Treinador</h1>
+        <p class="slogan" data-i18n="ecoSlogan">Formando e desenvolvendo integralmente profissionais que trabalham no futebol.</p>
+
+        <div class="esteira esteira-marcas">
+          <div class="esteira-trilho">
+            <img src="marcas/marca-mentoria.png" alt="Mentoria Diário do Treinador" loading="lazy" />
+            <img src="marcas/marca-bestsellers.png" alt="Best Sellers Aplicados ao Futebol" loading="lazy" />
+            <img src="marcas/marca-podcast.png" alt="Podcast Diário do Treinador" loading="lazy" />
+            <img src="marcas/marca-comunidade.png" alt="Comunidade Diário do Treinador" loading="lazy" />
+            <img src="marcas/marca-mentoria.png" alt="" aria-hidden="true" loading="lazy" />
+            <img src="marcas/marca-bestsellers.png" alt="" aria-hidden="true" loading="lazy" />
+            <img src="marcas/marca-podcast.png" alt="" aria-hidden="true" loading="lazy" />
+            <img src="marcas/marca-comunidade.png" alt="" aria-hidden="true" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="faixa corpo">
+
+    <!-- ============ MENTORIA ============ -->
+    <section class="banner">
+      <div class="campo" aria-hidden="true">
+        <svg class="campo-area esq" viewBox="0 0 84 162" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M0 1H67V161H0"/>
+          <path d="M0 44.4H23V117.6H0"/>
+          <path d="M67 51.3A37 37 0 0 1 67 110.7"/>
+          <circle cx="45" cy="81" r="1.8" fill="currentColor" stroke="none"/>
+        </svg>
+
+        <span class="campo-meio"></span>
+
+        <svg class="campo-circulo" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="40" cy="40" r="38"/>
+          <circle cx="40" cy="40" r="1.8" fill="currentColor" stroke="none"/>
+        </svg>
+
+        <svg class="campo-area dir" viewBox="0 0 84 162" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M0 1H67V161H0"/>
+          <path d="M0 44.4H23V117.6H0"/>
+          <path d="M67 51.3A37 37 0 0 1 67 110.7"/>
+          <circle cx="45" cy="81" r="1.8" fill="currentColor" stroke="none"/>
+        </svg>
       </div>
 
-      <ul class="link-list" id="grupo2-lista"></ul>
+      <ul class="selos">
+        <li class="selo selo-solido" data-i18n="mentoriaBadge">Temporada 2026</li>
+        <li class="selo selo-vazado" data-i18n="mentoriaStatus">Inscrições abertas</li>
+      </ul>
+
+      <h2 class="titulo-produto">
+        <strong data-i18n="mentoriaMarca1">Mentoria</strong>
+        <span data-i18n="mentoriaMarca2">Diário do Treinador</span>
+      </h2>
+      <p class="banner-lema" data-i18n="mentoriaTitulo">Conheça, aplique e transforme</p>
+
+      <div class="esteira esteira-pilares">
+        <ul class="esteira-trilho pilares">
+          <li class="pilar" data-i18n="pilar1">Mindset</li>
+          <li class="pilar" data-i18n="pilar2">Desenvolvimento profissional</li>
+          <li class="pilar" data-i18n="pilar3">Desenvolvimento pessoal</li>
+          <li class="pilar" data-i18n="pilar4">Leitura</li>
+          <li class="pilar" data-i18n="pilar5">Network</li>
+          <li class="pilar" data-i18n="pilar6">Autoconhecimento</li>
+          <li class="pilar" aria-hidden="true" data-i18n="pilar1">Mindset</li>
+          <li class="pilar" aria-hidden="true" data-i18n="pilar2">Desenvolvimento profissional</li>
+          <li class="pilar" aria-hidden="true" data-i18n="pilar3">Desenvolvimento pessoal</li>
+          <li class="pilar" aria-hidden="true" data-i18n="pilar4">Leitura</li>
+          <li class="pilar" aria-hidden="true" data-i18n="pilar5">Network</li>
+          <li class="pilar" aria-hidden="true" data-i18n="pilar6">Autoconhecimento</li>
+        </ul>
+      </div>
+
+      <p data-i18n="mentoriaDesc">Desenvolvimento profissional e pessoal para treinadores e profissionais do futebol.</p>
+      <a class="botao-mint" href="mentoria.html" data-i18n="mentoriaCta">Conhecer a mentoria</a>
     </section>
 
-    <footer class="site-footer">
-      <strong id="footer-nome"></strong>
-      <div class="footer-social" id="footer-social"></div>
-      <span id="footer-ecossistema"></span>
-      <span id="footer-dev"></span>
-    </footer>
+    <div class="meio-campo" aria-hidden="true"></div>
 
-  </main>
+    <!-- ============ BEST SELLERS ============ -->
+    <section class="secao">
+      <ul class="selos">
+        <li class="selo selo-solido" data-i18n="bsBadge">Cursos on-line</li>
+        <li class="selo selo-vazado" data-i18n="bsAutor">Com Gabriel Bussinger</li>
+      </ul>
 
-  <script src="data/links.js?v=2"></script>
-  <script src="js/icons.js?v=2"></script>
-  <script src="js/main.js?v=2"></script>
+      <h2 class="secao-titulo titulo-produto">
+        <strong data-i18n="bs1">Best Sellers</strong>
+        <span class="destaque" data-i18n="bs2">Aplicados ao Futebol</span>
+      </h2>
+      <p class="secao-resumo" data-i18n="bsResumo">Os insights de grandes mentes da literatura mundial, traduzidos para o dia a dia de quem trabalha no futebol.</p>
+
+      <div class="esteira esteira-livros">
+        <div class="esteira-trilho">
+        <article class="livro">
+          <img src="livros/capa-7habitos.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro1">Os 7 Hábitos das Pessoas Altamente Eficazes</b>
+          <span>Stephen R. Covey</span>
+        </article>
+        <article class="livro">
+          <img src="livros/capa-poderdaacao.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro2">O Poder da Ação</b>
+          <span>Paulo Vieira</span>
+        </article>
+        <article class="livro">
+          <img src="livros/capa-mindset.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro3">Mindset</b>
+          <span>Carol S. Dweck</span>
+        </article>
+        <article class="livro">
+          <img src="livros/capa-coragemimperfeito.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro4">A Coragem de Ser Imperfeito</b>
+          <span>Brené Brown</span>
+        </article>
+        <article class="livro">
+          <img src="livros/capa-comecepeloporque.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro5">Comece pelo Porquê</b>
+          <span>Simon Sinek</span>
+        </article>
+        <article class="livro">
+          <img src="livros/capa-comofazeramigos.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro6">Como Fazer Amigos e Influenciar Pessoas</b>
+          <span>Dale Carnegie</span>
+        </article>
+        <article class="livro">
+          <img src="livros/capa-mongeexecutivo.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro7">O Monge e o Executivo</b>
+          <span>James C. Hunter</span>
+        </article>
+        <article class="livro" aria-hidden="true">
+          <img src="livros/capa-7habitos.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro1">Os 7 Hábitos das Pessoas Altamente Eficazes</b>
+          <span>Stephen R. Covey</span>
+        </article>
+        <article class="livro" aria-hidden="true">
+          <img src="livros/capa-poderdaacao.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro2">O Poder da Ação</b>
+          <span>Paulo Vieira</span>
+        </article>
+        <article class="livro" aria-hidden="true">
+          <img src="livros/capa-mindset.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro3">Mindset</b>
+          <span>Carol S. Dweck</span>
+        </article>
+        <article class="livro" aria-hidden="true">
+          <img src="livros/capa-coragemimperfeito.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro4">A Coragem de Ser Imperfeito</b>
+          <span>Brené Brown</span>
+        </article>
+        <article class="livro" aria-hidden="true">
+          <img src="livros/capa-comecepeloporque.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro5">Comece pelo Porquê</b>
+          <span>Simon Sinek</span>
+        </article>
+        <article class="livro" aria-hidden="true">
+          <img src="livros/capa-comofazeramigos.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro6">Como Fazer Amigos e Influenciar Pessoas</b>
+          <span>Dale Carnegie</span>
+        </article>
+        <article class="livro" aria-hidden="true">
+          <img src="livros/capa-mongeexecutivo.jpg" width="169" height="240" alt="" loading="lazy" />
+          <b data-i18n="livro7">O Monge e o Executivo</b>
+          <span>James C. Hunter</span>
+        </article>
+        </div>
+      </div>
+
+      <a class="botao-inscrever" href="bestsellers.html" data-i18n="bsCta">Ver os cursos</a>
+    </section>
+
+    <div class="meio-campo" aria-hidden="true"></div>
+
+    <!-- ============ CANAIS ============ -->
+    <section class="secao">
+      <h2 class="secao-titulo"><span data-i18n="canais1">Canais do</span> <span class="destaque" data-i18n="canais2">ecossistema</span></h2>
+      <p class="secao-resumo" data-i18n="canaisResumo">Onde a formação continua fora dos cursos.</p>
+
+      <ul class="links links-duplo">
+        <li>
+          <a class="link" href="https://www.youtube.com/@gabrielbussinger3386" target="_blank" rel="noopener">
+            <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 00-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.84.43A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.76 1.77C5.75 19 12 19 12 19s6.25 0 7.84-.43a2.5 2.5 0 001.76-1.77C22 15.2 22 12 22 12s0-3.2-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg></span>
+            <span class="link-texto">
+              <strong class="link-titulo" data-i18n="ytTitulo">Canal do YouTube</strong>
+              <small class="link-desc" data-i18n="ytDesc">Palestras, podcasts e conteúdos aprofundados.</small>
+            </span>
+            <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="link" href="https://chat.whatsapp.com/Gy7ilSwjdTG2no4LeDbzgm" target="_blank" rel="noopener">
+            <span class="tile tile-teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 016.988 2.896 9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.549 4.142 1.595 5.945L0 24l6.305-1.654a11.94 11.94 0 005.71 1.454h.005c6.585 0 11.946-5.36 11.949-11.945a11.87 11.87 0 00-3.495-8.406"/></svg></span>
+            <span class="link-texto">
+              <strong class="link-titulo" data-i18n="waTitulo">Grupo aberto no WhatsApp</strong>
+              <small class="link-desc" data-i18n="waDesc">A comunidade do Diário do Treinador.</small>
+            </span>
+            <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="link" href="https://wa.me/5551991736138" target="_blank" rel="noopener">
+            <span class="tile tile-navy" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="2.6" y="13" width="4.4" height="6" rx="2"/><rect x="17" y="13" width="4.4" height="6" rx="2"/><path d="M19.2 19v.6a2.6 2.6 0 01-2.6 2.6H13"/></svg></span>
+            <span class="link-texto">
+              <strong class="link-titulo" data-i18n="supTitulo">Suporte</strong>
+              <small class="link-desc" data-i18n="supDesc">Dúvida ou problema? Chame e vamos resolver.</small>
+            </span>
+            <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+
+        <li>
+          <div class="link indisponivel">
+            <span class="tile tile-navy" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 19.5c.6-3.3 3.1-5.2 6.2-5.2s5.6 1.9 6.2 5.2"/><path d="M16.2 5.2a3.4 3.4 0 010 6.6M18 14.6c2.1.6 3.4 2.3 3.8 4.9"/></svg></span>
+            <span class="link-texto">
+              <strong class="link-titulo" data-i18n="bancoTitulo">Banco de Profissionais</strong>
+              <small class="link-desc" data-i18n="bancoDesc">Profissionais formados pela metodologia. Em breve.</small>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="faixa rodape">
+    <img class="assinatura-rodape" src="assinatura-gabriel.png" width="726" height="300" alt="Gabriel Bussinger" />
+
+    <div class="sociais">
+      <a class="social" href="https://www.linkedin.com/in/gabriel-bussinger-66132370/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg></a>
+      <a class="social" href="https://www.instagram.com/gabrielbussinger/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social" href="https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o" target="_blank" rel="noopener" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.6 14.4a.78.78 0 01-1.07.26c-2.93-1.79-6.62-2.2-10.97-1.2a.78.78 0 11-.35-1.52c4.76-1.09 8.84-.62 12.13 1.39.37.22.49.7.26 1.07zm1.23-2.75a.97.97 0 01-1.34.32c-3.35-2.06-8.46-2.66-12.42-1.45a.97.97 0 11-.57-1.86c4.53-1.38 10.16-.71 14 1.65.46.28.6.88.33 1.34zm.11-2.86C14.92 8.4 8.72 8.2 5.28 9.24a1.17 1.17 0 11-.68-2.24C8.55 5.8 15.4 6.04 19.4 8.41a1.17 1.17 0 01-1.2 2.01c-.09-.05-.17-.1-.26-.15z"/></svg></a>
+      <a class="social" href="mailto:gabrieltreinador33@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.8 6.8L12 13l8.2-6.2"/></svg></a>
+    </div>
+
+    <p class="creditos">
+      <span data-i18n="ecoRodape">Ecossistema Diário do Treinador</span><br>
+      <span data-i18n="feitoPor">Feito por</span>
+      <a href="https://wa.me/5551991736138?text=Ol%C3%A1%20Luis%2C%20gostaria%20de%20saber%20sobre%20seus%20servi%C3%A7os" target="_blank" rel="noopener">Sttudio11WD</a>
+    </p>
+  </footer>
+
+</main>
+
+<script>
+  var TEXTOS = {
+    pt: {
+      voltar:"Voltar",
+      ecoTitulo:"Diário do Treinador",
+      ecoSlogan:"Formando e desenvolvendo integralmente profissionais que trabalham no futebol.",
+      pilar1:"Mindset", pilar2:"Desenvolvimento profissional", pilar3:"Desenvolvimento pessoal",
+      pilar4:"Leitura", pilar5:"Network", pilar6:"Autoconhecimento",
+      mentoriaBadge:"Temporada 2026",
+      mentoriaStatus:"Inscrições abertas",
+      mentoriaMarca1:"Mentoria",
+      mentoriaMarca2:"Diário do Treinador",
+      bs1:"Best Sellers",
+      bs2:"Aplicados ao Futebol",
+      mentoriaCta:"Conhecer a mentoria",
+      bsCta:"Ver os cursos",
+      mentoriaTitulo:"Conheça, aplique e transforme",
+      mentoriaDesc:"Desenvolvimento profissional e pessoal para treinadores e profissionais do futebol.",
+      bsBadge:"Cursos on-line",
+      bsAutor:"Com Gabriel Bussinger",
+      bsResumo:"Os insights de grandes mentes da literatura mundial, traduzidos para o dia a dia de quem trabalha no futebol.",
+      livro1:"Os 7 Hábitos das Pessoas Altamente Eficazes",
+      livro2:"O Poder da Ação",
+      livro3:"Mindset",
+      livro4:"A Coragem de Ser Imperfeito",
+      livro5:"Comece pelo Porquê",
+      livro6:"Como Fazer Amigos e Influenciar Pessoas",
+      livro7:"O Monge e o Executivo",
+      canais1:"Canais do", canais2:"ecossistema",
+      canaisResumo:"Onde a formação continua fora dos cursos.",
+      ytTitulo:"Canal do YouTube",
+      ytDesc:"Palestras, podcasts e conteúdos aprofundados.",
+      waTitulo:"Grupo aberto no WhatsApp",
+      waDesc:"A comunidade do Diário do Treinador.",
+      supTitulo:"Suporte",
+      supDesc:"Dúvida ou problema? Chame e vamos resolver.",
+      bancoTitulo:"Banco de Profissionais",
+      bancoDesc:"Profissionais formados pela metodologia. Em breve.",
+      ecoRodape:"Ecossistema Diário do Treinador",
+      feitoPor:"Feito por"
+    },
+    en: {
+      voltar:"Back",
+      ecoTitulo:"Coach's Diary",
+      ecoSlogan:"Fully training and developing professionals who work in football.",
+      pilar1:"Mindset", pilar2:"Professional development", pilar3:"Personal development",
+      pilar4:"Reading", pilar5:"Network", pilar6:"Self-knowledge",
+      mentoriaBadge:"2026 Season",
+      mentoriaStatus:"Enrollment open",
+      mentoriaMarca1:"Mentorship",
+      mentoriaMarca2:"Coach's Diary",
+      bs1:"Best Sellers",
+      bs2:"Applied to Football",
+      mentoriaCta:"See the mentorship",
+      bsCta:"See the courses",
+      mentoriaTitulo:"Learn it, apply it, transform",
+      mentoriaDesc:"Professional and personal development for coaches and football professionals.",
+      bsBadge:"Online courses",
+      bsAutor:"With Gabriel Bussinger",
+      bsResumo:"Insights from great minds of world literature, translated into the daily work of football.",
+      livro1:"The 7 Habits of Highly Effective People",
+      livro2:"The Power of Action",
+      livro3:"Mindset",
+      livro4:"The Gifts of Imperfection",
+      livro5:"Start With Why",
+      livro6:"How to Win Friends and Influence People",
+      livro7:"The Servant",
+      canais1:"Ecosystem", canais2:"channels",
+      canaisResumo:"Where the learning continues outside the courses.",
+      ytTitulo:"YouTube channel",
+      ytDesc:"Talks, podcasts and in-depth content.",
+      waTitulo:"Open WhatsApp group",
+      waDesc:"The Coach's Diary community.",
+      supTitulo:"Support",
+      supDesc:"A question or a problem? Reach out and we'll sort it.",
+      bancoTitulo:"Professional directory",
+      bancoDesc:"Professionals trained through the methodology. Coming soon.",
+      ecoRodape:"Coach's Diary Ecosystem",
+      feitoPor:"Built by"
+    },
+    es: {
+      voltar:"Volver",
+      ecoTitulo:"Diario del Entrenador",
+      ecoSlogan:"Formando y desarrollando integralmente a los profesionales que trabajan en el fútbol.",
+      pilar1:"Mentalidad", pilar2:"Desarrollo profesional", pilar3:"Desarrollo personal",
+      pilar4:"Lectura", pilar5:"Red de contactos", pilar6:"Autoconocimiento",
+      mentoriaBadge:"Temporada 2026",
+      mentoriaStatus:"Inscripciones abiertas",
+      mentoriaMarca1:"Mentoría",
+      mentoriaMarca2:"Diario del Entrenador",
+      bs1:"Best Sellers",
+      bs2:"Aplicados al Fútbol",
+      mentoriaCta:"Conocer la mentoría",
+      bsCta:"Ver los cursos",
+      mentoriaTitulo:"Conoce, aplica, transforma",
+      mentoriaDesc:"Desarrollo profesional y personal para entrenadores y profesionales del fútbol.",
+      bsBadge:"Cursos en línea",
+      bsAutor:"Con Gabriel Bussinger",
+      bsResumo:"Los conocimientos de grandes mentes de la literatura mundial, llevados al día a día del fútbol.",
+      livro1:"Los 7 Hábitos de la Gente Altamente Efectiva",
+      livro2:"El Poder de la Acción",
+      livro3:"Mindset",
+      livro4:"Los Dones de la Imperfección",
+      livro5:"Empieza con el Porqué",
+      livro6:"Cómo Ganar Amigos e Influir sobre las Personas",
+      livro7:"El Monje y el Ejecutivo",
+      canais1:"Canales del", canais2:"ecosistema",
+      canaisResumo:"Donde la formación continúa fuera de los cursos.",
+      ytTitulo:"Canal de YouTube",
+      ytDesc:"Charlas, podcasts y contenidos a profundidad.",
+      waTitulo:"Grupo abierto de WhatsApp",
+      waDesc:"La comunidad del Diario del Entrenador.",
+      supTitulo:"Soporte",
+      supDesc:"¿Una duda o un problema? Escríbeme y lo resolvemos.",
+      bancoTitulo:"Banco de Profesionales",
+      bancoDesc:"Profesionales formados con la metodología. Próximamente.",
+      ecoRodape:"Ecosistema Diario del Entrenador",
+      feitoPor:"Desarrollado por"
+    }
+  };
+
+  var LOCALE = { pt:"pt-BR", en:"en", es:"es" };
+
+  function aplicarIdioma(lang){
+    var dic = TEXTOS[lang] || TEXTOS.pt;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var chave = el.getAttribute("data-i18n");
+      if (dic[chave]) el.textContent = dic[chave];
+    });
+    document.documentElement.lang = LOCALE[lang] || "pt-BR";
+    document.querySelectorAll(".idiomas button").forEach(function(b){
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem("gb-idioma", lang); } catch (e) {}
+  }
+
+  document.querySelectorAll(".idiomas button").forEach(function(b){
+    b.addEventListener("click", function(){ aplicarIdioma(b.dataset.lang); });
+  });
+
+  (function(){
+    var salvo = null;
+    try { salvo = localStorage.getItem("gb-idioma"); } catch (e) {}
+    if (salvo && TEXTOS[salvo]) aplicarIdioma(salvo);
+  })();
+</script>
+
 </body>
 </html>

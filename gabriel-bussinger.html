@@ -1,141 +1,1114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#14ffe3" />
-<title>Gabriel Bussinger | Diário do Treinador</title>
-<meta name="description" content="Gabriel Bussinger — Coordenador Técnico Geral, instrutor CONMEBOL/CBF e idealizador do Ecossistema Diário do Treinador. Mentoria, cursos e conteúdos para treinadores de futebol." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#001424">
+<title>Gabriel Bussinger — treinador, instrutor CONMEBOL/CBF e mentor</title>
+<meta name="description" content="Formação, palestras e mentoria para treinadores de futebol. Conheça o trabalho de Gabriel Bussinger e entre no ecossistema Diário do Treinador.">
+<link rel="canonical" href="https://www.diariodotreinador.com.br/gabriel-bussinger.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png" />
-<link rel="icon" type="image/png" sizes="256x256" href="images/favicon.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-
-<!-- Compartilhamento (WhatsApp, Instagram, Facebook, etc.) -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Diário do Treinador" />
-<meta property="og:title" content="Gabriel Bussinger | Diário do Treinador" />
-<meta property="og:description" content="Educação, evolução e desenvolvimento integral de treinadores e profissionais do futebol. Mentoria, cursos e conteúdos com Gabriel Bussinger." />
-<meta property="og:image" content="https://diariodotreinador.com.br/images/og-share.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://diariodotreinador.com.br/gabriel-bussinger.html" />
-<meta property="og:locale" content="pt_BR" />
-
-<!-- Compartilhamento (X/Twitter) -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Gabriel Bussinger | Diário do Treinador" />
-<meta name="twitter:description" content="Educação, evolução e desenvolvimento integral de treinadores e profissionais do futebol." />
-<meta name="twitter:image" content="https://diariodotreinador.com.br/gabriel-bussinger.htmlimages/og-share.jpg" />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Diário do Treinador">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Gabriel Bussinger — treinador, instrutor CONMEBOL/CBF e mentor">
+<meta property="og:description" content="Formação, palestras e mentoria para treinadores de futebol. Conheça o trabalho de Gabriel Bussinger e entre no ecossistema Diário do Treinador.">
+<meta property="og:url" content="https://www.diariodotreinador.com.br/gabriel-bussinger.html">
+<meta property="og:image" content="https://www.diariodotreinador.com.br/gabriel-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
 
-<link rel="stylesheet" href="css/style.css?v=2" />
+<style>
+  :root{
+    /* paleta — versão escura */
+    --mint:#36ECDE;
+    --mint-12:rgba(54,236,222,.10);
+    --mint-24:rgba(54,236,222,.18);
+    --teal:#36ECDE;          /* no escuro o mint puro já passa em contraste */
+    --ink:#E6E9EC;           /* tinta clara sobre fundo navy */
+    --ink-65:rgba(230,233,236,.72);
+    --ink-45:rgba(230,233,236,.55);
+    --paper:#001424;         /* fundo da página */
+    --card:#00203F;          /* Core Navy vira a superfície dos cards */
+    --borda:rgba(54,236,222,.16);
+    --borda-forte:rgba(54,236,222,.38);
+    --sombra:0 1px 3px rgba(0,0,0,.35);
+    --sombra-alta:0 14px 34px rgba(0,0,0,.45);
+    --brilho:0 14px 30px rgba(0,0,0,.45),0 0 0 1px rgba(54,236,222,.05);
+
+    /* gradientes — luz vinda de cima à esquerda, como no palco */
+    --g-card:linear-gradient(176deg,#0A2F52,#00203F 58%);
+    --g-card-alto:linear-gradient(176deg,#0D3459,#00203F 62%);
+    --g-borda:linear-gradient(155deg,rgba(54,236,222,.40),rgba(54,236,222,.05) 46%,rgba(54,236,222,.16));
+    --g-borda-fraca:linear-gradient(150deg,rgba(54,236,222,.26),rgba(54,236,222,.04));
+    --g-borda-forte:linear-gradient(150deg,rgba(54,236,222,.68),rgba(54,236,222,.12));
+    --g-mint:linear-gradient(100deg,#36ECDE,#8AF2E9);
+
+    /* tipo */
+    --display:"Outfit","Helvetica Neue",Arial,sans-serif;
+    --corpo:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif;
+
+    /* medidas */
+    --wrap:900px;
+    --gutter:18px;
+    --r-secao:26px;
+    --r-cartao:16px;
+    --r-tile:13px;
+  }
+
+  *{box-sizing:border-box}
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    pointer-events:none;
+    background:
+      radial-gradient(58% 38% at 10% 2%, rgba(54,236,222,.16), transparent 62%),
+      radial-gradient(46% 32% at 94% 24%, rgba(54,236,222,.09), transparent 64%),
+      radial-gradient(74% 42% at 50% 104%, rgba(54,236,222,.08), transparent 62%);
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--corpo);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit}
+  img,video{max-width:100%}
+
+  h1,h2,h3{
+    font-family:var(--display);
+    font-weight:600;
+    letter-spacing:-.018em;
+    line-height:1.12;
+    text-wrap:balance;
+    margin:0;
+  }
+
+  .destaque{color:var(--mint)}
+  @supports (-webkit-background-clip:text) or (background-clip:text){
+    .destaque{
+      background:linear-gradient(94deg,#36ECDE,#A6F6EF 52%,#36ECDE);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+  }
+
+  :focus-visible{
+    outline:3px solid var(--teal);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  .faixa{
+    width:100%;
+    max-width:var(--wrap);
+    margin-inline:auto;
+    padding-inline:var(--gutter);
+  }
+
+  /* ===================== TOPO COM VÍDEO ===================== */
+
+  .topo{
+    position:relative;
+    isolation:isolate;
+    padding-block:16px 0;
+  }
+
+  /* aurora mint atrás do vídeo */
+  .topo::before{
+    content:"";
+    position:absolute;
+    inset:0 0 34% 0;
+    z-index:-1;
+    background:
+      radial-gradient(72% 92% at 16% 2%, rgba(54,236,222,.24), transparent 64%),
+      radial-gradient(60% 78% at 90% 0%, rgba(54,236,222,.13), transparent 68%),
+      linear-gradient(180deg,#00395F,#002542 42%,var(--paper) 88%);
+  }
+
+  .barra-idiomas{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:14px;
+  }
+
+  .idiomas{
+    display:inline-flex;
+    gap:3px;
+    background:rgba(0,20,36,.62);
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:3px;
+    backdrop-filter:blur(6px);
+  }
+
+  .idiomas button{
+    font-family:var(--corpo);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.06em;
+    color:var(--ink-65);
+    background:transparent;
+    border:0;
+    border-radius:99px;
+    padding:6px 13px;
+    line-height:1;
+    cursor:pointer;
+    transition:background .16s ease,color .16s ease;
+  }
+  .idiomas button:hover{background:rgba(255,255,255,.08);color:var(--ink)}
+  .idiomas button[aria-pressed="true"]{background:var(--g-mint);color:#00203F}
+
+  .palco{
+    position:relative;
+    border-radius:var(--r-secao);
+    overflow:hidden;
+    background:#00203F padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+    box-shadow:var(--sombra-alta);
+    aspect-ratio:4/3;
+  }
+  @media (min-width:560px){
+    .palco{aspect-ratio:16/9}
+  }
+  .palco video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* cartão de identidade sobreposto ao vídeo */
+  .identidade{
+    position:relative;
+    z-index:2;
+    margin:-54px auto 0;
+    max-width:660px;
+    background:var(--g-card-alto) padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-secao);
+    box-shadow:var(--sombra-alta);
+    padding:0 24px 28px;
+    text-align:center;
+  }
+
+  .retrato{
+    width:96px;
+    height:96px;
+    border-radius:50%;
+    display:block;
+    margin:-48px auto 0;
+    border:4px solid var(--card);
+    background:#00203F;
+    box-shadow:0 0 0 2px var(--mint);
+  }
+
+  .assinatura{
+    display:block;
+    width:min(280px,80%);
+    height:auto;
+    margin:14px auto 0;
+  }
+
+  .slogan{
+    margin:12px auto 0;
+    max-width:40ch;
+    color:var(--ink-65);
+    font-size:15.5px;
+  }
+
+  /* ===================== CORPO ===================== */
+
+  .corpo{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding-block:24px 34px;
+  }
+
+  .secao{
+    background:var(--g-card) padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-secao);
+    box-shadow:var(--sombra);
+    padding:26px 20px;
+  }
+
+  .secao-titulo{
+    font-size:clamp(21px,4.6vw,26px);
+    text-align:center;
+  }
+
+  .secao-resumo{
+    margin:8px auto 0;
+    max-width:44ch;
+    text-align:center;
+    color:var(--ink-45);
+    font-size:14.5px;
+  }
+
+  /* --- faixa de credenciais --- */
+
+  .credenciais{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+  }
+
+  .credencial{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:8px;
+  }
+
+  .tile{
+    width:46px;
+    height:46px;
+    border-radius:var(--r-tile);
+    display:grid;
+    place-items:center;
+    flex:none;
+  }
+  .tile svg{width:22px;height:22px;display:block}
+  .tile-mint{background:linear-gradient(145deg,rgba(54,236,222,.28),rgba(54,236,222,.07));color:var(--mint)}
+  .tile-teal{background:linear-gradient(145deg,rgba(54,236,222,.18),rgba(54,236,222,.04));color:var(--mint)}
+  .tile-navy{background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.03));color:var(--ink)}
+
+  .credencial b{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15px;
+    line-height:1.2;
+  }
+  .credencial span{
+    color:var(--ink-45);
+    font-size:13px;
+    line-height:1.35;
+  }
+
+  @media (min-width:680px){
+    .credenciais{grid-template-columns:repeat(4,minmax(0,1fr))}
+  }
+
+  /* --- listas de links --- */
+
+  .links{
+    list-style:none;
+    margin:20px 0 0;
+    padding:0;
+    display:grid;
+    gap:12px;
+  }
+
+  @media (min-width:680px){
+    .links-duplo{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+
+  .link{
+    display:flex;
+    align-items:flex-start;
+    gap:13px;
+    height:100%;
+    background:var(--g-card) padding-box,var(--g-borda-fraca) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-cartao);
+    padding:15px 16px;
+    text-decoration:none;
+    transition:box-shadow .18s ease,transform .18s ease;
+  }
+  .link:hover{
+    background:var(--g-card-alto) padding-box,var(--g-borda-forte) border-box;
+    box-shadow:var(--brilho);
+    transform:translateY(-2px);
+  }
+
+  .link-texto{flex:1;min-width:0}
+
+  .link-titulo{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:16px;
+    line-height:1.25;
+  }
+
+  .link-desc{
+    display:block;
+    margin-top:3px;
+    color:var(--ink-45);
+    font-size:13.5px;
+    line-height:1.45;
+  }
+
+  .seta{
+    flex:none;
+    width:17px;
+    height:17px;
+    margin-top:3px;
+    color:var(--ink-45);
+    transition:transform .18s ease,color .18s ease;
+  }
+  .link:hover .seta{color:var(--teal);transform:translate(2px,-2px)}
+
+  /* --- agenda --- */
+
+  .evento{
+    margin-top:20px;
+    border:1px solid transparent;
+    border-radius:var(--r-cartao);
+    padding:16px;
+    background:
+      linear-gradient(168deg,rgba(54,236,222,.14),rgba(0,32,63,0) 54%) padding-box,
+      var(--g-card-alto) padding-box,
+      var(--g-borda) border-box;
+  }
+
+  .evento-topo{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+  }
+
+  .data{
+    flex:none;
+    width:60px;
+    background:linear-gradient(170deg,rgba(255,255,255,.13),rgba(255,255,255,.03));
+    border:1px solid var(--borda);
+    border-radius:var(--r-tile);
+    padding:9px 0 8px;
+    text-align:center;
+  }
+  .data .dia{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:26px;
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .data .mes{
+    display:block;
+    margin-top:3px;
+    color:var(--teal);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.09em;
+  }
+
+  .evento-tema{
+    font-size:18px;
+    margin:0;
+  }
+  .evento-local{
+    margin:4px 0 0;
+    color:var(--ink-45);
+    font-size:14px;
+  }
+
+  .detalhes{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:13px 0 0;
+    padding:0;
+  }
+  .detalhe{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    background:linear-gradient(170deg,rgba(255,255,255,.09),rgba(255,255,255,.02));
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:5px 11px;
+    font-size:12.5px;
+    color:var(--ink-65);
+    white-space:nowrap;
+  }
+  .detalhe svg{width:13px;height:13px;flex:none;color:var(--ink-45)}
+
+  .botao-inscrever{
+    display:block;
+    margin-top:15px;
+    background:var(--g-mint);
+    color:#00203F;
+    box-shadow:0 8px 22px rgba(54,236,222,.18);
+    text-align:center;
+    text-decoration:none;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15px;
+    padding:13px 18px;
+    border-radius:99px;
+    transition:opacity .18s ease,transform .18s ease;
+  }
+  .botao-inscrever:hover{opacity:.9;transform:translateY(-1px)}
+
+  /* --- banner final --- */
+
+  .banner{
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+    border-radius:var(--r-secao);
+    background:
+      radial-gradient(76% 130% at 8% -6%, rgba(255,255,255,.5), transparent 56%),
+      linear-gradient(118deg,#12CFC2 2%,#36ECDE 36%,#7BEFE5 70%,#B6F8F2 100%);
+    color:#00203F;
+    padding:34px 22px 32px;
+    text-align:center;
+  }
+
+  /* campo visto de cima: grande área em cada extremidade,
+     círculo central no meio, cortado pela linha do meio-campo */
+  .campo{
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    color:#00203F;
+    opacity:.2;
+    pointer-events:none;
+  }
+
+  /* mantém a espessura das linhas igual nos dois SVGs, que têm escalas diferentes */
+  .campo svg *{vector-effect:non-scaling-stroke}
+
+  /* mobile: campo na vertical — áreas em cima e embaixo.
+     o deslocamento de 24.07% = (altura-largura)/2·altura da caixa antes de girar,
+     que é o que encosta a linha de fundo na borda depois do rotate. */
+  .campo-area{
+    position:absolute;
+    left:50%;
+    width:26%;
+    height:auto;
+    aspect-ratio:84/162;
+  }
+  .campo-area.esq{top:0;translate:-50% -24.07%;rotate:90deg}
+  .campo-area.dir{bottom:0;translate:-50% 24.07%;rotate:-90deg}
+
+  .campo-meio{
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+    height:1.5px;
+    margin-top:-.75px;
+    background:currentColor;
+  }
+
+  .campo-circulo{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:40%;
+    height:auto;
+    aspect-ratio:1;
+    translate:-50% -50%;
+  }
+
+  /* desktop: campo na horizontal — áreas nas duas extremidades */
+  @media (min-width:560px){
+    .campo-area{left:auto;width:auto;height:80%}
+    .campo-area.esq{left:0;top:50%;translate:0 -50%;rotate:none}
+    .campo-area.dir{right:0;bottom:auto;top:50%;translate:0 -50%;rotate:none;scale:-1 1}
+
+    .campo-meio{
+      left:50%;
+      right:auto;
+      top:0;
+      bottom:0;
+      width:1.5px;
+      height:auto;
+      margin-top:0;
+      margin-left:-.75px;
+    }
+
+    .campo-circulo{width:auto;height:54%}
+  }
+
+  .banner-marca{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(17px,3.6vw,20px);
+    letter-spacing:-.01em;
+    margin:0 0 6px;
+    color:#00203F;
+  }
+
+  .banner h2{
+    font-size:clamp(23px,5.4vw,31px);
+    max-width:19ch;
+    margin-inline:auto;
+  }
+
+  .banner p{
+    margin:11px auto 0;
+    max-width:46ch;
+    color:rgba(0,32,63,.76);
+    font-size:15px;
+  }
+
+  .botao-mint{
+    display:inline-block;
+    margin-top:22px;
+    background:#00203F;
+    color:var(--mint);
+    text-decoration:none;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:16px;
+    padding:14px 30px;
+    border-radius:99px;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .botao-mint:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 24px rgba(0,32,63,.3);
+  }
+
+  /* --- rodapé --- */
+
+  .rodape{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    text-align:center;
+    padding-block:6px 34px;
+  }
+
+  .assinatura-rodape{width:min(200px,58%);height:auto;display:block;opacity:.85}
+
+  .sociais{display:flex;gap:9px}
+
+  .social{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:var(--card);
+    border:1px solid var(--borda);
+    color:var(--ink);
+    display:grid;
+    place-items:center;
+    transition:background .18s ease,color .18s ease,transform .18s ease;
+  }
+  .social svg{width:17px;height:17px;display:block}
+  .social:hover{background:var(--g-mint);color:#00203F;transform:translateY(-2px)}
+
+  .creditos{
+    font-size:13px;
+    color:var(--ink-45);
+    line-height:1.7;
+    margin:0;
+  }
+  .creditos a{color:var(--teal);font-weight:700;text-decoration:none}
+  .creditos a:hover{text-decoration:underline}
+
+  /* ===================== AJUSTE FINO DE MOBILE =====================
+     mesma composição, tudo um passo menor: tipo, respiro, tiles e raios */
+  @media (max-width:559px){
+    :root{
+      --r-secao:20px;
+      --r-cartao:13px;
+      --r-tile:11px;
+      --gutter:16px;
+    }
+
+    .corpo{gap:14px;padding-block:18px 26px}
+    .secao{padding:20px 15px}
+    .secao-titulo{font-size:19.5px}
+    .secao-resumo{margin-top:6px;font-size:13.5px}
+
+    /* identidade */
+    .identidade{margin-top:-44px;padding:0 18px 22px}
+    .retrato{width:80px;height:80px;margin-top:-40px;border-width:3px}
+    .assinatura{width:min(230px,72%);margin-top:12px}
+    .slogan{margin-top:9px;font-size:14.5px}
+
+    /* credenciais */
+    .credenciais{gap:11px}
+    .credencial{gap:7px}
+    .credencial b{font-size:14px}
+    .credencial span{font-size:12.5px}
+
+    .tile{width:40px;height:40px}
+    .tile svg{width:19px;height:19px}
+
+    /* links */
+    .links{margin-top:16px;gap:10px}
+    .link{gap:11px;padding:12px 13px}
+    .link-titulo{font-size:15px}
+    .link-desc{font-size:13px}
+    .seta{width:16px;height:16px}
+
+    /* agenda */
+    .evento{margin-top:16px;padding:14px}
+    .evento-topo{gap:12px}
+    .data{width:52px;padding:7px 0 6px}
+    .data .dia{font-size:23px}
+    .data .mes{font-size:10.5px}
+    .evento-tema{font-size:16.5px}
+    .evento-local{font-size:13.5px}
+    .detalhes{margin-top:11px;gap:6px}
+    .detalhe{padding:4px 9px;font-size:12px}
+    .botao-inscrever{margin-top:13px;padding:12px 16px;font-size:14.5px}
+
+    /* banner */
+    .banner{padding:26px 16px 24px}
+    .banner-marca{font-size:16px;margin-bottom:4px}
+    .banner h2{font-size:21px}
+    .banner p{margin-top:9px;font-size:14px}
+    .botao-mint{margin-top:18px;padding:13px 24px;font-size:15px}
+
+    /* campo vertical: encolhe junto com o banner */
+    .campo{opacity:.17}
+    .campo-area{width:23%}
+    .campo-circulo{width:36%}
+
+    /* rodapé */
+    .rodape{gap:12px;padding-block:4px 28px}
+    .assinatura-rodape{width:min(170px,52%)}
+    .social{width:36px;height:36px}
+    .social svg{width:16px;height:16px}
+    .creditos{font-size:12.5px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+      animation-duration:.001ms !important;
+      transition-duration:.001ms !important;
+    }
+  }
+
+  /* =====================================================================
+     BREAKPOINTS — mesmo sistema das outras páginas do ecossistema
+     Mobile < 640 · Tablet 640–1023 · Desktop 1024–1439 · Widescreen ≥ 1440
+     ===================================================================== */
+
+  @media (min-width:640px) and (max-width:1023px){
+    :root{ --wrap:720px; --gutter:26px; }
+  }
+  @media (min-width:1024px){
+    :root{ --wrap:940px; --gutter:28px; }
+  }
+  @media (min-width:1440px){
+    :root{ --wrap:1120px; --gutter:34px; }
+  }
+  @media (min-width:1800px){
+    :root{ --wrap:1280px; --gutter:44px; }
+  }
+
+  @media (min-width:1440px){
+    .corpo{gap:26px;padding-block:32px 44px}
+    .secao{padding:34px 28px}
+    .secao-titulo{font-size:clamp(26px,2.2vw,32px)}
+    .secao-resumo{font-size:15.5px}
+    .slogan{font-size:17px}
+
+    .assinatura{width:min(340px,70%)}
+    .retrato{width:116px;height:116px;margin-top:-58px}
+    .identidade{max-width:760px;margin-top:-64px;padding:0 30px 34px}
+
+    .credencial b{font-size:16.5px}
+    .credencial span{font-size:14px}
+
+    .link{padding:18px 20px}
+    .link-titulo{font-size:17px}
+    .link-desc{font-size:14.5px}
+    .tile{width:52px;height:52px}
+    .tile svg{width:24px;height:24px}
+
+    .data{width:68px}
+    .data .dia{font-size:29px}
+    .evento-tema{font-size:20px}
+    .detalhe{font-size:13.5px;padding:6px 13px}
+
+    .banner{padding:44px 30px 40px}
+    .banner h2{font-size:clamp(30px,2.6vw,38px)}
+    .banner p{font-size:16px}
+    .botao-mint{font-size:17px;padding:16px 34px}
+
+    .assinatura-rodape{width:min(240px,56%)}
+    .social{width:44px;height:44px}
+    .social svg{width:19px;height:19px}
+  }
+
+  /* ===================== MEIO-CAMPO: divisória de seções ===================== */
+
+  .secao,
+  .rodape{position:relative;z-index:1}
+
+  .meio-campo{
+    position:relative;
+    z-index:0;
+    height:0;
+    border:0;
+    border-top:1px solid currentColor;
+    color:var(--mint);
+    opacity:.2;
+    margin-block:-6px;
+    pointer-events:none;
+  }
+  .meio-campo::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:124px;
+    height:124px;
+    border:1px solid currentColor;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+  }
+  .meio-campo::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:currentColor;
+    transform:translate(-50%,-50%);
+  }
+  @media (max-width:559px){
+    .meio-campo::after{width:92px;height:92px}
+  }
+  @media (min-width:1440px){
+    .meio-campo::after{width:156px;height:156px}
+  }
+
+</style>
 </head>
 <body>
+<main>
 
-  <div class="flow-bg" aria-hidden="true">
-    <svg class="pitch-svg" viewBox="0 0 800 1200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <rect x="60" y="40" width="680" height="1120" rx="4" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <line x1="60" y1="600" x2="740" y2="600" stroke="currentColor" stroke-width="3.2"/>
-      <circle cx="400" cy="600" r="110" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <circle cx="400" cy="600" r="5" fill="currentColor"/>
-      <!-- área grande superior -->
-      <rect x="220" y="40" width="360" height="180" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <rect x="310" y="40" width="180" height="70" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <path d="M290 220 A110 110 0 0 0 510 220" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <circle cx="400" cy="160" r="5" fill="currentColor"/>
-      <!-- área grande inferior -->
-      <rect x="220" y="980" width="360" height="180" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <rect x="310" y="1090" width="180" height="70" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <path d="M290 980 A110 110 0 0 1 510 980" fill="none" stroke="currentColor" stroke-width="3.2"/>
-      <circle cx="400" cy="1040" r="5" fill="currentColor"/>
-      <!-- escanteios -->
-      <path d="M60 65 A25 25 0 0 0 85 40" fill="none" stroke="currentColor" stroke-width="3"/>
-      <path d="M715 40 A25 25 0 0 0 740 65" fill="none" stroke="currentColor" stroke-width="3"/>
-      <path d="M740 1135 A25 25 0 0 0 715 1160" fill="none" stroke="currentColor" stroke-width="3"/>
-      <path d="M85 1160 A25 25 0 0 0 60 1135" fill="none" stroke="currentColor" stroke-width="3"/>
-    </svg>
-    <div class="pitch-light pitch-light-1"></div>
-    <div class="pitch-light pitch-light-2"></div>
-    <div class="bg-video-overlay"></div>
-    <div class="light-orb light-orb-1"></div>
-    <div class="light-orb light-orb-2"></div>
-    <div class="light-orb light-orb-3"></div>
+  <!-- ============ TOPO: VÍDEO + IDENTIDADE ============ -->
+  <header class="topo">
+    <div class="faixa">
+      <div class="barra-idiomas">
+        <div class="idiomas" role="group" aria-label="Idioma">
+          <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+
+      <div class="palco">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Gabriel Bussinger em palestra">
+          <source src="gabriel-bg.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="identidade">
+        <img class="retrato" src="retrato.png" width="96" height="96" alt="Gabriel Bussinger" />
+        <img class="assinatura" src="assinatura-gabriel.png" width="726" height="300" alt="Gabriel Bussinger" />
+        <p class="slogan" data-i18n="slogan">Formação e desenvolvimento integral de treinadores e profissionais do futebol.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="faixa corpo">
+
+    <!-- ============ CREDENCIAIS ============ -->
+    <section class="secao">
+      <ul class="credenciais">
+        <li class="credencial">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6v3H9z"/><rect x="4" y="5" width="16" height="16" rx="2.5"/><path d="M8.5 12h7M8.5 16h4.5"/></svg></span>
+          <b data-i18n="cred1t">Coordenador Técnico Geral</b>
+          <span data-i18n="cred1d">Vasco da Gama SAF</span>
+        </li>
+        <li class="credencial">
+          <span class="tile tile-teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.2"/><path d="M8.4 13.4L7 21l5-2.4L17 21l-1.4-7.6"/></svg></span>
+          <b data-i18n="cred2t">Instrutor</b>
+          <span data-i18n="cred2d">CONMEBOL e CBF</span>
+        </li>
+        <li class="credencial">
+          <span class="tile tile-navy" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 19.5c.6-3.3 3.1-5.2 6.2-5.2s5.6 1.9 6.2 5.2"/><path d="M16.2 5.2a3.4 3.4 0 010 6.6M18 14.6c2.1.6 3.4 2.3 3.8 4.9"/></svg></span>
+          <b data-i18n="cred3t">Mentor</b>
+          <span data-i18n="cred3d">Profissionais do futebol</span>
+        </li>
+        <li class="credencial">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.6" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21M9 21h6"/></svg></span>
+          <b data-i18n="cred4t">Podcast</b>
+          <span data-i18n="cred4d">Diário do Treinador</span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="meio-campo" aria-hidden="true"></div>
+
+    <!-- ============ ACOMPANHE ============ -->
+    <section class="secao">
+      <h2 class="secao-titulo"><span data-i18n="seguir1">Onde acompanhar o</span> <span class="destaque" data-i18n="seguir2">Diário do Treinador</span></h2>
+      <p class="secao-resumo" data-i18n="seguirResumo">Artigos e podcasts sobre desenvolvimento profissional e pessoal.</p>
+
+      <ul class="links links-duplo">
+        <li>
+          <a class="link" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7462991799133855744" target="_blank" rel="noopener">
+            <span class="tile tile-teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg></span>
+            <span class="link-texto">
+              <strong class="link-titulo" data-i18n="newsTitulo">Assinar a newsletter</strong>
+              <small class="link-desc" data-i18n="newsDesc">Publicada toda semana no LinkedIn.</small>
+            </span>
+            <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="link" href="https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o" target="_blank" rel="noopener">
+            <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.6 14.4a.78.78 0 01-1.07.26c-2.93-1.79-6.62-2.2-10.97-1.2a.78.78 0 11-.35-1.52c4.76-1.09 8.84-.62 12.13 1.39.37.22.49.7.26 1.07zm1.23-2.75a.97.97 0 01-1.34.32c-3.35-2.06-8.46-2.66-12.42-1.45a.97.97 0 11-.57-1.86c4.53-1.38 10.16-.71 14 1.65.46.28.6.88.33 1.34zm.11-2.86C14.92 8.4 8.72 8.2 5.28 9.24a1.17 1.17 0 11-.68-2.24C8.55 5.8 15.4 6.04 19.4 8.41a1.17 1.17 0 01-1.2 2.01c-.09-.05-.17-.1-.26-.15z"/></svg></span>
+            <span class="link-texto">
+              <strong class="link-titulo" data-i18n="podTitulo">Podcast Diário do Treinador</strong>
+              <small class="link-desc" data-i18n="podDesc">Reflexões de um treinador sobre a própria prática.</small>
+            </span>
+            <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="meio-campo" aria-hidden="true"></div>
+
+    <!-- ============ AGENDA ============ -->
+    <section class="secao">
+      <h2 class="secao-titulo"><span data-i18n="agenda1">Próximas</span> <span class="destaque" data-i18n="agenda2">palestras</span></h2>
+      <p class="secao-resumo" data-i18n="agendaResumo">Cursos, congressos e eventos com vagas abertas.</p>
+
+      <article class="evento">
+        <div class="evento-topo">
+          <div class="data">
+            <span class="dia">26</span>
+            <span class="mes" data-i18n="mes">OUT</span>
+          </div>
+          <div>
+            <h3 class="evento-tema" data-i18n="eventoTema">Transição Base-Profissional e Organização Metodológica-Estrutural do Treinamento</h3>
+            <p class="evento-local" data-i18n="eventoLocal">Seminário FGF Conecta — auditório da Federação Gaúcha de Futebol</p>
+          </div>
+        </div>
+
+        <ul class="detalhes">
+          <li class="detalhe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="eventoCidade">Porto Alegre, Brasil</span>
+          </li>
+          <li class="detalhe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span data-i18n="eventoHora">Segunda, 16h às 20h</span>
+          </li>
+          <li class="detalhe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8"/></svg>
+            <span data-i18n="eventoFormato">Presencial</span>
+          </li>
+        </ul>
+
+        <a class="botao-inscrever" href="https://conecta.fgf.com.br" target="_blank" rel="noopener" data-i18n="inscrever">Inscreva-se</a>
+      </article>
+
+      <ul class="links">
+        <li>
+          <a class="link" href="mailto:gabrieltreinador33@gmail.com">
+            <span class="tile tile-navy" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.8 6.8L12 13l8.2-6.2"/></svg></span>
+            <span class="link-texto">
+              <strong class="link-titulo" data-i18n="contatoTitulo">Cursos e Palestras</strong>
+              <small class="link-desc" data-i18n="contatoDesc">Escreva para verificar a disponibilidade de agenda.</small>
+            </span>
+            <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ BANNER ECOSSISTEMA ============ -->
+    <section class="banner">
+      <div class="campo" aria-hidden="true">
+        <svg class="campo-area esq" viewBox="0 0 84 162" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M0 1H67V161H0"/>
+          <path d="M0 44.4H23V117.6H0"/>
+          <path d="M67 51.3A37 37 0 0 1 67 110.7"/>
+          <circle cx="45" cy="81" r="1.8" fill="currentColor" stroke="none"/>
+        </svg>
+
+        <span class="campo-meio"></span>
+
+        <svg class="campo-circulo" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="40" cy="40" r="38"/>
+          <circle cx="40" cy="40" r="1.8" fill="currentColor" stroke="none"/>
+        </svg>
+
+        <svg class="campo-area dir" viewBox="0 0 84 162" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M0 1H67V161H0"/>
+          <path d="M0 44.4H23V117.6H0"/>
+          <path d="M67 51.3A37 37 0 0 1 67 110.7"/>
+          <circle cx="45" cy="81" r="1.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+
+      <p class="banner-marca" data-i18n="ecoMarca">Diário do Treinador</p>
+      <h2 data-i18n="ecoTitulo">Mentoria, cursos e conteúdos em um só lugar</h2>
+      <p data-i18n="ecoResumo">O ecossistema Diário do Treinador reúne os canais de formação integral de treinadores e profissionais do futebol.</p>
+      <a class="botao-mint" href="index.html" data-i18n="ecoCta">Entrar no ecossistema</a>
+    </section>
+
   </div>
 
-  <main class="page">
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="faixa rodape">
+    <img class="assinatura-rodape" src="assinatura-gabriel.png" width="726" height="300" alt="Gabriel Bussinger" />
 
-    <!-- ================= PAINEL 1 — GABRIEL BUSSINGER ================= -->
-    <section class="hero-v2">
-      <div class="hero-video-block">
-        <div class="hero-bg-video">
-          <video autoplay muted loop playsinline>
-            <source src="gabriel-bg.mp4" type="video/mp4">
-          </video>
-          <div class="hero-bg-video-overlay"></div>
-        </div>
-      </div>
+    <div class="sociais">
+      <a class="social" href="https://www.linkedin.com/in/gabriel-bussinger-66132370/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg></a>
+      <a class="social" href="https://www.instagram.com/gabrielbussinger/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social" href="https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o" target="_blank" rel="noopener" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.6 14.4a.78.78 0 01-1.07.26c-2.93-1.79-6.62-2.2-10.97-1.2a.78.78 0 11-.35-1.52c4.76-1.09 8.84-.62 12.13 1.39.37.22.49.7.26 1.07zm1.23-2.75a.97.97 0 01-1.34.32c-3.35-2.06-8.46-2.66-12.42-1.45a.97.97 0 11-.57-1.86c4.53-1.38 10.16-.71 14 1.65.46.28.6.88.33 1.34zm.11-2.86C14.92 8.4 8.72 8.2 5.28 9.24a1.17 1.17 0 11-.68-2.24C8.55 5.8 15.4 6.04 19.4 8.41a1.17 1.17 0 01-1.2 2.01c-.09-.05-.17-.1-.26-.15z"/></svg></a>
+      <a class="social" href="mailto:gabrieltreinador33@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.8 6.8L12 13l8.2-6.2"/></svg></a>
+    </div>
 
-      <div class="content-panel hero-info-panel">
-        <div class="hero-avatar-overlap">
-          <img id="hero-avatar" class="avatar-img" src="" alt="Gabriel Bussinger" />
-        </div>
-        <h1 id="hero-nome"></h1>
-        <div class="role-lines" id="hero-roles"></div>
-        <div class="cred-badges" id="cred-badges"></div>
-        <div class="role-lines" id="hero-roles-secondary"></div>
-        <div class="lang-switcher" id="lang-switcher" aria-label="Selecionar idioma"></div>
-      </div>
-    </section>
+    <p class="creditos">
+      <span data-i18n="ecoRodape">Ecossistema Diário do Treinador</span><br>
+      <span data-i18n="feitoPor">Feito por</span>
+      <a href="https://wa.me/5551991736138?text=Ol%C3%A1%20Luis%2C%20gostaria%20de%20saber%20sobre%20seus%20servi%C3%A7os" target="_blank" rel="noopener">Sttudio11WD</a>
+    </p>
+  </footer>
 
-    <!-- ================= CAIXA 1 — NEWSLETTER + PODCAST ================= -->
-    <section class="content-panel">
-      <div class="panel-header">
-        <span class="panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.73 21a2 2 0 01-3.46 0" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div>
-          <span class="panel-title" id="grupo1-titulo"></span>
-          <p class="panel-subtitle" id="grupo1-subtitulo"></p>
-        </div>
-      </div>
-      <ul class="link-list" id="grupo1-lista"></ul>
-    </section>
+</main>
 
-    <!-- ================= CAIXA 2 — AGENDA + PALESTRAS E EVENTOS ================= -->
-    <section class="content-panel">
-      <div class="panel-header">
-        <span class="panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="15" rx="2.2"/><path d="M3.5 9.6h17M8 3v4M16 3v4" stroke-linecap="round"/><circle cx="8.1" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="15.9" cy="14" r="1" fill="currentColor" stroke="none"/></svg></span>
-        <div>
-          <span class="panel-title" id="agenda-titulo"></span>
-          <p class="panel-subtitle" id="agenda-heading"></p>
-        </div>
-      </div>
-      <ul class="agenda-list-flat" id="agenda-lista"></ul>
-      <ul class="link-list" id="grupo3-lista"></ul>
-    </section>
+<script>
+  var TEXTOS = {
+    pt: {
+      slogan:"Formação e desenvolvimento integral de treinadores e profissionais do futebol.",
+      cred1t:"Coordenador Técnico Geral", cred1d:"Vasco da Gama SAF",
+      cred2t:"Instrutor",                 cred2d:"CONMEBOL e CBF",
+      cred3t:"Mentor",                    cred3d:"Profissionais do futebol",
+      cred4t:"Podcast",                   cred4d:"Diário do Treinador",
+      seguir1:"Onde acompanhar o", seguir2:"Diário do Treinador",
+      seguirResumo:"Artigos e podcasts sobre desenvolvimento profissional e pessoal.",
+      newsTitulo:"Assinar a newsletter",
+      newsDesc:"Publicada toda semana no LinkedIn.",
+      podTitulo:"Podcast Diário do Treinador",
+      podDesc:"Reflexões de um treinador sobre a própria prática.",
+      agenda1:"Próximas", agenda2:"palestras",
+      agendaResumo:"Cursos, congressos e eventos com vagas abertas.",
+      mes:"OUT",
+      eventoTema:"Transição Base-Profissional e Organização Metodológica-Estrutural do Treinamento",
+      eventoLocal:"Seminário FGF Conecta — auditório da Federação Gaúcha de Futebol",
+      eventoHora:"Segunda, 16h às 20h",
+      eventoCidade:"Porto Alegre, Brasil",
+      eventoFormato:"Presencial",
+      inscrever:"Inscreva-se",
+      contatoTitulo:"Cursos e Palestras",
+      contatoDesc:"Escreva para verificar a disponibilidade de agenda.",
+      ecoMarca:"Diário do Treinador",
+      ecoTitulo:"Mentoria, cursos e conteúdos em um só lugar",
+      ecoResumo:"O ecossistema Diário do Treinador reúne os canais de formação integral de treinadores e profissionais do futebol.",
+      ecoCta:"Entrar no ecossistema",
+      ecoRodape:"Ecossistema Diário do Treinador",
+      feitoPor:"Feito por"
+    },
+    en: {
+      slogan:"Full training and development for coaches and football professionals.",
+      cred1t:"General Technical Coordinator", cred1d:"Vasco da Gama SAF",
+      cred2t:"Instructor",                    cred2d:"CONMEBOL and CBF",
+      cred3t:"Mentor",                        cred3d:"Football professionals",
+      cred4t:"Podcast",                       cred4d:"Coach's Diary",
+      seguir1:"Where to follow the", seguir2:"Coach's Diary",
+      seguirResumo:"Articles and podcasts on professional and personal development.",
+      newsTitulo:"Subscribe to the newsletter",
+      newsDesc:"Published every week on LinkedIn.",
+      podTitulo:"Coach's Diary podcast",
+      podDesc:"A coach reflecting on his own practice.",
+      agenda1:"Upcoming", agenda2:"talks",
+      agendaResumo:"Courses, conferences and events with open seats.",
+      mes:"OCT",
+      eventoTema:"Youth-to-Senior Transition and the Methodological and Structural Organisation of Training",
+      eventoLocal:"FGF Conecta seminar — Rio Grande do Sul Football Federation auditorium",
+      eventoHora:"Monday, 4–8 pm",
+      eventoCidade:"Porto Alegre, Brazil",
+      eventoFormato:"In person",
+      inscrever:"Sign up",
+      contatoTitulo:"Courses and Talks",
+      contatoDesc:"Write to check availability in the calendar.",
+      ecoMarca:"Coach's Diary",
+      ecoTitulo:"Mentorship, courses and content in one place",
+      ecoResumo:"The Coach's Diary ecosystem brings together the channels for the full development of coaches and football professionals.",
+      ecoCta:"Enter the ecosystem",
+      ecoRodape:"Coach's Diary Ecosystem",
+      feitoPor:"Built by"
+    },
+    es: {
+      slogan:"Formación y desarrollo integral de entrenadores y profesionales del fútbol.",
+      cred1t:"Coordinador Técnico General", cred1d:"Vasco da Gama SAF",
+      cred2t:"Instructor",                  cred2d:"CONMEBOL y CBF",
+      cred3t:"Mentor",                      cred3d:"Profesionales del fútbol",
+      cred4t:"Pódcast",                     cred4d:"Diario del Entrenador",
+      seguir1:"Dónde seguir el", seguir2:"Diario del Entrenador",
+      seguirResumo:"Artículos y pódcast sobre desarrollo profesional y personal.",
+      newsTitulo:"Suscribirse al newsletter",
+      newsDesc:"Publicado cada semana en LinkedIn.",
+      podTitulo:"Pódcast Diario del Entrenador",
+      podDesc:"Las reflexiones de un entrenador sobre su propia práctica.",
+      agenda1:"Próximas", agenda2:"charlas",
+      agendaResumo:"Cursos, congresos y eventos con cupos abiertos.",
+      mes:"OCT",
+      eventoTema:"Transición Base-Profesional y Organización Metodológica-Estructural del Entrenamiento",
+      eventoLocal:"Seminario FGF Conecta — auditorio de la Federación Gaúcha de Fútbol",
+      eventoHora:"Lunes, de 16 a 20 h",
+      eventoCidade:"Porto Alegre, Brasil",
+      eventoFormato:"Presencial",
+      inscrever:"Inscríbete",
+      contatoTitulo:"Cursos y Charlas",
+      contatoDesc:"Escríbeme para consultar la disponibilidad de agenda.",
+      ecoMarca:"Diario del Entrenador",
+      ecoTitulo:"Mentoría, cursos y contenidos en un solo lugar",
+      ecoResumo:"El ecosistema Diario del Entrenador reúne los canales de formación integral de entrenadores y profesionales del fútbol.",
+      ecoCta:"Entrar al ecosistema",
+      ecoRodape:"Ecosistema Diario del Entrenador",
+      feitoPor:"Desarrollado por"
+    }
+  };
 
-    <!-- ================= CAIXA 4 — ECOSSISTEMA (leva pra página 2) ================= -->
-    <section class="content-panel">
-      <ul class="link-list" id="grupo4-lista"></ul>
-    </section>
+  var LOCALE = { pt:"pt-BR", en:"en", es:"es" };
 
-    <footer class="site-footer">
-      <strong id="footer-nome"></strong>
-      <div class="footer-social" id="footer-social"></div>
-      <span id="footer-ecossistema"></span>
-      <span id="footer-dev"></span>
-    </footer>
+  function aplicarIdioma(lang){
+    var dic = TEXTOS[lang] || TEXTOS.pt;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var chave = el.getAttribute("data-i18n");
+      if (dic[chave]) el.textContent = dic[chave];
+    });
+    document.documentElement.lang = LOCALE[lang] || "pt-BR";
+    document.querySelectorAll(".idiomas button").forEach(function(b){
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem("gb-idioma", lang); } catch (e) {}
+  }
 
-  </main>
+  document.querySelectorAll(".idiomas button").forEach(function(b){
+    b.addEventListener("click", function(){ aplicarIdioma(b.dataset.lang); });
+  });
 
-  <script src="data/links.js?v=2"></script>
-  <script src="js/icons.js?v=2"></script>
-  <script src="js/main.js?v=2"></script>
+  (function(){
+    var salvo = null;
+    try { salvo = localStorage.getItem("gb-idioma"); } catch (e) {}
+    if (salvo && TEXTOS[salvo]) aplicarIdioma(salvo);
+  })();
+</script>
+
 </body>
 </html>

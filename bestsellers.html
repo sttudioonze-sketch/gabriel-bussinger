@@ -1,281 +1,3513 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#0f1f3d" />
-<title>Best Sellers Aplicados ao Futebol | Gabriel Bussinger</title>
-<meta name="description" content="Best Sellers Aplicados ao Futebol — a sabedoria dos maiores livros do mundo, conectada à prática do treinador de futebol." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#001424">
+<title>Best Sellers Aplicados ao Futebol — cursos | Diário do Treinador</title>
+<meta name="description" content="Cursos on-line que traduzem os grandes livros de liderança, mindset e comunicação para a realidade do treinador de futebol.">
+<link rel="canonical" href="https://www.diariodotreinador.com.br/bestsellers.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png" />
-<link rel="icon" type="image/png" sizes="256x256" href="images/favicon.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Diário do Treinador" />
-<meta property="og:title" content="Best Sellers Aplicados ao Futebol | Gabriel Bussinger" />
-<meta property="og:description" content="A sabedoria dos maiores livros do mundo, conectada à prática do treinador de futebol." />
-<meta property="og:image" content="https://diariodotreinador.com.br/images/og-share.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://diariodotreinador.com.br/bestsellers.html" />
-<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Diário do Treinador">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Best Sellers Aplicados ao Futebol — cursos | Diário do Treinador">
+<meta property="og:description" content="Cursos on-line que traduzem os grandes livros de liderança, mindset e comunicação para a realidade do treinador de futebol.">
+<meta property="og:url" content="https://www.diariodotreinador.com.br/bestsellers.html">
+<meta property="og:image" content="https://www.diariodotreinador.com.br/hero-livros.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Carlito:ital,wght@0,700;0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Outfit:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
 
-<link rel="stylesheet" href="css/style-bestsellers2.css" />
+<style>
+  :root{
+    /* paleta — versão escura */
+    --mint:#36ECDE;
+    --mint-12:rgba(54,236,222,.10);
+    --mint-24:rgba(54,236,222,.18);
+    --teal:#36ECDE;          /* no escuro o mint puro já passa em contraste */
+    --ink:#E6E9EC;           /* tinta clara sobre fundo navy */
+    --ink-65:rgba(230,233,236,.72);
+    --ink-45:rgba(230,233,236,.55);
+    --paper:#001424;         /* fundo da página */
+    --card:#00203F;          /* Core Navy vira a superfície dos cards */
+    --borda:rgba(54,236,222,.16);
+    --borda-forte:rgba(54,236,222,.38);
+    --sombra:0 1px 3px rgba(0,0,0,.35);
+    --sombra-alta:0 14px 34px rgba(0,0,0,.45);
+    --brilho:0 14px 30px rgba(0,0,0,.45),0 0 0 1px rgba(54,236,222,.05);
+
+    /* gradientes — luz vinda de cima à esquerda, como no palco */
+    --g-card:linear-gradient(176deg,#0A2F52,#00203F 58%);
+    --g-card-alto:linear-gradient(176deg,#0D3459,#00203F 62%);
+    --g-borda:linear-gradient(155deg,rgba(54,236,222,.40),rgba(54,236,222,.05) 46%,rgba(54,236,222,.16));
+    --g-borda-fraca:linear-gradient(150deg,rgba(54,236,222,.26),rgba(54,236,222,.04));
+    --g-borda-forte:linear-gradient(150deg,rgba(54,236,222,.68),rgba(54,236,222,.12));
+    --g-mint:linear-gradient(100deg,#36ECDE,#8AF2E9);
+
+    /* tipo */
+    --display:"Outfit","Helvetica Neue",Arial,sans-serif;
+    --corpo:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif;
+
+    /* medidas */
+    --wrap:900px;
+    --gutter:18px;
+    --r-secao:26px;
+    --r-cartao:16px;
+    --r-tile:13px;
+  }
+
+  *{box-sizing:border-box}
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    pointer-events:none;
+    background:
+      radial-gradient(58% 38% at 10% 2%, rgba(54,236,222,.16), transparent 62%),
+      radial-gradient(46% 32% at 94% 24%, rgba(54,236,222,.09), transparent 64%),
+      radial-gradient(74% 42% at 50% 104%, rgba(54,236,222,.08), transparent 62%);
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--corpo);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit}
+  img,video{max-width:100%}
+
+  h1,h2,h3{
+    font-family:"Fraunces",Georgia,"Times New Roman",serif;
+    font-optical-sizing:auto;
+    /* SOFT 0 e WONK 0 deixam a Fraunces clássica em vez de estilizada */
+    font-variation-settings:"SOFT" 0,"WONK" 0;
+    font-weight:600;
+    letter-spacing:-.022em;
+    line-height:1.08;
+    text-wrap:balance;
+    margin:0;
+  }
+
+  .destaque{color:var(--mint)}
+
+  :focus-visible{
+    outline:3px solid var(--teal);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  .faixa{
+    width:100%;
+    max-width:var(--wrap);
+    margin-inline:auto;
+    padding-inline:var(--gutter);
+  }
+
+  /* ===================== TOPO COM VÍDEO ===================== */
+
+  .topo{
+    position:relative;
+    isolation:isolate;
+    padding-block:16px 0;
+  }
+
+  /* aurora mint atrás do vídeo */
+  .topo::before{
+    content:"";
+    position:absolute;
+    inset:0 0 34% 0;
+    z-index:-1;
+    background:
+      radial-gradient(72% 92% at 16% 2%, rgba(54,236,222,.24), transparent 64%),
+      radial-gradient(60% 78% at 90% 0%, rgba(54,236,222,.13), transparent 68%),
+      linear-gradient(180deg,#00395F,#002542 42%,var(--paper) 88%);
+  }
+
+  .barra-idiomas{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:14px;
+  }
+
+  .idiomas{
+    display:inline-flex;
+    gap:3px;
+    background:rgba(0,20,36,.62);
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:3px;
+    backdrop-filter:blur(6px);
+  }
+
+  .idiomas button{
+    font-family:var(--corpo);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.06em;
+    color:var(--ink-65);
+    background:transparent;
+    border:0;
+    border-radius:99px;
+    padding:6px 13px;
+    line-height:1;
+    cursor:pointer;
+    transition:background .16s ease,color .16s ease;
+  }
+  .idiomas button:hover{background:rgba(255,255,255,.08);color:var(--ink)}
+  .idiomas button[aria-pressed="true"]{background:var(--g-mint);color:#00203F}
+
+  .palco{
+    position:relative;
+    border-radius:var(--r-secao);
+    overflow:hidden;
+    background:#00203F padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+    box-shadow:var(--sombra-alta);
+    aspect-ratio:1/1;
+  }
+  @media (min-width:560px){
+    .palco{aspect-ratio:16/9}
+  }
+  .palco video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* cartão de identidade sobreposto ao vídeo */
+  .identidade{
+    position:relative;
+    z-index:2;
+    margin:-54px auto 0;
+    max-width:660px;
+    background:var(--g-card-alto) padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-secao);
+    box-shadow:var(--sombra-alta);
+    padding:0 24px 28px;
+    text-align:center;
+  }
+
+  .retrato{
+    width:96px;
+    height:96px;
+    border-radius:50%;
+    display:block;
+    margin:-48px auto 0;
+    border:4px solid var(--card);
+    background:#00203F;
+    box-shadow:0 0 0 2px var(--mint);
+  }
+
+  .assinatura{
+    display:block;
+    width:min(280px,80%);
+    height:auto;
+    margin:14px auto 0;
+  }
+
+  .slogan{
+    margin:12px auto 0;
+    max-width:40ch;
+    color:var(--ink-65);
+    font-size:15.5px;
+  }
+
+  /* ===================== CORPO ===================== */
+
+  .corpo{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding-block:24px 34px;
+  }
+
+  .secao{
+    background:var(--g-card) padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-secao);
+    box-shadow:var(--sombra);
+    padding:26px 20px;
+  }
+
+  .secao-titulo{
+    font-size:clamp(21px,4.6vw,26px);
+    text-align:center;
+  }
+
+  .secao-resumo{
+    margin:8px auto 0;
+    max-width:44ch;
+    text-align:center;
+    color:var(--ink-45);
+    font-size:14.5px;
+  }
+
+  /* --- faixa de credenciais --- */
+
+  .credenciais{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+  }
+
+  .credencial{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:8px;
+  }
+
+  .tile{
+    width:46px;
+    height:46px;
+    border-radius:var(--r-tile);
+    display:grid;
+    place-items:center;
+    flex:none;
+  }
+  .tile svg{width:22px;height:22px;display:block}
+  .tile-mint{background:linear-gradient(145deg,rgba(54,236,222,.28),rgba(54,236,222,.07));color:var(--mint)}
+  .tile-teal{background:linear-gradient(145deg,rgba(54,236,222,.18),rgba(54,236,222,.04));color:var(--mint)}
+  .tile-navy{background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.03));color:var(--ink)}
+
+  .credencial b{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15px;
+    line-height:1.2;
+  }
+  .credencial span{
+    color:var(--ink-45);
+    font-size:13px;
+    line-height:1.35;
+  }
+
+  @media (min-width:680px){
+    .credenciais{grid-template-columns:repeat(4,minmax(0,1fr))}
+  }
+
+  /* --- listas de links --- */
+
+  .links{
+    list-style:none;
+    margin:20px 0 0;
+    padding:0;
+    display:grid;
+    gap:12px;
+  }
+
+  @media (min-width:680px){
+    .links-duplo{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+
+  .link{
+    display:flex;
+    align-items:flex-start;
+    gap:13px;
+    height:100%;
+    background:var(--g-card) padding-box,var(--g-borda-fraca) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-cartao);
+    padding:15px 16px;
+    text-decoration:none;
+    transition:box-shadow .18s ease,transform .18s ease;
+  }
+  .link:hover{
+    background:var(--g-card-alto) padding-box,var(--g-borda-forte) border-box;
+    box-shadow:var(--brilho);
+    transform:translateY(-2px);
+  }
+
+  .link-texto{flex:1;min-width:0}
+
+  .link-titulo{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:16px;
+    line-height:1.25;
+  }
+
+  .link-desc{
+    display:block;
+    margin-top:3px;
+    color:var(--ink-45);
+    font-size:13.5px;
+    line-height:1.45;
+  }
+
+  .seta{
+    flex:none;
+    width:17px;
+    height:17px;
+    margin-top:3px;
+    color:var(--ink-45);
+    transition:transform .18s ease,color .18s ease;
+  }
+  .link:hover .seta{color:var(--teal);transform:translate(2px,-2px)}
+
+  /* --- agenda --- */
+
+  .evento{
+    margin-top:20px;
+    border:1px solid transparent;
+    border-radius:var(--r-cartao);
+    padding:16px;
+    background:
+      linear-gradient(168deg,rgba(54,236,222,.14),rgba(0,32,63,0) 54%) padding-box,
+      var(--g-card-alto) padding-box,
+      var(--g-borda) border-box;
+  }
+
+  .evento-topo{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+  }
+
+  .data{
+    flex:none;
+    width:60px;
+    background:linear-gradient(170deg,rgba(255,255,255,.13),rgba(255,255,255,.03));
+    border:1px solid var(--borda);
+    border-radius:var(--r-tile);
+    padding:9px 0 8px;
+    text-align:center;
+  }
+  .data .dia{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:26px;
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .data .mes{
+    display:block;
+    margin-top:3px;
+    color:var(--teal);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.09em;
+  }
+
+  .evento-tema{
+    font-size:18px;
+    margin:0;
+  }
+  .evento-local{
+    margin:4px 0 0;
+    color:var(--ink-45);
+    font-size:14px;
+  }
+
+  .detalhes{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:13px 0 0;
+    padding:0;
+  }
+  .detalhe{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    background:linear-gradient(170deg,rgba(255,255,255,.09),rgba(255,255,255,.02));
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:5px 11px;
+    font-size:12.5px;
+    color:var(--ink-65);
+    white-space:nowrap;
+  }
+  .detalhe svg{width:13px;height:13px;flex:none;color:var(--ink-45)}
+
+  .botao-inscrever{
+    display:block;
+    margin-top:15px;
+    background:var(--g-mint);
+    color:#00203F;
+    box-shadow:0 8px 22px rgba(54,236,222,.18);
+    text-align:center;
+    text-decoration:none;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15px;
+    padding:13px 18px;
+    border-radius:99px;
+    transition:opacity .18s ease,transform .18s ease;
+  }
+  .botao-inscrever:hover{opacity:.9;transform:translateY(-1px)}
+
+  /* --- banner final --- */
+
+  .banner{
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+    border-radius:var(--r-secao);
+    background:
+      radial-gradient(76% 130% at 8% -6%, rgba(255,255,255,.5), transparent 56%),
+      linear-gradient(118deg,#12CFC2 2%,#36ECDE 36%,#7BEFE5 70%,#B6F8F2 100%);
+    color:#00203F;
+    padding:34px 22px 32px;
+    text-align:center;
+  }
+
+  /* campo visto de cima: grande área em cada extremidade,
+     círculo central no meio, cortado pela linha do meio-campo */
+  .campo{
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    color:#00203F;
+    opacity:.2;
+    pointer-events:none;
+  }
+
+  /* mantém a espessura das linhas igual nos dois SVGs, que têm escalas diferentes */
+  .campo svg *{vector-effect:non-scaling-stroke}
+
+  /* mobile: campo na vertical — áreas em cima e embaixo.
+     o deslocamento de 24.07% = (altura-largura)/2·altura da caixa antes de girar,
+     que é o que encosta a linha de fundo na borda depois do rotate. */
+  .campo-area{
+    position:absolute;
+    left:50%;
+    width:26%;
+    height:auto;
+    aspect-ratio:84/162;
+  }
+  .campo-area.esq{top:0;translate:-50% -24.07%;rotate:90deg}
+  .campo-area.dir{bottom:0;translate:-50% 24.07%;rotate:-90deg}
+
+  .campo-meio{
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+    height:1.5px;
+    margin-top:-.75px;
+    background:currentColor;
+  }
+
+  .campo-circulo{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:40%;
+    height:auto;
+    aspect-ratio:1;
+    translate:-50% -50%;
+  }
+
+  /* desktop: campo na horizontal — áreas nas duas extremidades */
+  @media (min-width:560px){
+    .campo-area{left:auto;width:auto;height:80%}
+    .campo-area.esq{left:0;top:50%;translate:0 -50%;rotate:none}
+    .campo-area.dir{right:0;bottom:auto;top:50%;translate:0 -50%;rotate:none;scale:-1 1}
+
+    .campo-meio{
+      left:50%;
+      right:auto;
+      top:0;
+      bottom:0;
+      width:1.5px;
+      height:auto;
+      margin-top:0;
+      margin-left:-.75px;
+    }
+
+    .campo-circulo{width:auto;height:54%}
+  }
+
+  .banner h2{
+    font-size:clamp(25px,5.9vw,34px);
+    max-width:20ch;
+    margin-inline:auto;
+  }
+
+  .banner-lema{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(15px,3.2vw,17px);
+    letter-spacing:-.005em;
+    margin:8px auto 0;
+    color:rgba(0,32,63,.7);
+  }
+
+  .banner p{
+    margin:11px auto 0;
+    max-width:46ch;
+    color:rgba(0,32,63,.76);
+    font-size:15px;
+  }
+
+  .botao-mint{
+    display:inline-block;
+    margin-top:22px;
+    background:#00203F;
+    color:var(--mint);
+    text-decoration:none;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:16px;
+    padding:14px 30px;
+    border-radius:99px;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .botao-mint:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 24px rgba(0,32,63,.3);
+  }
+
+  /* --- rodapé --- */
+
+  .rodape{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    text-align:center;
+    padding-block:6px 34px;
+  }
+
+  .assinatura-rodape{width:min(200px,58%);height:auto;display:block;opacity:.85}
+
+  .sociais{display:flex;gap:9px}
+
+  .social{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:var(--card);
+    border:1px solid var(--borda);
+    color:var(--ink);
+    display:grid;
+    place-items:center;
+    transition:background .18s ease,color .18s ease,transform .18s ease;
+  }
+  .social svg{width:17px;height:17px;display:block}
+  .social:hover{background:var(--g-mint);color:#00203F;transform:translateY(-2px)}
+
+  .creditos{
+    font-size:13px;
+    color:var(--ink-45);
+    line-height:1.7;
+    margin:0;
+  }
+  .creditos a{color:var(--teal);font-weight:700;text-decoration:none}
+  .creditos a:hover{text-decoration:underline}
+
+  /* ===================== TOPBAR ===================== */
+
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:14px;
+  }
+
+  .voltar{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:rgba(0,20,36,.62);
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:7px 14px 7px 10px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink-65);
+    text-decoration:none;
+    backdrop-filter:blur(6px);
+    transition:color .16s ease,border-color .16s ease;
+  }
+  .voltar svg{width:16px;height:16px;flex:none}
+  .voltar:hover{color:var(--ink);border-color:var(--borda-forte)}
+
+  .palco-foto{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:58% 38%;
+    display:block;
+  }
+
+  /* ===================== MARCA DO ECOSSISTEMA ===================== */
+
+  .marca-eco{
+    width:84px;
+    height:84px;
+    border-radius:24px;
+    margin:-42px auto 0;
+    display:grid;
+    place-items:center;
+    background:var(--g-mint);
+    border:4px solid var(--card);
+    box-shadow:0 0 0 1px rgba(54,236,222,.45);
+    color:#00203F;
+  }
+  .marca-eco svg{width:38px;height:38px;display:block}
+
+  .eco-titulo{
+    font-size:clamp(27px,6.4vw,37px);
+    margin-top:14px;
+  }
+
+  /* ===================== ESTEIRAS (carrosséis) =====================
+     cada trilho tem o conteúdo duplicado; a animação anda -50%,
+     então o ponto de retorno cai exatamente sobre a cópia. */
+  .esteira{
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+  }
+  .esteira-trilho{
+    display:flex;
+    width:max-content;
+    animation:correr var(--tempo,34s) linear infinite;
+  }
+  .esteira:hover .esteira-trilho,
+  .esteira:focus-within .esteira-trilho{animation-play-state:paused}
+
+  @keyframes correr{to{transform:translateX(-50%)}}
+
+  @media (prefers-reduced-motion:reduce){
+    .esteira{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+    .esteira-trilho{animation:none;width:auto}
+  }
+
+  /* esteira 1 — pilares do método */
+  .esteira-pilares{margin-top:18px;--tempo:36s}
+
+  .pilares{list-style:none;margin:0;padding:0}
+  .pilar{
+    white-space:nowrap;
+    flex:none;
+    margin-right:8px;
+    border:1px solid var(--borda);
+    border-radius:99px;
+    padding:6px 13px;
+    font-size:12.5px;
+    color:var(--ink-65);
+    background:linear-gradient(170deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+  }
+
+  /* esteira 2 — marcas do ecossistema */
+  .esteira-marcas{--tempo:30s}
+  .esteira-marcas .esteira-trilho{align-items:center;padding-block:4px}
+  .esteira-marcas img{
+    height:34px;
+    width:auto;
+    display:block;
+    flex:none;
+    margin-right:34px;
+    opacity:.85;
+  }
+
+  /* ===================== SELOS ===================== */
+
+  .selos{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:7px;
+    margin:0 0 14px;
+    padding:0;
+  }
+  .selo{
+    display:inline-flex;
+    align-items:center;
+    border-radius:99px;
+    padding:5px 12px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+  .banner .selo-solido{background:#00203F;color:var(--mint)}
+  .banner .selo-vazado{border:1px solid rgba(0,32,63,.3);color:rgba(0,32,63,.78)}
+  .secao .selo-solido{background:var(--g-mint);color:#00203F}
+  .secao .selo-vazado{border:1px solid var(--borda);color:var(--ink-65)}
+
+  /* ===================== PRATELEIRA DE LIVROS ===================== */
+
+  .esteira-livros{margin-top:18px;--tempo:52s}
+  .esteira-livros .esteira-trilho{padding-block:2px 6px}
+
+  .livro{flex:none;width:104px;margin-right:14px}
+  .livro img{
+    display:block;
+    width:104px;
+    height:148px;
+    object-fit:cover;
+    border-radius:9px;
+    border:1px solid var(--borda);
+    box-shadow:0 10px 22px rgba(0,0,0,.45);
+  }
+  .livro b{
+    display:block;
+    margin-top:9px;
+    font-size:12px;
+    font-weight:600;
+    line-height:1.3;
+  }
+  .livro span{
+    display:block;
+    margin-top:2px;
+    color:var(--ink-45);
+    font-size:11.5px;
+    line-height:1.3;
+  }
+
+  /* card sem link, para o que ainda não abriu */
+  .link.indisponivel{
+    opacity:.6;
+    cursor:default;
+  }
+  .link.indisponivel:hover{
+    background:var(--g-card) padding-box,var(--g-borda-fraca) border-box;
+    box-shadow:none;
+    transform:none;
+  }
+
+  /* ===================== METODOLOGIA (sequência real: 3 partes) ===================== */
+
+  .passos{
+    list-style:none;
+    margin:20px 0 0;
+    padding:0;
+    display:grid;
+    gap:12px;
+  }
+  @media (min-width:700px){
+    .passos{grid-template-columns:repeat(3,minmax(0,1fr))}
+  }
+
+  .passo{
+    background:var(--g-card-alto) padding-box,var(--g-borda-fraca) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-cartao);
+    padding:16px;
+    height:100%;
+  }
+  .passo-num{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15px;
+    color:var(--mint);
+    letter-spacing:.02em;
+  }
+  .passo h3{
+    font-size:16.5px;
+    margin:6px 0 0;
+  }
+  .passo p{
+    margin:7px 0 0;
+    color:var(--ink-45);
+    font-size:13.5px;
+    line-height:1.5;
+  }
+
+  /* ===================== LISTAS COM ÍCONE ===================== */
+
+  .itens{
+    list-style:none;
+    margin:20px 0 0;
+    padding:0;
+    display:grid;
+    gap:11px;
+  }
+  @media (min-width:640px){
+    .itens{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+
+  .item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    background:var(--g-card-alto) padding-box,var(--g-borda-fraca) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-cartao);
+    padding:13px 14px;
+    height:100%;
+  }
+  .item .tile{width:38px;height:38px}
+  .item .tile svg{width:19px;height:19px}
+  .item-texto{flex:1;min-width:0;font-size:14px;line-height:1.45}
+  .item-texto strong{font-weight:700}
+  .item-texto small{
+    display:block;
+    margin-top:2px;
+    color:var(--ink-45);
+    font-size:12.5px;
+  }
+
+  /* ===================== DEPOIMENTOS ===================== */
+
+  .esteira-depoimentos{margin-top:20px;--tempo:60s}
+  .esteira-depoimentos .esteira-trilho{padding-block:2px 4px;align-items:stretch}
+
+  .depoimento{
+    flex:none;
+    width:272px;
+    margin:0 12px 0 0;
+    display:flex;
+    flex-direction:column;
+    background:
+      linear-gradient(168deg,rgba(54,236,222,.12),rgba(0,32,63,0) 56%) padding-box,
+      var(--g-card-alto) padding-box,
+      var(--g-borda) border-box;
+    border:1px solid transparent;
+    border-radius:var(--r-cartao);
+    padding:16px;
+    text-align:left;
+  }
+  .depoimento .aspas{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:30px;
+    line-height:.7;
+    color:var(--mint);
+  }
+  .depoimento p{
+    margin:10px 0 0;
+    font-size:14px;
+    line-height:1.5;
+    color:var(--ink-65);
+  }
+
+  /* ===================== PLANOS ===================== */
+
+  .planos{
+    display:grid;
+    gap:14px;
+    margin-top:22px;
+  }
+  @media (min-width:760px){
+    .planos{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+  }
+
+  .plano{
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    border-radius:var(--r-secao);
+    padding:22px 18px 20px;
+    text-align:center;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .plano-escuro{
+    background:var(--g-card-alto) padding-box,var(--g-borda) border-box;
+    border:1px solid transparent;
+  }
+
+  .plano-destaque{
+    background:
+      radial-gradient(76% 120% at 8% -8%, rgba(255,255,255,.5), transparent 56%),
+      linear-gradient(118deg,#12CFC2 2%,#36ECDE 36%,#7BEFE5 70%,#B6F8F2 100%);
+    color:#00203F;
+  }
+  .plano-destaque .campo{opacity:.14}
+
+  .fita{
+    display:inline-block;
+    align-self:center;
+    background:#00203F;
+    color:var(--mint);
+    border-radius:99px;
+    padding:6px 14px;
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:.02em;
+    margin-bottom:14px;
+  }
+
+  .plano-nome{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:19px;
+  }
+
+  .preco{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(38px,9vw,48px);
+    line-height:1.05;
+    margin-top:8px;
+    font-variant-numeric:tabular-nums;
+  }
+  .preco-unit{
+    display:block;
+    font-size:14px;
+    margin-top:2px;
+  }
+  .preco-alt{
+    display:block;
+    font-size:13px;
+    margin-top:6px;
+  }
+  .plano-escuro .preco-unit{color:var(--ink-65)}
+  .plano-escuro .preco-alt{color:var(--ink-45)}
+  .plano-destaque .preco-unit{color:rgba(0,32,63,.78)}
+  .plano-destaque .preco-alt{color:rgba(0,32,63,.62)}
+
+  .checklist{
+    list-style:none;
+    margin:18px 0 0;
+    padding:0;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+    flex:1;
+  }
+  .checklist li{
+    display:flex;
+    align-items:flex-start;
+    gap:9px;
+    font-size:14px;
+    line-height:1.4;
+  }
+  .checklist svg{
+    width:17px;
+    height:17px;
+    flex:none;
+    margin-top:2px;
+  }
+  .plano-escuro .checklist li{color:var(--ink-65)}
+  .plano-escuro .checklist svg{color:var(--mint)}
+  .plano-destaque .checklist li{color:rgba(0,32,63,.85)}
+  .plano-destaque .checklist svg{color:#00203F}
+
+  .plano-cta{
+    display:block;
+    margin-top:20px;
+    text-align:center;
+    text-decoration:none;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15.5px;
+    padding:14px 18px;
+    border-radius:99px;
+    transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease;
+  }
+  .plano-destaque .plano-cta{
+    background:#00203F;
+    color:var(--mint);
+  }
+  .plano-destaque .plano-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,32,63,.3)}
+  .plano-escuro .plano-cta{
+    background:var(--g-mint);
+    color:#00203F;
+    box-shadow:0 8px 22px rgba(54,236,222,.16);
+  }
+  .plano-escuro .plano-cta:hover{transform:translateY(-2px);opacity:.92}
+
+  .nota-planos{
+    margin:16px auto 0;
+    max-width:52ch;
+    text-align:center;
+    color:var(--ink-45);
+    font-size:12.5px;
+  }
+
+  /* tagline do topo */
+  .tagline{
+    margin:14px auto 0;
+    max-width:32ch;
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(16px,3.6vw,19px);
+    color:var(--mint);
+  }
+
+  /* ===================== FAIXA CLARA =====================
+     todos os componentes leem os mesmos tokens, então a faixa clara
+     é só um escopo que os redefine — nenhum componente precisa mudar. */
+
+  .zona-clara{
+    --ink:#00203F;
+    --ink-65:#47617A;
+    --ink-45:#6B8194;
+    --card:#FFFFFF;
+    --teal:#0A7F77;
+
+    --borda:rgba(0,32,63,.10);
+    --borda-forte:rgba(0,32,63,.26);
+
+    --g-card:linear-gradient(176deg,#FFFFFF,#F6F9FA 62%);
+    --g-card-alto:linear-gradient(176deg,#FFFFFF,#F1F6F8 64%);
+    --g-borda:linear-gradient(155deg,rgba(0,32,63,.18),rgba(0,32,63,.04) 46%,rgba(0,32,63,.10));
+    --g-borda-fraca:linear-gradient(150deg,rgba(0,32,63,.12),rgba(0,32,63,.03));
+    --g-borda-forte:linear-gradient(150deg,rgba(0,32,63,.34),rgba(0,32,63,.08));
+
+    --sombra:0 1px 3px rgba(0,32,63,.06);
+    --sombra-alta:0 12px 28px rgba(0,32,63,.10);
+    --brilho:0 12px 26px rgba(0,32,63,.13),0 0 0 1px rgba(0,32,63,.03);
+
+    color:var(--ink);
+    background:
+      radial-gradient(62% 40% at 12% 0%, rgba(54,236,222,.22), transparent 62%),
+      radial-gradient(52% 36% at 92% 100%, rgba(54,236,222,.14), transparent 64%),
+      linear-gradient(180deg,#EEF2F4,#E3E8EB);
+  }
+
+  /* o mint puro não passa em contraste sobre claro: vira teal escurecido */
+  .zona-clara .destaque{color:#0A7F77}
+
+  .zona-clara .passo-num{color:#0A7F77}
+  .zona-clara .depoimento .aspas{color:#0A7F77}
+  .zona-clara .depoimento{
+    background:
+      linear-gradient(168deg,rgba(54,236,222,.20),rgba(255,255,255,0) 56%) padding-box,
+      var(--g-card-alto) padding-box,
+      var(--g-borda) border-box;
+  }
+
+  .zona-clara .tile-mint{background:linear-gradient(145deg,#CFF6F1,#E9FBF9);color:#075B55}
+  .zona-clara .tile-teal{background:linear-gradient(145deg,#E2FAF6,#F3FDFC);color:#0A7F77}
+  .zona-clara .tile-navy{background:linear-gradient(145deg,rgba(0,32,63,.10),rgba(0,32,63,.03));color:#00203F}
+
+  .zona-clara .botao-inscrever{box-shadow:0 8px 22px rgba(10,127,119,.18)}
+
+  /* ===================== AJUSTE FINO DE MOBILE =====================
+     mesma composição, tudo um passo menor: tipo, respiro, tiles e raios */
+  @media (max-width:559px){
+    :root{
+      --r-secao:20px;
+      --r-cartao:13px;
+      --r-tile:11px;
+      --gutter:16px;
+    }
+
+    .corpo{gap:14px;padding-block:18px 26px}
+    .secao{padding:20px 15px}
+    .secao-titulo{font-size:19.5px}
+    .secao-resumo{margin-top:6px;font-size:13.5px}
+
+    /* identidade */
+    .identidade{margin-top:-44px;padding:0 18px 22px}
+    .retrato{width:80px;height:80px;margin-top:-40px;border-width:3px}
+    .assinatura{width:min(230px,72%);margin-top:12px}
+    .slogan{margin-top:9px;font-size:14.5px}
+
+    /* credenciais */
+    .credenciais{gap:11px}
+    .credencial{gap:7px}
+    .credencial b{font-size:14px}
+    .credencial span{font-size:12.5px}
+
+    .tile{width:40px;height:40px}
+    .tile svg{width:19px;height:19px}
+
+    /* links */
+    .links{margin-top:16px;gap:10px}
+    .link{gap:11px;padding:12px 13px}
+    .link-titulo{font-size:15px}
+    .link-desc{font-size:13px}
+    .seta{width:16px;height:16px}
+
+    /* agenda */
+    .evento{margin-top:16px;padding:14px}
+    .evento-topo{gap:12px}
+    .data{width:52px;padding:7px 0 6px}
+    .data .dia{font-size:23px}
+    .data .mes{font-size:10.5px}
+    .evento-tema{font-size:16.5px}
+    .evento-local{font-size:13.5px}
+    .detalhes{margin-top:11px;gap:6px}
+    .detalhe{padding:4px 9px;font-size:12px}
+    .botao-inscrever{margin-top:13px;padding:12px 16px;font-size:14.5px}
+
+    /* banner */
+    .banner{padding:26px 16px 24px}
+    .banner h2{font-size:23px}
+    .banner-lema{font-size:14.5px;margin-top:6px}
+    .banner p{margin-top:9px;font-size:14px}
+    .botao-mint{margin-top:18px;padding:13px 24px;font-size:15px}
+
+    /* campo vertical: encolhe junto com o banner */
+    .campo{opacity:.17}
+    .campo-area{width:23%}
+    .campo-circulo{width:36%}
+
+    /* rodapé */
+    .rodape{gap:12px;padding-block:4px 28px}
+    .assinatura-rodape{width:min(170px,52%)}
+    .social{width:36px;height:36px}
+    .social svg{width:16px;height:16px}
+    .creditos{font-size:12.5px}
+
+    /* --- página do ecossistema --- */
+    .topbar{margin-bottom:12px}
+    .voltar{padding:6px 12px 6px 9px;font-size:12.5px}
+    .marca-eco{width:70px;height:70px;border-radius:20px;margin-top:-35px;border-width:3px}
+    .marca-eco svg{width:32px;height:32px}
+    .eco-titulo{font-size:26px;margin-top:12px}
+    .esteira-pilares{margin-top:14px}
+    .pilar{padding:5px 11px;font-size:11.5px;margin-right:6px}
+    .esteira-marcas img{height:28px;margin-right:26px}
+
+    /* --- página da mentoria --- */
+    .passos{margin-top:16px;gap:10px}
+    .passo{padding:14px}
+    .passo h3{font-size:15.5px}
+    .passo p{font-size:13px}
+    .itens{margin-top:16px;gap:9px}
+    .item{padding:11px 12px;gap:10px}
+    .item .tile{width:34px;height:34px}
+    .item .tile svg{width:17px;height:17px}
+    .item-texto{font-size:13.5px}
+    .esteira-depoimentos{margin-top:16px}
+    .depoimento{width:244px;padding:14px;margin-right:10px}
+    .depoimento p{font-size:13.5px}
+    .planos{margin-top:18px;gap:12px}
+    .plano{padding:18px 15px 17px}
+    .plano-nome{font-size:17.5px}
+    .checklist li{font-size:13.5px}
+    .plano-cta{font-size:15px;padding:13px 16px;margin-top:17px}
+    .tagline{font-size:16px;margin-top:12px}
+    .selos{gap:6px;margin-bottom:12px}
+    .selo{padding:4px 10px;font-size:11.5px}
+    .esteira-livros{margin-top:14px}
+    .livro{width:92px;margin-right:10px}
+    .livro img{width:92px;height:131px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+      animation-duration:.001ms !important;
+      transition-duration:.001ms !important;
+    }
+  }
+  /* =====================================================================
+     DIREÇÃO EDITORIAL — sobrescreve o kit de cartões.
+     Fica por último de propósito: vence as regras base na mesma
+     especificidade, inclusive dentro do bloco de mobile.
+     ===================================================================== */
+
+  :root{ --serifa:"Fraunces",Georgia,"Times New Roman",serif; }
+
+  /* --- a seção deixa de ser um cartão: a faixa já é o continente --- */
+  .secao{
+    background:none;
+    border:0;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+  }
+  .corpo{gap:46px;padding-block:44px 52px}
+
+  /* --- espinha alinhada à esquerda --- */
+  .secao-titulo{
+    text-align:left;
+    font-size:clamp(27px,5.8vw,40px);
+    font-weight:500;
+  }
+  .secao-resumo{
+    text-align:left;
+    margin:12px 0 0;
+    max-width:62ch;
+    font-size:15.5px;
+    color:var(--ink-65);
+  }
+  .secao-resumo + .secao-resumo{margin-top:12px}
+
+  /* ===================== TESE DE ABERTURA ===================== */
+
+  .tese{
+    font-family:var(--serifa);
+    font-optical-sizing:auto;
+    font-variation-settings:"SOFT" 0,"WONK" 0;
+    font-weight:400;
+    font-size:clamp(27px,6.6vw,46px);
+    line-height:1.16;
+    letter-spacing:-.026em;
+    max-width:20ch;
+    margin:0;
+  }
+  .tese b{font-weight:500;color:var(--teal)}
+
+  .assinatura-fecho{
+    display:block;
+    width:min(190px,52%);
+    height:auto;
+    margin-top:26px;
+  }
+
+  /* ===================== PRATELEIRA ===================== */
+
+  .prateleira-nota{
+    margin:18px 0 0;
+    max-width:56ch;
+    font-size:14px;
+    color:var(--ink-45);
+  }
+
+  /* ===================== RELATOS ===================== */
+
+  .relatos{
+    list-style:none;
+    margin:24px 0 0;
+    padding:0;
+    display:grid;
+    gap:0;
+  }
+  .relatos li{
+    padding:22px 0;
+    border-top:1px solid var(--borda);
+  }
+  .relatos li:first-child{border-top:0;padding-top:4px}
+
+  .relato{
+    font-family:var(--serifa);
+    font-optical-sizing:auto;
+    font-variation-settings:"SOFT" 0,"WONK" 0;
+    font-weight:400;
+    font-size:clamp(18px,4.4vw,24px);
+    line-height:1.32;
+    letter-spacing:-.008em;
+    margin:0;
+    max-width:30ch;
+  }
+  .relatos li:first-child .relato{
+    font-size:clamp(21px,5.2vw,30px);
+    font-weight:500;
+  }
+  .relato-fonte{
+    display:block;
+    margin-top:10px;
+    font-size:12.5px;
+    color:var(--ink-45);
+  }
+
+  @media (min-width:760px){
+    .relatos{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:44px}
+    .relatos li:first-child{grid-column:1 / -1}
+    .relatos li:nth-child(2){border-top:0}
+  }
+
+  /* ===================== MOBILE ===================== */
+
+  @media (max-width:559px){
+    .corpo{gap:38px;padding-block:34px 42px}
+    .secao-resumo{font-size:15px;margin-top:10px}
+    .capa-texto{margin-top:-28px;padding-bottom:28px}
+    .capa h1{margin-top:17px}
+    .capa-acoes{margin-top:22px}
+    .btn{padding:13px 19px;font-size:14px}
+    .palavras .esteira{padding-block:9px}
+    .palavra{font-size:12.5px;gap:13px;margin-right:13px}
+    .etapa h3{font-size:16.5px}
+    .etapa p{font-size:14px}
+    .cronograma{padding-left:26px}
+    .etapa::before{left:-26px;width:10px;height:10px}
+    .relatos li{padding:18px 0}
+    .assinatura-fecho{margin-top:22px}
+  }
+
+  /* =====================================================================
+     NEOMORFISMO
+     O efeito depende de o elemento ter a MESMA cor do fundo em volta:
+     o relevo vem só das duas sombras, uma clara em cima à esquerda e
+     uma escura embaixo à direita. Por isso as bordas saem daqui.
+     ===================================================================== */
+
+  :root{
+    --neo-fundo:#022B4D;
+    --neo-alto:
+      -7px -7px 16px rgba(54,236,222,.055),
+       7px  7px 18px rgba(0,0,0,.5);
+    --neo-alto-forte:
+      -9px -9px 20px rgba(54,236,222,.08),
+       9px  9px 24px rgba(0,0,0,.58);
+    --neo-baixo:
+      inset  4px  4px 9px rgba(0,0,0,.45),
+      inset -4px -4px 9px rgba(54,236,222,.05);
+  }
+
+  .zona-clara,
+  .capa{
+    --neo-fundo:#E8EBEE;
+    --neo-alto:
+      -7px -7px 15px rgba(255,255,255,.95),
+       7px  7px 18px rgba(0,32,63,.12);
+    --neo-alto-forte:
+      -9px -9px 20px rgba(255,255,255,1),
+       9px  9px 24px rgba(0,32,63,.16);
+    --neo-baixo:
+      inset  4px  4px 9px rgba(0,32,63,.1),
+      inset -4px -4px 9px rgba(255,255,255,.9);
+  }
+
+  .zona-clara{
+    background:
+      radial-gradient(58% 40% at 12% 0%, rgba(54,236,222,.16), transparent 62%),
+      radial-gradient(50% 36% at 92% 100%, rgba(54,236,222,.11), transparent 64%),
+      linear-gradient(180deg,#EAEDF0,#E5E9EC);
+  }
+
+  /* --- superfícies em relevo --- */
+  .item,
+  .passo,
+  .plano-escuro,
+  .evento{
+    background:var(--neo-fundo);
+    border:0;
+    box-shadow:var(--neo-alto);
+  }
+  .plano-escuro{box-shadow:var(--neo-alto-forte)}
+
+  .link{
+    background:var(--neo-fundo);
+    border:0;
+    box-shadow:var(--neo-alto);
+  }
+  .link:hover{box-shadow:var(--neo-alto-forte);transform:translateY(-2px)}
+
+  /* --- pílulas e botões --- */
+  .capa-selo,
+  .voltar,
+  .btn-secundario,
+  .social{
+    background:var(--neo-fundo);
+    border:0;
+    box-shadow:var(--neo-alto);
+  }
+  .capa .voltar:hover,
+  .btn-secundario:hover,
+  .social:hover{box-shadow:var(--neo-alto-forte)}
+  .social:hover{background:var(--neo-fundo);color:#0A7F77;transform:translateY(-2px)}
+
+  .btn-primario,
+  .plano-cta,
+  .botao-inscrever{
+    box-shadow:
+      -5px -5px 12px rgba(255,255,255,.4),
+       8px  8px 20px rgba(0,32,63,.28);
+  }
+  .btn-primario:hover,
+  .plano-cta:hover,
+  .botao-inscrever:hover{
+    box-shadow:
+      -6px -6px 14px rgba(255,255,255,.5),
+      10px 10px 26px rgba(0,32,63,.34);
+  }
+
+  /* --- chips e a data: relevo para dentro, como gravado --- */
+  .detalhe,
+  .data,
+  .tile{
+    border:0;
+    box-shadow:var(--neo-baixo);
+  }
+  .tile{background:var(--neo-fundo)}
+  .zona-clara .tile-mint{background:var(--neo-fundo);color:#0A7F77}
+  .zona-clara .tile-teal{background:var(--neo-fundo);color:#0A7F77}
+  .zona-clara .tile-navy{background:var(--neo-fundo);color:#00203F}
+  .tile-mint,.tile-teal{background:var(--neo-fundo);color:var(--mint)}
+  .tile-navy{background:var(--neo-fundo);color:var(--ink)}
+
+  /* --- capas dos livros --- */
+  .livro img{
+    border:0;
+    box-shadow:var(--neo-alto);
+  }
+
+  /* --- o plano em destaque mantém o mint, ganha o mesmo relevo --- */
+  .plano-destaque{
+    box-shadow:
+      -9px -9px 22px rgba(255,255,255,.7),
+       10px 10px 28px rgba(0,32,63,.2);
+  }
+
+  /* --- cronograma: o trilho fica gravado no fundo --- */
+  .cronograma::before{
+    width:6px;
+    left:3px;
+    border-radius:99px;
+    box-shadow:var(--neo-baixo);
+  }
+  .etapa::before{
+    left:-32px;
+    width:14px;
+    height:14px;
+    box-shadow:var(--neo-alto);
+  }
+
+  @media (max-width:559px){
+    :root{
+      --neo-alto:
+        -5px -5px 11px rgba(54,236,222,.05),
+         5px  5px 13px rgba(0,0,0,.48);
+    }
+    .zona-clara,.capa{
+      --neo-alto:
+        -5px -5px 11px rgba(255,255,255,.9),
+         5px  5px 13px rgba(0,32,63,.12);
+    }
+    .etapa::before{left:-27px;width:12px;height:12px}
+    .cronograma::before{width:5px;left:2px}
+  }
+
+  /* =====================================================================
+     MEIO-CAMPO — divisória de seções
+     A linha é o meio-campo e o círculo central fica cortado por ela,
+     como no campo visto de cima. Herda a cor da faixa em que está.
+     ===================================================================== */
+
+  /* a divisória fica sempre atrás: z-index 0 aqui, 1 em tudo que é conteúdo */
+  .secao,
+  .rodape,
+  .palavras{
+    position:relative;
+    z-index:1;
+  }
+
+  .meio-campo{
+    position:relative;
+    z-index:0;
+    height:0;
+    border:0;
+    border-top:1px solid currentColor;
+    color:var(--mint);
+    opacity:.22;
+    margin-block:-12px;
+    pointer-events:none;
+  }
+  .zona-clara .meio-campo{color:#00203F;opacity:.16}
+
+  .meio-campo::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:136px;
+    height:136px;
+    border:1px solid currentColor;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+  }
+  .meio-campo::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:currentColor;
+    transform:translate(-50%,-50%);
+  }
+
+  /* fecho da página: o mesmo desenho, um pouco maior */
+  .meio-campo-fecho{
+    margin-block:8px 26px;
+  }
+  .meio-campo-fecho::after{width:180px;height:180px}
+
+  @media (max-width:559px){
+    .meio-campo{margin-block:-8px}
+    .meio-campo::after{width:98px;height:98px}
+    .meio-campo-fecho::after{width:124px;height:124px}
+  }
+
+  /* =====================================================================
+     CAPA ESCURA — o azul volta a dominar a hero.
+     Só cor e véu mudam aqui; a estrutura da capa clara continua valendo.
+     ===================================================================== */
+
+  .capa{
+    color:#E6E9EC;
+    background:
+      radial-gradient(44% 56% at 4% 30%, rgba(54,236,222,.18), transparent 64%),
+      radial-gradient(38% 44% at 86% 84%, rgba(54,236,222,.10), transparent 70%),
+      linear-gradient(140deg,#00355E,#00233F 46%,#001424);
+
+    --neo-fundo:rgba(255,255,255,.07);
+    --neo-alto:
+      -6px -6px 14px rgba(54,236,222,.07),
+       7px  7px 18px rgba(0,0,0,.42);
+    --neo-alto-forte:
+      -8px -8px 18px rgba(54,236,222,.11),
+       9px  9px 24px rgba(0,0,0,.5);
+  }
+
+  .capa .voltar,
+  .capa-selo,
+  .capa .btn-secundario{
+    background:rgba(0,20,36,.44);
+    color:#D6DEE5;
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow:var(--neo-alto);
+    backdrop-filter:blur(6px);
+  }
+  .capa .voltar:hover,
+  .capa .btn-secundario:hover{
+    color:#fff;
+    border-color:rgba(54,236,222,.42);
+    box-shadow:var(--neo-alto-forte);
+  }
+  .capa-selo::before{background:var(--mint)}
+
+  .capa h1{color:#fff}
+  .capa h1 em{color:var(--mint)}
+  .capa-sub{color:rgba(230,233,236,.94)}
+  .capa-desc{color:rgba(230,233,236,.74)}
+
+  .capa .btn-primario{
+    background:var(--g-mint);
+    color:#00203F;
+    box-shadow:
+      -5px -5px 12px rgba(54,236,222,.12),
+       8px  8px 22px rgba(0,0,0,.42);
+  }
+  .capa .btn-primario:hover{
+    box-shadow:
+      -6px -6px 14px rgba(54,236,222,.18),
+      10px 10px 28px rgba(0,0,0,.5);
+  }
+
+  /* mobile: a foto some no azul do topo */
+  .capa-foto{
+    -webkit-mask-image:linear-gradient(180deg,#000 44%,rgba(0,0,0,.4) 74%,transparent 99%);
+    mask-image:linear-gradient(180deg,#000 44%,rgba(0,0,0,.4) 74%,transparent 99%);
+  }
+
+  @media (min-width:900px){
+    /* o rosto vai mais para a direita e o véu termina bem antes dele */
+    .capa-foto{
+      -webkit-mask-image:none;
+      mask-image:none;
+      transform:scale(1.5) translateX(19%);
+    }
+
+    .capa-veu{
+      background:
+        radial-gradient(40% 58% at 0% 34%, rgba(54,236,222,.16), transparent 64%),
+        linear-gradient(90deg,
+          #00233F 0%,
+          #00233F calc(50% - (var(--wrap) / 2) + 330px),
+          rgba(0,35,63,.92) calc(50% - (var(--wrap) / 2) + 430px),
+          rgba(0,35,63,.55) calc(50% - (var(--wrap) / 2) + 500px),
+          rgba(0,35,63,.15) calc(50% - (var(--wrap) / 2) + 570px),
+          rgba(0,35,63,0)   calc(50% - (var(--wrap) / 2) + 640px)),
+        linear-gradient(0deg,rgba(0,20,36,.5) 0%,rgba(0,20,36,0) 26%);
+    }
+  }
+
+  /* ===================== TOPBAR DA CAPA ===================== */
+
+  .capa-topo{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .capa .idiomas{
+    background:rgba(0,20,36,.44);
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow:var(--neo-alto);
+  }
+  .capa .idiomas button{color:rgba(230,233,236,.72)}
+  .capa .idiomas button:hover{background:rgba(255,255,255,.1);color:#fff}
+  .capa .idiomas button[aria-pressed="true"]{background:var(--g-mint);color:#00203F}
+
+  /* ===================== FOTO: MAIS SUAVE, ATÉ O TOPO NO MOBILE ===================== */
+
+  @media (max-width:899px){
+    .capa{padding-block:0}
+    .capa-topo{
+      position:absolute;
+      top:14px;
+      left:0;
+      right:0;
+      z-index:3;
+    }
+    .capa-foto-col{margin-top:0}
+    .capa-foto{
+      aspect-ratio:4/5;
+      object-position:52% 18%;
+      -webkit-mask-image:linear-gradient(180deg,#000 20%,rgba(0,0,0,.88) 44%,rgba(0,0,0,.56) 64%,rgba(0,0,0,.22) 83%,transparent 100%);
+      mask-image:linear-gradient(180deg,#000 20%,rgba(0,0,0,.88) 44%,rgba(0,0,0,.56) 64%,rgba(0,0,0,.22) 83%,transparent 100%);
+    }
+    .capa-texto{margin-top:-52px}
+  }
+
+  @media (min-width:900px){
+    .capa-foto{
+      object-position:50% 22%;
+      transform:scale(1.45) translateX(17%);
+    }
+
+    /* mais paradas intermediárias: a passagem fica macia sem ficar mais longa */
+    .capa-veu{
+      background:
+        radial-gradient(40% 58% at 0% 34%, rgba(54,236,222,.16), transparent 64%),
+        linear-gradient(90deg,
+          #00233F 0%,
+          #00233F calc(50% - (var(--wrap) / 2) + 300px),
+          rgba(0,35,63,.94) calc(50% - (var(--wrap) / 2) + 400px),
+          rgba(0,35,63,.78) calc(50% - (var(--wrap) / 2) + 460px),
+          rgba(0,35,63,.50) calc(50% - (var(--wrap) / 2) + 520px),
+          rgba(0,35,63,.24) calc(50% - (var(--wrap) / 2) + 580px),
+          rgba(0,35,63,.07) calc(50% - (var(--wrap) / 2) + 630px),
+          rgba(0,35,63,0)   calc(50% - (var(--wrap) / 2) + 680px)),
+        linear-gradient(0deg,rgba(0,20,36,.5) 0%,rgba(0,20,36,0) 26%);
+    }
+  }
+
+  /* =====================================================================
+     BREAKPOINTS
+     Mobile < 640 · Tablet 640–1023 · Desktop 1024–1439 · Widescreen ≥ 1440
+
+     A capa deixa de depender de scale()/translate() em pixels fixos:
+     a foto passa a ocupar uma FAIXA proporcional a --wrap, e o véu usa
+     frações da mesma medida. Assim a moldura do rosto e a passagem do
+     degradê ficam iguais em qualquer largura.
+     ===================================================================== */
+
+  /* ---------- medidas por breakpoint ---------- */
+  @media (min-width:640px) and (max-width:1023px){
+    :root{ --wrap:720px; --gutter:26px; }
+  }
+  @media (min-width:1024px){
+    :root{ --wrap:940px; --gutter:28px; }
+  }
+  @media (min-width:1440px){
+    :root{ --wrap:1120px; --gutter:34px; }
+  }
+  @media (min-width:1800px){
+    :root{ --wrap:1280px; --gutter:44px; }
+  }
+
+  /* ---------- TABLET: empilhado, mas com a foto mais baixa ---------- */
+  @media (min-width:640px) and (max-width:899px){
+    .capa-foto{
+      aspect-ratio:16/10;
+      object-position:52% 20%;
+    }
+    .capa-texto{
+      margin-top:-46px;
+      padding-bottom:42px;
+      max-width:40rem;
+      margin-inline:auto;
+    }
+    .capa h1{font-size:clamp(40px,6vw,52px)}
+    .capa-sub{max-width:40ch}
+    .capa-desc{max-width:52ch}
+  }
+
+  /* ---------- DESKTOP e acima: foto numa faixa proporcional ---------- */
+  @media (min-width:900px){
+    .capa-foto-col{
+      inset:0 0 0 calc(50% - (var(--wrap) / 2) + (var(--wrap) * .54));
+    }
+    .capa-foto{
+      width:100%;
+      height:100%;
+      aspect-ratio:auto;
+      object-fit:cover;
+      object-position:40% 22%;
+      transform:none;
+      -webkit-mask-image:none;
+      mask-image:none;
+    }
+
+    .capa-veu{
+      background:
+        radial-gradient(40% 58% at 0% 34%, rgba(54,236,222,.16), transparent 64%),
+        linear-gradient(90deg,
+          #00233F 0%,
+          #00233F calc(50% - (var(--wrap) / 2) + (var(--wrap) * .50)),
+          rgba(0,35,63,.93) calc(50% - (var(--wrap) / 2) + (var(--wrap) * .58)),
+          rgba(0,35,63,.70) calc(50% - (var(--wrap) / 2) + (var(--wrap) * .62)),
+          rgba(0,35,63,.38) calc(50% - (var(--wrap) / 2) + (var(--wrap) * .67)),
+          rgba(0,35,63,.12) calc(50% - (var(--wrap) / 2) + (var(--wrap) * .72)),
+          rgba(0,35,63,0)   calc(50% - (var(--wrap) / 2) + (var(--wrap) * .78))),
+        linear-gradient(0deg,rgba(0,20,36,.45) 0%,rgba(0,20,36,0) 24%);
+    }
+
+    .capa-texto{max-width:calc(var(--wrap) * .46)}
+    .capa h1{max-width:14ch}
+  }
+
+  /* ---------- WIDESCREEN: mais ar e tipo maior ---------- */
+  @media (min-width:1440px){
+    .capa{min-height:clamp(600px,78vh,780px)}
+    .capa h1{font-size:clamp(46px,3.9vw,60px)}
+    .capa-sub{font-size:19px;max-width:32ch}
+    .capa-desc{font-size:16.5px;max-width:44ch}
+    .capa-foto{object-position:44% 22%}
+
+    .corpo{gap:58px;padding-block:58px 66px}
+    .secao-titulo{font-size:clamp(34px,2.9vw,44px)}
+    .secao-resumo{font-size:16.5px}
+
+    .itens{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .item-texto{font-size:14.5px}
+
+    .livro-destaque{grid-template-columns:minmax(0,.34fr) minmax(0,.66fr);gap:48px}
+    .livro-texto{font-size:16px}
+
+    .etapa h3{font-size:22px}
+    .etapa p{font-size:15.5px}
+
+    .relato{font-size:clamp(20px,1.6vw,25px)}
+    .relatos li:first-child .relato{font-size:clamp(26px,2.2vw,34px)}
+
+    .palavra{font-size:15px;gap:20px;margin-right:20px}
+    .palavras .esteira{padding-block:14px}
+
+    .meio-campo::after{width:170px;height:170px}
+    .meio-campo-fecho::after{width:220px;height:220px}
+  }
+
+  @media (min-width:1800px){
+    .capa h1{font-size:64px}
+    .capa{min-height:clamp(640px,74vh,820px)}
+    .corpo{gap:66px;padding-block:66px 76px}
+  }
+
+  /* =====================================================================
+     DISSOLUÇÃO DA FOTO
+     Antes o véu tinha um trecho de cor chapada sobre um fundo em degradê
+     diagonal — a emenda entre os dois era a quebra brusca. Agora não há
+     véu horizontal: a própria foto é mascarada e some dentro do fundo.
+     A curva é uma smoothstep com onze paradas, plana nas duas pontas,
+     então não existe aresta perceptível em ponto nenhum da passagem.
+     ===================================================================== */
+
+  @media (max-width:899px){
+    .capa-foto{
+      -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,1.000) 0.0%,rgba(0,0,0,1.000) 16.0%,rgba(0,0,0,0.972) 24.4%,rgba(0,0,0,0.896) 32.8%,rgba(0,0,0,0.784) 41.2%,rgba(0,0,0,0.648) 49.6%,rgba(0,0,0,0.500) 58.0%,rgba(0,0,0,0.352) 66.4%,rgba(0,0,0,0.216) 74.8%,rgba(0,0,0,0.104) 83.2%,rgba(0,0,0,0.028) 91.6%,rgba(0,0,0,0.000) 100.0%);
+      mask-image:linear-gradient(180deg,rgba(0,0,0,1.000) 0.0%,rgba(0,0,0,1.000) 16.0%,rgba(0,0,0,0.972) 24.4%,rgba(0,0,0,0.896) 32.8%,rgba(0,0,0,0.784) 41.2%,rgba(0,0,0,0.648) 49.6%,rgba(0,0,0,0.500) 58.0%,rgba(0,0,0,0.352) 66.4%,rgba(0,0,0,0.216) 74.8%,rgba(0,0,0,0.104) 83.2%,rgba(0,0,0,0.028) 91.6%,rgba(0,0,0,0.000) 100.0%);
+    }
+  }
+
+  @media (min-width:900px){
+    .capa-foto{
+      object-position:32% 22%;
+      -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,0.000) 0.0%,rgba(0,0,0,0.028) 3.8%,rgba(0,0,0,0.104) 7.6%,rgba(0,0,0,0.216) 11.4%,rgba(0,0,0,0.352) 15.2%,rgba(0,0,0,0.500) 19.0%,rgba(0,0,0,0.648) 22.8%,rgba(0,0,0,0.784) 26.6%,rgba(0,0,0,0.896) 30.4%,rgba(0,0,0,0.972) 34.2%,rgba(0,0,0,1.000) 38.0%,rgba(0,0,0,1.000) 100.0%);
+      mask-image:linear-gradient(90deg,rgba(0,0,0,0.000) 0.0%,rgba(0,0,0,0.028) 3.8%,rgba(0,0,0,0.104) 7.6%,rgba(0,0,0,0.216) 11.4%,rgba(0,0,0,0.352) 15.2%,rgba(0,0,0,0.500) 19.0%,rgba(0,0,0,0.648) 22.8%,rgba(0,0,0,0.784) 26.6%,rgba(0,0,0,0.896) 30.4%,rgba(0,0,0,0.972) 34.2%,rgba(0,0,0,1.000) 38.0%,rgba(0,0,0,1.000) 100.0%);
+    }
+
+    /* sobra só o brilho mint e um assentamento suave na base */
+    .capa-veu{
+      background:
+        radial-gradient(42% 60% at 0% 36%, rgba(54,236,222,.15), transparent 66%),
+        linear-gradient(0deg,
+          rgba(0,20,36,.42) 0%,
+          rgba(0,20,36,.34) 6%,
+          rgba(0,20,36,.22) 12%,
+          rgba(0,20,36,.11) 18%,
+          rgba(0,20,36,.04) 24%,
+          rgba(0,20,36,0)  32%);
+    }
+  }
+
+  @media (min-width:1440px){
+    .capa-foto{object-position:36% 22%}
+  }
+
+  /* =====================================================================
+     DISSOLUÇÃO — terceira passada
+     O que restava não era a rampa: era luminância. A foto tem palco azul
+     claro justamente na borda onde ela nasce, contra um fundo navy. Mesmo
+     a 20% de opacidade, azul claro sobre navy já salta aos olhos.
+     Três medidas: a faixa da foto começa mais cedo (mais espaço de
+     dissolução), a rampa cobre 62% dela em 16 paradas em vez de 38% em 11,
+     e a foto é escurecida e dessaturada para encurtar o salto de brilho.
+     ===================================================================== */
+
+  .capa-foto{
+    filter:brightness(.88) saturate(.92);
+  }
+
+  @media (max-width:899px){
+    .capa-foto{
+      -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,1.0000) 10.00%,rgba(0,0,0,0.9873) 16.00%,rgba(0,0,0,0.9514) 22.00%,rgba(0,0,0,0.8960) 28.00%,rgba(0,0,0,0.8246) 34.00%,rgba(0,0,0,0.7407) 40.00%,rgba(0,0,0,0.6480) 46.00%,rgba(0,0,0,0.5499) 52.00%,rgba(0,0,0,0.4501) 58.00%,rgba(0,0,0,0.3520) 64.00%,rgba(0,0,0,0.2593) 70.00%,rgba(0,0,0,0.1754) 76.00%,rgba(0,0,0,0.1040) 82.00%,rgba(0,0,0,0.0486) 88.00%,rgba(0,0,0,0.0127) 94.00%,rgba(0,0,0,0.0000) 100.00%);
+      mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,1.0000) 10.00%,rgba(0,0,0,0.9873) 16.00%,rgba(0,0,0,0.9514) 22.00%,rgba(0,0,0,0.8960) 28.00%,rgba(0,0,0,0.8246) 34.00%,rgba(0,0,0,0.7407) 40.00%,rgba(0,0,0,0.6480) 46.00%,rgba(0,0,0,0.5499) 52.00%,rgba(0,0,0,0.4501) 58.00%,rgba(0,0,0,0.3520) 64.00%,rgba(0,0,0,0.2593) 70.00%,rgba(0,0,0,0.1754) 76.00%,rgba(0,0,0,0.1040) 82.00%,rgba(0,0,0,0.0486) 88.00%,rgba(0,0,0,0.0127) 94.00%,rgba(0,0,0,0.0000) 100.00%);
+    }
+  }
+
+  @media (min-width:900px){
+    .capa-foto-col{
+      inset:0 0 0 calc(50% - (var(--wrap) / 2) + (var(--wrap) * .40));
+    }
+    .capa-foto{
+      object-position:28% 22%;
+      -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,0.0000) 0.00%,rgba(0,0,0,0.0127) 4.13%,rgba(0,0,0,0.0486) 8.27%,rgba(0,0,0,0.1040) 12.40%,rgba(0,0,0,0.1754) 16.53%,rgba(0,0,0,0.2593) 20.67%,rgba(0,0,0,0.3520) 24.80%,rgba(0,0,0,0.4501) 28.93%,rgba(0,0,0,0.5499) 33.07%,rgba(0,0,0,0.6480) 37.20%,rgba(0,0,0,0.7407) 41.33%,rgba(0,0,0,0.8246) 45.47%,rgba(0,0,0,0.8960) 49.60%,rgba(0,0,0,0.9514) 53.73%,rgba(0,0,0,0.9873) 57.87%,rgba(0,0,0,1.0000) 62.00%,rgba(0,0,0,1) 100%);
+      mask-image:linear-gradient(90deg,rgba(0,0,0,0.0000) 0.00%,rgba(0,0,0,0.0127) 4.13%,rgba(0,0,0,0.0486) 8.27%,rgba(0,0,0,0.1040) 12.40%,rgba(0,0,0,0.1754) 16.53%,rgba(0,0,0,0.2593) 20.67%,rgba(0,0,0,0.3520) 24.80%,rgba(0,0,0,0.4501) 28.93%,rgba(0,0,0,0.5499) 33.07%,rgba(0,0,0,0.6480) 37.20%,rgba(0,0,0,0.7407) 41.33%,rgba(0,0,0,0.8246) 45.47%,rgba(0,0,0,0.8960) 49.60%,rgba(0,0,0,0.9514) 53.73%,rgba(0,0,0,0.9873) 57.87%,rgba(0,0,0,1.0000) 62.00%,rgba(0,0,0,1) 100%);
+    }
+  }
+
+  @media (min-width:1440px){
+    .capa-foto{object-position:32% 22%}
+  }
+
+  /* =====================================================================
+     DISSOLUÇÃO — quarta passada
+     A foto agora nasce na metade da headline e leva 72% da faixa para
+     chegar ao cheio. Como isso põe foto atrás do texto, entra uma segunda
+     camada em forma de corcova: escurecimento que sai de zero, cresce só
+     onde o texto está e volta a zero. Zero nas duas pontas significa que
+     ela não cria borda em lugar nenhum — só preserva o contraste.
+     ===================================================================== */
+
+  @media (max-width:899px){
+    .capa-foto{
+      -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,1.0000) 20.00%,rgba(0,0,0,0.9920) 24.21%,rgba(0,0,0,0.9691) 28.42%,rgba(0,0,0,0.9331) 32.63%,rgba(0,0,0,0.8857) 36.84%,rgba(0,0,0,0.8287) 41.05%,rgba(0,0,0,0.7638) 45.26%,rgba(0,0,0,0.6928) 49.47%,rgba(0,0,0,0.6174) 53.68%,rgba(0,0,0,0.5394) 57.89%,rgba(0,0,0,0.4606) 62.11%,rgba(0,0,0,0.3826) 66.32%,rgba(0,0,0,0.3072) 70.53%,rgba(0,0,0,0.2362) 74.74%,rgba(0,0,0,0.1713) 78.95%,rgba(0,0,0,0.1143) 83.16%,rgba(0,0,0,0.0669) 87.37%,rgba(0,0,0,0.0309) 91.58%,rgba(0,0,0,0.0080) 95.79%,rgba(0,0,0,0.0000) 100.00%);
+      mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,1.0000) 20.00%,rgba(0,0,0,0.9920) 24.21%,rgba(0,0,0,0.9691) 28.42%,rgba(0,0,0,0.9331) 32.63%,rgba(0,0,0,0.8857) 36.84%,rgba(0,0,0,0.8287) 41.05%,rgba(0,0,0,0.7638) 45.26%,rgba(0,0,0,0.6928) 49.47%,rgba(0,0,0,0.6174) 53.68%,rgba(0,0,0,0.5394) 57.89%,rgba(0,0,0,0.4606) 62.11%,rgba(0,0,0,0.3826) 66.32%,rgba(0,0,0,0.3072) 70.53%,rgba(0,0,0,0.2362) 74.74%,rgba(0,0,0,0.1713) 78.95%,rgba(0,0,0,0.1143) 83.16%,rgba(0,0,0,0.0669) 87.37%,rgba(0,0,0,0.0309) 91.58%,rgba(0,0,0,0.0080) 95.79%,rgba(0,0,0,0.0000) 100.00%);
+    }
+  }
+
+  @media (min-width:900px){
+    .capa-foto-col{
+      inset:0 0 0 calc(50% - (var(--wrap) / 2) + (var(--wrap) * .20));
+    }
+    .capa-foto{
+      object-position:22% 22%;
+      -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,0.0000) 0.00%,rgba(0,0,0,0.0080) 3.79%,rgba(0,0,0,0.0309) 7.58%,rgba(0,0,0,0.0669) 11.37%,rgba(0,0,0,0.1143) 15.16%,rgba(0,0,0,0.1713) 18.95%,rgba(0,0,0,0.2362) 22.74%,rgba(0,0,0,0.3072) 26.53%,rgba(0,0,0,0.3826) 30.32%,rgba(0,0,0,0.4606) 34.11%,rgba(0,0,0,0.5394) 37.89%,rgba(0,0,0,0.6174) 41.68%,rgba(0,0,0,0.6928) 45.47%,rgba(0,0,0,0.7638) 49.26%,rgba(0,0,0,0.8287) 53.05%,rgba(0,0,0,0.8857) 56.84%,rgba(0,0,0,0.9331) 60.63%,rgba(0,0,0,0.9691) 64.42%,rgba(0,0,0,0.9920) 68.21%,rgba(0,0,0,1.0000) 72.00%,rgba(0,0,0,1) 100%);
+      mask-image:linear-gradient(90deg,rgba(0,0,0,0.0000) 0.00%,rgba(0,0,0,0.0080) 3.79%,rgba(0,0,0,0.0309) 7.58%,rgba(0,0,0,0.0669) 11.37%,rgba(0,0,0,0.1143) 15.16%,rgba(0,0,0,0.1713) 18.95%,rgba(0,0,0,0.2362) 22.74%,rgba(0,0,0,0.3072) 26.53%,rgba(0,0,0,0.3826) 30.32%,rgba(0,0,0,0.4606) 34.11%,rgba(0,0,0,0.5394) 37.89%,rgba(0,0,0,0.6174) 41.68%,rgba(0,0,0,0.6928) 45.47%,rgba(0,0,0,0.7638) 49.26%,rgba(0,0,0,0.8287) 53.05%,rgba(0,0,0,0.8857) 56.84%,rgba(0,0,0,0.9331) 60.63%,rgba(0,0,0,0.9691) 64.42%,rgba(0,0,0,0.9920) 68.21%,rgba(0,0,0,1.0000) 72.00%,rgba(0,0,0,1) 100%);
+    }
+    .capa-foto-col::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(90deg,rgba(0,35,63,0.0000) 0.00%,rgba(0,35,63,0.0178) 3.11%,rgba(0,35,63,0.0656) 6.22%,rgba(0,35,63,0.1348) 9.33%,rgba(0,35,63,0.2168) 12.44%,rgba(0,35,63,0.3032) 15.56%,rgba(0,35,63,0.3852) 18.67%,rgba(0,35,63,0.4544) 21.78%,rgba(0,35,63,0.5022) 24.89%,rgba(0,35,63,0.5200) 28.00%,rgba(0,35,63,0.5022) 32.67%,rgba(0,35,63,0.4544) 37.33%,rgba(0,35,63,0.3852) 42.00%,rgba(0,35,63,0.3032) 46.67%,rgba(0,35,63,0.2168) 51.33%,rgba(0,35,63,0.1348) 56.00%,rgba(0,35,63,0.0656) 60.67%,rgba(0,35,63,0.0178) 65.33%,rgba(0,35,63,0.0000) 70.00%,rgba(0,35,63,0) 100%);
+    }
+  }
+
+  @media (min-width:1440px){
+    .capa-foto{object-position:26% 22%}
+  }
+
+  /* ===================== BOTÃO DO LIVRO ===================== */
+  .livro-cta{margin-top:22px}
+
+  /* =====================================================================
+     AJUSTES FINAIS
+     ===================================================================== */
+
+  /* assinatura acima do título */
+  .capa-assinatura{
+    width:min(160px,44%);
+    margin:0 auto 14px;
+  }
+  @media (min-width:900px){
+    .capa-assinatura{margin:0 0 16px;width:168px}
+  }
+  .capa h1{margin-top:0}
+
+  /* --- quebras de linha: nada de órfãs --- */
+  .tese,
+  .capa-sub,
+  .capa-desc,
+  .secao-resumo,
+  .relato,
+  .livro-lema,
+  .livro-sub,
+  .livro-texto,
+  .etapa p,
+  .item-texto,
+  .banner p,
+  .prateleira-nota{
+    text-wrap:pretty;
+  }
+  .capa-sub,
+  .livro-lema,
+  .etapa h3{
+    text-wrap:balance;
+  }
+
+  /* --- depoimentos em caixa, com aspas --- */
+  .relatos{
+    gap:14px;
+    margin-top:26px;
+  }
+  .relatos li{
+    padding:22px 22px 24px;
+    border:0;
+    border-top:0;
+    border-radius:var(--r-cartao);
+    background:var(--neo-fundo);
+    box-shadow:var(--neo-alto);
+  }
+  .relatos li:first-child{border-top:0;padding-top:22px}
+
+  .relatos li::before{
+    content:"\201C";
+    display:block;
+    font-family:var(--serifa);
+    font-variation-settings:"SOFT" 0,"WONK" 0;
+    font-weight:600;
+    font-size:52px;
+    line-height:.62;
+    color:var(--teal);
+    opacity:.5;
+    margin-bottom:10px;
+  }
+
+  @media (min-width:760px){
+    .relatos{column-gap:14px}
+    .relatos li:nth-child(2){border-top:0}
+  }
+
+  @media (max-width:559px){
+    .relatos li{padding:18px 18px 20px}
+    .relatos li::before{font-size:44px;margin-bottom:8px}
+  }
+
+  /* --- plano anual: sem o campo, superfície limpa --- */
+  .plano-destaque{
+    background:
+      radial-gradient(70% 110% at 10% -6%, rgba(255,255,255,.55), transparent 58%),
+      linear-gradient(120deg,#2EE4D6 2%,#5FEBE0 46%,#9CF4EC 100%);
+  }
+
+  /* assinatura passa a abrir o bloco, acima do selo da temporada */
+  .capa-assinatura{margin:0 auto 18px}
+  .capa h1{margin-top:22px}
+  @media (min-width:900px){
+    .capa-assinatura{margin:0 0 20px;width:176px}
+    .capa h1{margin-top:24px}
+  }
+
+  /* ===================== ÍCONES ESCUROS =====================
+     Nas faixas claras o tile passa a ser navy com o glifo em mint:
+     dá o ponto de contraste que faltava a Formato e Benefícios. */
+
+  .zona-clara .tile,
+  .zona-clara .tile-mint,
+  .zona-clara .tile-teal,
+  .zona-clara .tile-navy{
+    background:linear-gradient(150deg,#0B3156,#00203F 72%);
+    color:var(--mint);
+    box-shadow:
+      -3px -3px 8px rgba(255,255,255,.7),
+       4px  4px 10px rgba(0,32,63,.22);
+  }
+
+  /* segunda linha do item: sempre presente, sempre discreta */
+  .item-texto strong{
+    display:block;
+    font-weight:700;
+    line-height:1.3;
+  }
+  .item-texto small{
+    display:block;
+    margin-top:3px;
+    font-size:12.5px;
+    line-height:1.4;
+    color:var(--ink-45);
+  }
+
+  
+  /* =====================================================================
+     BEST SELLERS — componentes próprios
+     O tema do livro entra por três caminhos concretos: capitular na
+     abertura, pauta de papel nas faixas claras e fólio marcando cada
+     seção como página. Nada de moldura de livro desenhada.
+     ===================================================================== */
+
+  /* ---------- ABERTURA ---------- */
+
+  .abertura{
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    color:#E6E9EC;
+    background:
+      radial-gradient(48% 56% at 14% 8%, rgba(54,236,222,.20), transparent 64%),
+      radial-gradient(40% 46% at 88% 74%, rgba(54,236,222,.12), transparent 70%),
+      linear-gradient(150deg,#00375F,#00233F 44%,#001424);
+    padding-block:18px 0;
+  }
+
+  .abertura-topo{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    position:relative;
+    z-index:2;
+  }
+  .abertura .voltar,
+  .abertura .idiomas{
+    background:rgba(0,20,36,.44);
+    border:1px solid rgba(255,255,255,.14);
+    color:#D6DEE5;
+    box-shadow:var(--neo-alto);
+    backdrop-filter:blur(6px);
+  }
+  .abertura .idiomas button{color:rgba(230,233,236,.72)}
+  .abertura .idiomas button:hover{background:rgba(255,255,255,.1);color:#fff}
+  .abertura .idiomas button[aria-pressed="true"]{background:var(--g-mint);color:#00203F}
+
+  .abertura-texto{
+    text-align:center;
+    padding-block:34px 0;
+    max-width:46rem;
+    margin-inline:auto;
+  }
+
+  .marca-curso{
+    display:block;
+    width:min(300px,74%);
+    height:auto;
+    margin:0 auto 22px;
+  }
+
+  .abertura h1{
+    font-weight:500;
+    font-size:clamp(38px,9.4vw,74px);
+    line-height:.98;
+    letter-spacing:-.034em;
+    color:#fff;
+  }
+  .abertura h1 em{
+    display:block;
+    font-style:italic;
+    font-weight:400;
+    color:var(--mint);
+  }
+
+  .abertura-sub{
+    margin:20px auto 0;
+    max-width:40ch;
+    font-size:clamp(16px,3.4vw,18.5px);
+    line-height:1.5;
+    color:rgba(230,233,236,.82);
+    text-wrap:pretty;
+  }
+
+  /* grifo de marca-texto: um só na página */
+  .marca-texto{
+    background:linear-gradient(180deg,transparent 58%,rgba(54,236,222,.32) 58%);
+    padding-inline:2px;
+  }
+
+  .abertura-acoes{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top:26px;
+  }
+
+  /* ---------- ESTANTE ---------- */
+
+  .estante{
+    position:relative;
+    margin-top:34px;
+    padding-bottom:30px;
+  }
+  .estante-fila{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    overflow-x:auto;
+    padding:6px 18px 0;
+    scrollbar-width:none;
+  }
+  .estante-fila::-webkit-scrollbar{display:none}
+
+  .estante-fila img{
+    flex:none;
+    width:clamp(78px,17vw,124px);
+    height:auto;
+    aspect-ratio:169/240;
+    object-fit:cover;
+    border-radius:4px 8px 8px 4px;
+    box-shadow:
+      -1px 0 0 rgba(255,255,255,.14) inset,
+       10px 14px 26px rgba(0,0,0,.5);
+    transition:transform .22s ease;
+  }
+  .estante-fila img + img{margin-left:clamp(-26px,-3.4vw,-14px)}
+  .estante-fila img:hover{transform:translateY(-8px)}
+
+  /* a linha da prateleira */
+  .estante::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:24px;
+    width:min(680px,88%);
+    height:1px;
+    transform:translateX(-50%);
+    background:linear-gradient(90deg,transparent,rgba(54,236,222,.4),transparent);
+  }
+
+  /* ---------- PAUTA E FÓLIO ---------- */
+
+  /* pauta de papel: linhas quase imperceptíveis, como caderno */
+  .zona-clara{
+    background-image:
+      repeating-linear-gradient(180deg,
+        rgba(0,32,63,.045) 0px,
+        rgba(0,32,63,.045) 1px,
+        transparent 1px,
+        transparent 34px),
+      radial-gradient(58% 40% at 12% 0%, rgba(54,236,222,.16), transparent 62%),
+      radial-gradient(50% 36% at 92% 100%, rgba(54,236,222,.11), transparent 64%),
+      linear-gradient(180deg,#EAEDF0,#E5E9EC);
+  }
+
+  .folio{
+    display:block;
+    font-family:var(--serifa);
+    font-optical-sizing:auto;
+    font-variation-settings:"SOFT" 0,"WONK" 0;
+    font-style:italic;
+    font-size:13.5px;
+    letter-spacing:.02em;
+    color:var(--ink-45);
+    margin-bottom:10px;
+  }
+
+  /* ---------- CAPITULAR ---------- */
+
+  .capitular{
+    font-family:var(--serifa);
+    font-optical-sizing:auto;
+    font-variation-settings:"SOFT" 0,"WONK" 0;
+    font-weight:400;
+    font-size:clamp(19px,4vw,22px);
+    line-height:1.5;
+    max-width:54ch;
+    margin:18px 0 0;
+    color:var(--ink-65);
+    text-wrap:pretty;
+  }
+  .capitular::first-letter{
+    float:left;
+    font-weight:600;
+    font-size:3.4em;
+    line-height:.82;
+    padding:4px 12px 0 0;
+    color:var(--teal);
+  }
+
+  /* ---------- TEMAS ---------- */
+
+  .temas{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin:22px 0 0;
+    padding:0;
+  }
+  .temas li{
+    border-radius:99px;
+    padding:8px 16px;
+    font-size:13.5px;
+    font-weight:700;
+    letter-spacing:.02em;
+    color:var(--teal);
+    background:var(--neo-fundo);
+    box-shadow:var(--neo-baixo);
+  }
+
+  /* ---------- CURSOS ---------- */
+
+  .curso-destaque{
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    border-radius:var(--r-secao);
+    padding:26px 22px 24px;
+    margin-top:26px;
+    background:
+      radial-gradient(70% 110% at 10% -6%, rgba(255,255,255,.55), transparent 58%),
+      linear-gradient(120deg,#2EE4D6 2%,#5FEBE0 46%,#9CF4EC 100%);
+    color:#00203F;
+    box-shadow:
+      -9px -9px 22px rgba(255,255,255,.7),
+       10px 10px 28px rgba(0,32,63,.2);
+  }
+  @media (min-width:760px){
+    .curso-destaque{
+      display:grid;
+      grid-template-columns:minmax(0,190px) minmax(0,1fr);
+      gap:30px;
+      align-items:center;
+      padding:30px 28px;
+    }
+  }
+  @media (min-width:1440px){
+    .curso-destaque{grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:40px;padding:38px 34px}
+  }
+
+  .curso-capa{
+    width:150px;
+    max-width:100%;
+    margin-inline:auto;
+    border-radius:6px 10px 10px 6px;
+    overflow:hidden;
+    box-shadow:0 14px 30px rgba(0,32,63,.28);
+  }
+  @media (min-width:760px){ .curso-capa{width:100%;margin-inline:0} }
+  .curso-capa img{display:block;width:100%;height:auto;aspect-ratio:169/240;object-fit:cover}
+
+  .curso-selos{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:18px 0 0;
+    padding:0;
+  }
+  @media (min-width:760px){ .curso-selos{margin-top:0} }
+  .curso-selos li{
+    border-radius:99px;
+    padding:5px 12px;
+    font-size:12px;
+    font-weight:700;
+    background:#00203F;
+    color:var(--mint);
+  }
+
+  .curso-nome{
+    font-size:clamp(25px,5.4vw,34px);
+    font-weight:500;
+    margin:14px 0 0;
+  }
+  .curso-autor{
+    margin:6px 0 0;
+    font-size:14px;
+    color:rgba(0,32,63,.7);
+  }
+  .curso-texto{
+    margin:14px 0 0;
+    max-width:56ch;
+    font-size:15px;
+    line-height:1.6;
+    color:rgba(0,32,63,.82);
+    text-wrap:pretty;
+  }
+
+  .curso-topicos{
+    list-style:none;
+    margin:16px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+  .curso-topicos li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14.5px;
+    line-height:1.45;
+    color:rgba(0,32,63,.86);
+  }
+  .curso-topicos svg{width:17px;height:17px;flex:none;margin-top:2px;color:#00203F}
+
+  .curso-preco{
+    display:flex;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0 0;
+  }
+  .curso-preco b{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(34px,7vw,42px);
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .curso-preco span{font-size:14px;color:rgba(0,32,63,.7)}
+
+  .curso-cta{
+    display:block;
+    margin-top:18px;
+    text-align:center;
+    text-decoration:none;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:16px;
+    padding:16px 22px;
+    border-radius:99px;
+    background:#00203F;
+    color:var(--mint);
+    box-shadow:
+      -5px -5px 12px rgba(255,255,255,.4),
+       8px  8px 22px rgba(0,32,63,.28);
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .curso-cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,32,63,.34)}
+
+  /* grade dos demais cursos */
+  .cursos-grade{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+    margin:22px 0 0;
+    padding:0;
+  }
+  @media (min-width:700px){ .cursos-grade{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  @media (min-width:1440px){ .cursos-grade{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px} }
+
+  .curso-mini{
+    background:var(--neo-fundo);
+    border-radius:var(--r-cartao);
+    box-shadow:var(--neo-alto);
+    padding:12px 12px 14px;
+    text-align:center;
+  }
+  .curso-mini img{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:169/240;
+    object-fit:cover;
+    border-radius:4px 7px 7px 4px;
+    box-shadow:0 8px 18px rgba(0,32,63,.2);
+  }
+  .curso-mini b{
+    display:block;
+    margin-top:11px;
+    font-size:13px;
+    font-weight:700;
+    line-height:1.3;
+  }
+  .curso-mini span{
+    display:block;
+    margin-top:5px;
+    font-size:11.5px;
+    letter-spacing:.08em;
+    font-weight:700;
+    color:var(--teal);
+  }
+
+  /* ---------- FAQ ---------- */
+
+  .faq{
+    list-style:none;
+    margin:24px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .faq details{
+    background:var(--neo-fundo);
+    border-radius:var(--r-cartao);
+    box-shadow:var(--neo-alto);
+    padding:0 18px;
+  }
+  .faq summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:16px 0;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15.5px;
+    line-height:1.35;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{
+    content:"";
+    flex:none;
+    width:11px;
+    height:11px;
+    border-right:2px solid var(--teal);
+    border-bottom:2px solid var(--teal);
+    transform:rotate(45deg) translateY(-2px);
+    transition:transform .2s ease;
+  }
+  .faq details[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+  .faq p{
+    margin:0;
+    padding:0 0 18px;
+    max-width:62ch;
+    font-size:14.5px;
+    line-height:1.6;
+    color:var(--ink-65);
+    text-wrap:pretty;
+  }
+
+  /* ---------- FECHO ---------- */
+
+  .fecho{
+    text-align:center;
+    padding-block:46px 52px;
+  }
+  .fecho h2{
+    font-size:clamp(27px,6vw,40px);
+    font-weight:500;
+    max-width:18ch;
+    margin-inline:auto;
+  }
+  .fecho p{
+    margin:14px auto 0;
+    max-width:44ch;
+    font-size:16px;
+    color:var(--ink-65);
+    text-wrap:pretty;
+  }
+  .fecho .btn{margin-top:26px}
+  .fecho-eco{
+    margin:22px 0 0;font-size:14px;color:var(--ink-45);
+  }
+  .fecho-eco a{
+    color:var(--mint);text-decoration:none;
+    border-bottom:1px solid rgba(54,236,222,.35);padding-bottom:1px;
+  }
+  .fecho-eco a:hover{border-bottom-color:var(--mint)}
+
+  @media (min-width:1440px){
+    .abertura-texto{padding-top:44px;max-width:52rem}
+    .capitular{font-size:23px;max-width:58ch}
+    .folio{font-size:14.5px}
+    .estante{margin-top:42px}
+    .fecho{padding-block:60px 66px}
+  }
+
+  @media (max-width:559px){
+    .abertura-texto{padding-top:26px}
+    .marca-curso{width:min(230px,66%);margin-bottom:18px}
+    .estante{margin-top:26px;padding-bottom:26px}
+    .estante-fila{justify-content:flex-start}
+    .curso-destaque{padding:20px 16px 20px}
+    .temas li{padding:7px 13px;font-size:12.5px}
+    .faq details{padding:0 15px}
+    .faq summary{font-size:14.5px;padding:14px 0}
+  }
+
+
+  /* ===================== BOTÕES E NÚMEROS =====================
+     Vieram da página da Mentoria; aqui o primário é mint sobre o
+     escuro e navy sobre a faixa clara. */
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    border-radius:99px;
+    padding:15px 26px;
+    font-family:var(--corpo);
+    font-weight:700;
+    font-size:15px;
+    line-height:1;
+    text-decoration:none;
+    transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease;
+  }
+  .btn svg{width:16px;height:16px;flex:none}
+
+  .btn-primario{
+    background:var(--g-mint);
+    color:#00203F;
+    box-shadow:
+      -5px -5px 12px rgba(54,236,222,.12),
+       8px  8px 22px rgba(0,0,0,.42);
+  }
+  .btn-primario:hover{
+    transform:translateY(-2px);
+    box-shadow:
+      -6px -6px 14px rgba(54,236,222,.18),
+      10px 10px 28px rgba(0,0,0,.5);
+  }
+
+  .zona-clara .btn-primario{
+    background:#00203F;
+    color:#fff;
+    box-shadow:
+      -5px -5px 12px rgba(255,255,255,.4),
+       8px  8px 20px rgba(0,32,63,.26);
+  }
+  .zona-clara .btn-primario:hover{
+    box-shadow:
+      -6px -6px 14px rgba(255,255,255,.5),
+      10px 10px 26px rgba(0,32,63,.32);
+  }
+
+  /* números: aqui eles são o argumento, não enfeite */
+  .numeros{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+    margin:26px 0 0;
+    padding:0;
+    max-width:460px;
+  }
+  .numeros li{
+    background:var(--neo-fundo);
+    border-radius:var(--r-cartao);
+    box-shadow:var(--neo-alto);
+    padding:18px 16px 17px;
+    text-align:center;
+  }
+  .numeros b{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(30px,5.8vw,40px);
+    line-height:1;
+    color:var(--ink);
+    font-variant-numeric:tabular-nums;
+  }
+  .numeros span{
+    display:block;
+    margin-top:7px;
+    font-size:12.5px;
+    line-height:1.35;
+    color:var(--ink-45);
+  }
+
+  @media (min-width:1440px){
+    .btn{padding:17px 30px;font-size:16px}
+    .numeros{max-width:540px}
+  }
+
+  /* ===================== RETRATO COM OS LIVROS =====================
+     A foto é a própria estante: dispensa a fileira de capas que estava
+     aqui. A máscara radial dissolve as bordas dentro do navy da capa,
+     então não há recorte aparente entre a foto e o fundo. */
+
+  .retrato-livros{
+    margin-top:26px;
+    display:flex;
+    justify-content:center;
+  }
+  .retrato-livros img{
+    display:block;
+    width:min(720px,100%);
+    height:auto;
+    filter:saturate(.94) contrast(1.02);
+    /* closest-side: os raios passam a ser 50% da caixa, então o degradê
+       chega a transparente exatamente na borda. Com raio maior que o
+       elemento, como estava antes, ele nunca completava e a foto ficava
+       com corte reto. A segunda máscara dissolve a base. */
+    -webkit-mask-image:
+      radial-gradient(closest-side at 50% 48%, #000 50%, rgba(0,0,0,.62) 76%, rgba(0,0,0,.2) 92%, transparent 100%),
+      linear-gradient(180deg, #000 68%, rgba(0,0,0,.35) 88%, transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:
+      radial-gradient(closest-side at 50% 48%, #000 50%, rgba(0,0,0,.62) 76%, rgba(0,0,0,.2) 92%, transparent 100%),
+      linear-gradient(180deg, #000 68%, rgba(0,0,0,.35) 88%, transparent 100%);
+    mask-composite:intersect;
+  }
+
+  @media (min-width:1024px){
+    .retrato-livros{margin-top:18px}
+    .retrato-livros img{width:min(780px,100%)}
+  }
+  @media (min-width:1440px){
+    .retrato-livros img{width:min(880px,100%)}
+  }
+  @media (max-width:559px){
+    .retrato-livros{margin-top:18px}
+    .retrato-livros img{width:min(560px,112%);max-width:none}
+  }
+
+  /* com a foto ocupando a base, a abertura respira menos embaixo */
+  .abertura{padding-bottom:0}
+  .abertura-texto{padding-bottom:0}
+
+  /* ===================== HERO REORDENADO =====================
+     A foto abre; as informações do curso vêm logo abaixo dos livros. */
+
+  .abertura .marca-curso{width:min(240px,58%);margin:22px auto 6px}
+  .abertura-texto{padding-block:0 42px;margin-top:-14px}
+  .abertura h1{font-size:clamp(34px,8.2vw,62px)}
+
+  .fatos{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    margin:20px 0 0;
+    padding:0;
+  }
+  .fatos li{
+    border:1px solid rgba(255,255,255,.16);
+    background:rgba(0,20,36,.4);
+    border-radius:99px;
+    padding:7px 14px;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.02em;
+    color:rgba(230,233,236,.82);
+  }
+
+  @media (min-width:1024px){
+    .abertura .marca-curso{width:min(280px,40%);margin-top:26px}
+    .abertura-texto{padding-bottom:52px;margin-top:-26px}
+  }
+  @media (max-width:559px){
+    .abertura .marca-curso{width:min(200px,62%);margin-top:16px}
+    .abertura-texto{margin-top:-8px;padding-bottom:34px}
+    .fatos li{padding:6px 12px;font-size:11.5px}
+  }
+
+  /* ===================== CARD DE CURSO — MINI LANDING =====================
+     Escuro sobre a faixa clara: é o ponto de conversão da página. */
+
+  .curso-card{
+    margin-top:26px;
+    border-radius:var(--r-secao);
+    overflow:hidden;
+    color:#E6E9EC;
+    background:linear-gradient(176deg,#0D3459,#00203F 62%);
+    box-shadow:
+      -8px -8px 20px rgba(255,255,255,.6),
+       14px 16px 38px rgba(0,32,63,.3);
+  }
+  /* Desktop: infos a esquerda, livro + video a direita (ordem visual invertida
+     em relacao ao DOM, que e mobile-first: video no topo). */
+  @media (min-width:880px){
+    .curso-card{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);align-items:stretch}
+    .curso-corpo{order:1}
+    .curso-midia{order:2}
+  }
+
+  .curso-midia{
+    position:relative;
+    background:linear-gradient(200deg,#0B3252,#001A2E 72%);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:24px;padding:24px 24px 28px;
+  }
+  @media (min-width:1440px){ .curso-midia{gap:28px;padding:30px 30px 34px} }
+
+  /* O video e sempre horizontal (16:9) no desktop: a moldura reserva esse espaco. */
+  .curso-video{
+    width:100%;background:#00131F;
+    border-radius:12px;overflow:hidden;
+    box-shadow:0 18px 34px rgba(0,0,0,.42);
+  }
+  .curso-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+
+  .curso-livro{
+    width:156px;flex:none;
+    border-radius:3px 7px 7px 3px;overflow:hidden;
+    box-shadow:0 16px 30px rgba(0,0,0,.5);
+  }
+  @media (min-width:1440px){ .curso-livro{width:172px} }
+  .curso-livro img{display:block;width:100%;height:auto;aspect-ratio:169/240;object-fit:cover}
+
+  /* Mobile: video no topo, quadrado (o original horizontal e cortado nas
+     laterais); a capa do livro encosta no canto, atravessando as duas caixas. */
+  @media (max-width:879px){
+    .curso-midia{display:block;padding:0}
+    .curso-video{border-radius:0;box-shadow:none}
+    .curso-video video{aspect-ratio:1/1}
+    /* a capa desce para o corpo escuro, sem cobrir os controles do player */
+    .curso-livro{width:94px;margin:18px 0 0 22px;box-shadow:0 14px 26px rgba(0,0,0,.55)}
+  }
+
+  .curso-corpo{padding:20px 22px 24px}
+  @media (min-width:880px){ .curso-corpo{padding:32px 30px 30px} }
+  @media (min-width:1440px){ .curso-corpo{padding:40px 38px 36px} }
+
+  .curso-card .curso-selos li{background:var(--g-mint);color:#00203F}
+  .curso-card .curso-nome{color:#fff;margin-top:14px}
+  .curso-card .curso-autor{color:rgba(230,233,236,.68)}
+  .curso-card .curso-texto{color:rgba(230,233,236,.8)}
+  .curso-card .curso-topicos li{color:rgba(230,233,236,.9)}
+  .curso-card .curso-topicos svg{color:var(--mint)}
+  .curso-card .curso-preco b{color:#fff}
+  .curso-card .curso-preco span{color:rgba(230,233,236,.68)}
+  .curso-card .curso-cta{background:var(--g-mint);color:#00203F;box-shadow:0 12px 28px rgba(0,0,0,.4)}
+  .curso-card .curso-cta:hover{box-shadow:0 16px 34px rgba(0,0,0,.48)}
+
+  /* ===================== FOTO COMPLETA, SEM MÁSCARA =====================
+     A própria foto já é escura: ela entra inteira, largura total, e o
+     fundo da abertura foi aproximado do tom dela para não sobrar emenda. */
+
+  .abertura{
+    background:
+      radial-gradient(44% 48% at 12% 6%, rgba(54,236,222,.14), transparent 64%),
+      radial-gradient(38% 42% at 90% 78%, rgba(54,236,222,.09), transparent 70%),
+      linear-gradient(180deg,#002744,#001B30 38%,#00121F);
+  }
+
+  .retrato-livros{margin-top:14px}
+  .retrato-livros img{
+    width:100%;
+    max-width:none;
+    filter:none;
+    -webkit-mask-image:none;
+    mask-image:none;
+  }
+
+  @media (min-width:1024px){
+    .retrato-livros{margin-top:6px}
+    .retrato-livros img{width:100%}
+  }
+  @media (min-width:1440px){
+    .retrato-livros img{width:100%}
+  }
+  @media (max-width:559px){
+    .retrato-livros{margin-top:10px}
+    .retrato-livros img{width:100%}
+  }
+
+  /* =====================================================================
+     ABERTURA — a foto ocupa o hero inteiro
+     Sem moldura e sem véu por cima: a foto entra em largura total e o
+     bloco de texto sobe por cima dos últimos pixels dela, com um degradê
+     que nasce transparente. A cor do degradê é a cor medida da base da
+     própria imagem (#080209), então a emenda não existe.
+     ===================================================================== */
+
+  .abertura{
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    background:#080209;
+    padding:0;
+  }
+
+  .abertura-topo{
+    position:absolute;
+    top:18px;
+    left:0;
+    right:0;
+    z-index:3;
+    width:100%;
+    max-width:var(--wrap);
+    margin-inline:auto;
+    padding-inline:var(--gutter);
+  }
+
+  .abertura-foto{
+    display:block;
+    width:100%;
+    height:auto;
+    max-width:none;
+  }
+
+  .abertura-texto{
+    position:relative;
+    z-index:2;
+    margin-top:-11%;
+    padding-block:0 46px;
+    text-align:center;
+    background:linear-gradient(180deg,
+      rgba(8,2,9,0)   0%,
+      rgba(8,2,9,.55) 26%,
+      rgba(8,2,9,.9)  48%,
+      #080209         66%);
+  }
+  .abertura-texto > .faixa{padding-top:8%}
+
+  .abertura .marca-curso{
+    width:min(300px,62%);
+    margin:0 auto 20px;
+  }
+
+  .abertura h1{font-size:clamp(34px,8vw,62px)}
+  .abertura-sub{margin-top:18px}
+  .fatos{margin-top:18px}
+  .abertura-acoes{margin-top:24px}
+
+  @media (min-width:1024px){
+    .abertura-texto{margin-top:-13%;padding-bottom:56px}
+    .abertura-texto > .faixa{padding-top:9%}
+    .abertura .marca-curso{width:min(330px,40%)}
+  }
+  @media (max-width:559px){
+    .abertura-topo{top:14px}
+    .abertura-texto{margin-top:-14%;padding-bottom:36px}
+    .abertura-texto > .faixa{padding-top:11%}
+    .abertura .marca-curso{width:min(230px,66%);margin-bottom:16px}
+  }
+
+  /* a página começa no tom da base da foto */
+  .abertura + .zona-clara{border-top:0}
+
+  /* No celular a foto em proporção natural fica baixa demais e o
+     especialista some. Recorte mais alto: o corte é lateral, então
+     a pilha de livros continua inteira. */
+  @media (max-width:700px){
+    .abertura-foto{
+      aspect-ratio:5/6;
+      object-fit:cover;
+      object-position:50% 50%;
+    }
+    .abertura-texto{margin-top:-22%;padding-bottom:36px}
+    .abertura-texto > .faixa{padding-top:17%}
+  }
+  @media (max-width:420px){
+    .abertura-foto{aspect-ratio:4/5}
+    .abertura-texto{margin-top:-26%}
+    .abertura-texto > .faixa{padding-top:20%}
+  }
+
+  /* ===================== PASSOS COM ÍCONE =====================
+     O rótulo "Capítulo N" saiu: dava a entender que eram capítulos do
+     curso. O tile escuro faz o trabalho de marcar cada passo. */
+
+  .passo .tile{
+    width:44px;
+    height:44px;
+    margin-bottom:12px;
+  }
+  .passo h3{margin-top:0}
+
+  @media (min-width:1440px){
+    .passo .tile{width:50px;height:50px}
+    .passo .tile svg{width:24px;height:24px}
+  }
+
+  /* temas: relevo para fora, não mais gravado */
+  .temas li{box-shadow:var(--neo-alto)}
+
+  /* a última dobra passa a dividir a faixa do rodapé */
+  .fecho{padding-block:52px 34px}
+  .fecho h2{color:var(--ink)}
+  .fecho p{color:var(--ink-65)}
+  @media (min-width:1440px){ .fecho{padding-block:66px 40px} }
+  @media (max-width:559px){ .fecho{padding-block:40px 26px} }
+
+  /* ===================== CARROSSEL DE CAPAS =====================
+     Sem legenda: o texto sob cada capa tinha de uma a três linhas e era
+     o que desalinhava a fileira. As capas já trazem título e autor
+     impressos, então cada item vira exatamente uma capa — mesma largura,
+     mesma proporção, mesma margem. Uniforme por construção. */
+
+  .esteira-capas{
+    margin-top:26px;
+    --tempo:56s;
+  }
+  .esteira-capas .esteira-trilho{
+    align-items:center;
+    padding-block:8px 12px;
+  }
+  .esteira-capas .capa{
+    flex:none;
+    width:96px;
+    height:auto;
+    aspect-ratio:169/240;
+    object-fit:cover;
+    margin-right:16px;
+    border:0;
+    border-radius:4px 8px 8px 4px;
+    box-shadow:var(--neo-alto);
+  }
+
+  @media (min-width:1440px){
+    .esteira-capas .capa{width:116px;margin-right:20px}
+  }
+  @media (max-width:559px){
+    .esteira-capas{margin-top:20px}
+    .esteira-capas .capa{width:82px;margin-right:13px}
+  }
+
+  .nota-cursos{
+    margin:22px 0 0;
+    font-size:13.5px;
+    color:var(--ink-45);
+    text-align:center;
+  }
+</style>
 </head>
 <body>
+<main>
 
-  <div class="topbar">
-    <a href="index.html" class="back">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M13 8.2l-4 3.8 4 3.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Voltar
-    </a>
-    <img src="images/assinatura-gabriel.png" alt="Gabriel Bussinger" class="topbar-signature" />
-    <div class="lang-switcher" id="lang-switcher" aria-label="Selecionar idioma"></div>
-  </div>
+  <!-- ============ ABERTURA ============ -->
+  <header class="abertura">
+    <div class="faixa abertura-topo">
+      <a class="voltar" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 7l-5 5 5 5"/></svg>
+        <span data-i18n="voltar">Voltar</span>
+      </a>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero-card">
-    <h1>Leia. Aplique. <span>Lidere.</span></h1>
-    <p>Best Sellers Aplicados ao Futebol é a ponte entre os maiores livros do mundo e a sua carreira como treinador.</p>
-    <a href="#curso" class="hero-cta">Conhecer o curso →</a>
-
-    <div class="hero-video-wrap">
-      <div class="hero-video">
-        <video autoplay muted loop playsinline>
-          <source src="gabriel-bg.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="float-card float-quote">
-        📖 7 livros essenciais, traduzidos para o futebol
-      </div>
-      <div class="float-card float-stat">
-        <b>+400</b>
-        <span>TREINADORES</span>
+      <div class="idiomas" role="group" aria-label="Idioma">
+        <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
       </div>
     </div>
-  </section>
 
-  <!-- ================= POR QUE ESSE CURSO (service cards) ================= -->
-  <section class="services-section">
-    <span class="services-tag">★ Nosso Método</span>
-    <h2 class="services-title">Por que esse curso ajuda treinadores</h2>
-    <div class="services-row">
-      <div class="service-card">
-        <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="4" width="5.2" height="16" rx="0.8"/><rect x="9.5" y="4" width="5.2" height="16" rx="0.8"/></svg></div>
-        <b>Escolha um Livro</b>
-        <p>Cada curso nasce de um best seller mundial, traduzido para o futebol.</p>
-        <a href="#curso" class="service-link">Saiba mais <span class="arrow-dot">→</span></a>
-      </div>
-      <div class="service-card">
-        <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z"/></svg></div>
-        <b>Aprenda no Seu Ritmo</b>
-        <p>Vídeo-aulas gravadas para assistir quando e onde quiser.</p>
-        <a href="#curso" class="service-link">Saiba mais <span class="arrow-dot">→</span></a>
-      </div>
-      <div class="service-card">
-        <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l4-1 10-10-3-3L5 16z"/></svg></div>
-        <b>Aplique no Campo</b>
-        <p>Ferramentas práticas para usar direto na sua comissão técnica.</p>
-        <a href="#curso" class="service-link">Saiba mais <span class="arrow-dot">→</span></a>
-      </div>
-      <div class="service-card">
-        <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8.5" cy="8" r="3"/><path d="M2.8 19c0-3.1 2.6-5.5 5.7-5.5S14.2 15.9 14.2 19"/></svg></div>
-        <b>Evolua Sua Liderança</b>
-        <p>Desenvolva uma liderança mais consciente e inspiradora.</p>
-        <a href="#curso" class="service-link">Saiba mais <span class="arrow-dot">→</span></a>
-      </div>
-      <div class="service-card">
-        <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.6 5.8L21 9.5l-4.5 4.2 1.1 6.3L12 16.8 6.4 20l1.1-6.3L3 9.5l6.4-.7z"/></svg></div>
-        <b>Alcance Seus Objetivos</b>
-        <p>Resultados reais na sua carreira como treinador.</p>
-        <a href="#curso" class="service-link">Saiba mais <span class="arrow-dot">→</span></a>
-      </div>
-    </div>
-  </section>
+    <img class="abertura-foto" src="hero-livros.jpg" width="2000" height="1389" alt="Gabriel Bussinger segurando a pilha de livros do curso" />
 
-  <!-- ================= LOGO + CARROSSEL DE LIVROS ================= -->
-  <img src="images/logo-bestsellers.png" alt="Best Sellers Aplicados ao Futebol" class="section-logo" />
+    <div class="abertura-texto">
+      <div class="faixa">
+        <img class="marca-curso" src="logo-bestsellers-branco.png" width="1003" height="324" alt="Best Sellers Aplicados ao Futebol" />
 
-  <!-- ================= FEATURE COM FOTO ================= -->
-  <section class="feature">
-    <div class="feature-img mosaic">
-      <img class="mosaic-book b1" src="images/livros/capa-comecepeloporque.jpg" alt="" />
-      <img class="mosaic-book b2" src="images/livros/capa-mindset.jpg" alt="" />
-      <img class="mosaic-book b3" src="images/livros/capa-7habitos.jpg" alt="" />
-      <img class="mosaic-book b4" src="images/livros/capa-coragemimperfeito.jpg" alt="" />
-      <img class="mosaic-book b5" src="images/livros/capa-mongeexecutivo.jpg" alt="" />
-    </div>
-    <div class="feature-text">
-      <span class="feature-tag">Quem somos</span>
-      <h2>Formando <span>mentes</span> através da leitura aplicada</h2>
-      <p>Acreditamos que todo treinador merece acesso à sabedoria dos maiores autores do mundo — traduzida para a realidade do futebol.</p>
-      <div class="feature-stats">
-        <div><b>7</b><span>LIVROS</span></div>
-        <div><b>+400</b><span>TREINADORES</span></div>
-      </div>
-    </div>
-  </section>
+        <h1><span data-i18n="h1a">Leia. Aplique.</span> <em data-i18n="h1b">Lidere.</em></h1>
 
-  <!-- ================= TEMAS ABORDADOS ================= -->
-  <section class="cats">
-    <div class="cats-head"><h3>Temas abordados</h3></div>
-    <div class="cats-grid">
-      <div class="cat-card"><div class="cat-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8.5" cy="8" r="3"/><path d="M2.8 19c0-3.1 2.6-5.5 5.7-5.5S14.2 15.9 14.2 19"/></svg></div><b>Liderança</b></div>
-      <div class="cat-card"><div class="cat-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5.5h16v10.5H9l-4 3.5v-3.5H4z"/></svg></div><b>Comunicação</b></div>
-      <div class="cat-card"><div class="cat-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.5.4.8 1 .8 1.6v.5h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0012 3z"/></svg></div><b>Mindset</b></div>
-      <div class="cat-card"><div class="cat-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4.5" y="11" width="15" height="10" rx="2"/><path d="M8 11V7.5a4 4 0 017.5-2"/></svg></div><b>Gestão</b></div>
-      <div class="cat-card"><div class="cat-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.6 5.8L21 9.5l-4.5 4.2 1.1 6.3L12 16.8 6.4 20l1.1-6.3L3 9.5l6.4-.7z"/></svg></div><b>Performance</b></div>
-      <div class="cat-card"><div class="cat-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.3 9.3a2.7 2.7 0 015.2 1c0 1.7-2.5 2-2.5 3.7"/></svg></div><b>Propósito</b></div>
-    </div>
-  </section>
+        <p class="abertura-sub"><span data-i18n="sub1">A ponte entre o conhecimento de grandes mentes e o seu</span> <span class="marca-texto" data-i18n="sub2">desenvolvimento como treinador</span>.</p>
 
-  <!-- ================= APRENDA DE FORMA INTELIGENTE ================= -->
-  <!-- ================= APRENDA DE FORMA INTELIGENTE (service cards) ================= -->
-  <section class="services-section">
-    <span class="services-tag">★ Metodologia</span>
-    <h2 class="services-title">Aprenda de um jeito mais inteligente</h2>
-    <div class="services-row">
-      <div class="service-card">
-        <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 5v14l11-7z"/></svg></div>
-        <b>Vídeo-Aulas</b>
-        <p>Conteúdo em alta qualidade, direto ao ponto.</p>
-        <a href="#curso" class="service-link">Saiba mais <span class="arrow-dot">→</span></a>
-      </div>
-      <div class="service-card">
-        <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l4-1 10-10-3-3L5 16z"/></svg></div>
-        <b>Exercícios Práticos</b>
-        <p>Atividades aplicadas direto na sua rotina.</p>
-        <a href="#curso" class="service-link">Saiba mais <span class="arrow-dot">→</span></a>
-      </div>
-      <div class="service-card">
-        <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8.5" cy="8" r="3"/><path d="M2.8 19c0-3.1 2.6-5.5 5.7-5.5S14.2 15.9 14.2 19"/><circle cx="17" cy="8.5" r="2.3"/><path d="M15.7 13.7c2.5.3 4.5 2.4 4.5 5"/></svg></div>
-        <b>Comunidade</b>
-        <p>Troque experiências com outros treinadores.</p>
-        <a href="#curso" class="service-link">Saiba mais <span class="arrow-dot">→</span></a>
-      </div>
-      <div class="service-card">
-        <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4.5" y="11" width="15" height="10" rx="2"/><path d="M8 11V7.5a4 4 0 017.5-2"/></svg></div>
-        <b>Liberdade Total</b>
-        <p>Aprenda onde e quando quiser, no seu tempo.</p>
-        <a href="#curso" class="service-link">Saiba mais <span class="arrow-dot">→</span></a>
-      </div>
-    </div>
-  </section>
+        <ul class="fatos">
+          <li data-i18n="fato2">100% gravado</li>
+          <li data-i18n="fato3">Acesso imediato</li>
+        </ul>
 
-  <!-- ================= CURSO: COMECE PELO PORQUÊ ================= -->
-  <section class="curso-section" id="curso">
-    <div class="curso-header">
-      <div class="step-icon icon-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="4" width="5.2" height="16" rx="0.8"/><rect x="9.5" y="4" width="5.2" height="16" rx="0.8"/><path d="M16.4 5.2l4.1-0.9 2.8 14.7-4.1 0.9z" stroke-linejoin="round"/></svg></div>
-      <h2 class="section-h2">Best Sellers Disponíveis</h2>
-    </div>
-  <div class="livros-carousel" aria-hidden="true">
-    <div class="livros-carousel-track">
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-7habitos.jpg" alt=""><span class="mini-text"><span class="mini-title">Os 7 Hábitos das Pessoas Altamente Eficazes</span><span class="mini-autor">Stephen R. Covey</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-poderdaacao.jpg" alt=""><span class="mini-text"><span class="mini-title">O Poder da Ação</span><span class="mini-autor">Paulo Vieira</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-mindset.jpg" alt=""><span class="mini-text"><span class="mini-title">Mindset</span><span class="mini-autor">Carol S. Dweck</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-coragemimperfeito.jpg" alt=""><span class="mini-text"><span class="mini-title">A Coragem de Ser Imperfeito</span><span class="mini-autor">Brené Brown</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-comecepeloporque.jpg" alt=""><span class="mini-text"><span class="mini-title">Comece pelo Porquê</span><span class="mini-autor">Simon Sinek</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-comofazeramigos.jpg" alt=""><span class="mini-text"><span class="mini-title">Como Fazer Amigos & Influenciar Pessoas</span><span class="mini-autor">Dale Carnegie</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-mongeexecutivo.jpg" alt=""><span class="mini-text"><span class="mini-title">O Monge e o Executivo</span><span class="mini-autor">James C. Hunter</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-7habitos.jpg" alt=""><span class="mini-text"><span class="mini-title">Os 7 Hábitos das Pessoas Altamente Eficazes</span><span class="mini-autor">Stephen R. Covey</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-poderdaacao.jpg" alt=""><span class="mini-text"><span class="mini-title">O Poder da Ação</span><span class="mini-autor">Paulo Vieira</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-mindset.jpg" alt=""><span class="mini-text"><span class="mini-title">Mindset</span><span class="mini-autor">Carol S. Dweck</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-coragemimperfeito.jpg" alt=""><span class="mini-text"><span class="mini-title">A Coragem de Ser Imperfeito</span><span class="mini-autor">Brené Brown</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-comecepeloporque.jpg" alt=""><span class="mini-text"><span class="mini-title">Comece pelo Porquê</span><span class="mini-autor">Simon Sinek</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-comofazeramigos.jpg" alt=""><span class="mini-text"><span class="mini-title">Como Fazer Amigos & Influenciar Pessoas</span><span class="mini-autor">Dale Carnegie</span></span></span>
-      <span class="mini-item"><img class="mini-capa" src="images/livros/capa-mongeexecutivo.jpg" alt=""><span class="mini-text"><span class="mini-title">O Monge e o Executivo</span><span class="mini-autor">James C. Hunter</span></span></span>
-    </div>
-  </div>
-    <div class="curso-card">
-      <div class="curso-card-video">
-        <div class="video-frame">
-          <video controls playsinline preload="metadata">
-            <source src="video-comece-pelo-porque.mp4" type="video/mp4">
-          </video>
+        <div class="abertura-acoes">
+          <a class="btn btn-primario" href="#cursos">
+            <span data-i18n="ctaTopo">Escolher um curso</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
         </div>
       </div>
-      <div class="curso-card-info">
-        <div class="curso-tags">
-          <span class="curso-tag">Liderança</span>
-          <span class="curso-tag">Comunicação</span>
+    </div>
+  </header>
+
+  <!-- ============ FAIXA CLARA 1 ============ -->
+  <section class="zona-clara">
+  <div class="faixa corpo">
+
+    <section class="secao">
+      <span class="folio" data-i18n="fol0">pág. 01 — o que é</span>
+      <h2 class="secao-titulo" data-i18n="oqueTit">O que é o curso</h2>
+      <p class="capitular" data-i18n="oqueTexto">Best Sellers Aplicados ao Futebol é uma linha de cursos on-line baseada em grandes literaturas mundiais. Cada curso parte de um livro que já foi destrinchado na Mentoria Diário do Treinador e mostrou valor para conectarmos ao futebol.</p>
+      <p class="secao-resumo" style="text-align:left;margin-inline:0" data-i18n="oqueTexto2">Nossa missão é traduzir essas ideias para a realidade de quem comanda um elenco: liderança, comunicação, mentalidade e gestão de pessoas, ditas na linguagem do vestiário.</p>
+      <p class="secao-resumo" style="text-align:left;margin-inline:0" data-i18n="oqueTexto3">Não é resumo de livro. É a aplicação prática e real: exemplos do futebol de alto nível e ferramentas para usar já no próximo treino ou jogo.</p>
+    </section>
+
+    <div class="meio-campo" aria-hidden="true"></div>
+
+    <section class="secao">
+      <span class="folio" data-i18n="fol1">pág. 02 — o método</span>
+      <h2 class="secao-titulo" data-i18n="metTit">Como os cursos funcionam</h2>
+      <p class="secao-resumo" style="text-align:left;margin-inline:0" data-i18n="metLead">Todo curso parte de um livro que já provou valor fora do futebol, e o traduz para a realidade de quem comanda um elenco. São cinco passos, do primeiro capítulo ao resultado no campo.</p>
+
+      <ol class="passos">
+        <li class="passo">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5h6a2.5 2.5 0 012.5 2.5v13A2 2 0 0011 19H4z"/><path d="M20 4.5h-6A2.5 2.5 0 0011.5 7v13A2 2 0 0113 19h7z"/></svg></span>
+          <h3 data-i18n="p1t">Escolha um livro</h3>
+          <p data-i18n="p1d">Cada curso nasce de um best seller mundial, traduzido para o futebol.</p>
+        </li>
+        <li class="passo">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="5.5" width="14" height="13" rx="2.4"/><path d="M16.8 10.2l4.4-2.6v8.8l-4.4-2.6z"/></svg></span>
+          <h3 data-i18n="p2t">Aprenda no seu ritmo</h3>
+          <p data-i18n="p2d">Vídeo-aulas gravadas para assistir quando e onde quiser.</p>
+        </li>
+        <li class="passo">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3 data-i18n="p3t">Aplique no campo</h3>
+          <p data-i18n="p3d">Ferramentas práticas para usar direto na sua comissão técnica.</p>
+        </li>
+        <li class="passo">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.4a4.6 4.6 0 00-3 8.1c.6.5.9 1.2.9 2v.6h4.2v-.6c0-.8.3-1.5.9-2a4.6 4.6 0 00-3-8.1z"/><path d="M9.9 17.4h4.2M10.6 20h2.8"/></svg></span>
+          <h3 data-i18n="p4t">Evolua sua liderança</h3>
+          <p data-i18n="p4d">Uma liderança mais consciente e mais inspiradora.</p>
+        </li>
+        <li class="passo">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>
+          <h3 data-i18n="p5t">Alcance seus objetivos</h3>
+          <p data-i18n="p5d">Resultados reais na sua carreira como treinador.</p>
+        </li>
+      </ol>
+    </section>
+
+    <div class="meio-campo" aria-hidden="true"></div>
+
+    <section class="secao">
+      <span class="folio" data-i18n="fol2">pág. 03 — quem somos</span>
+      <h2 class="secao-titulo" data-i18n="quemTit">Mudando mindsets através da leitura aplicada ao futebol</h2>
+      <p class="secao-resumo" data-i18n="quemLead">Todo treinador merece acesso à sabedoria dos maiores autores do mundo — traduzida para a realidade do futebol.</p>
+
+
+      <ul class="temas">
+        <li data-i18n="tema1">Liderança</li>
+        <li data-i18n="tema2">Comunicação</li>
+        <li data-i18n="tema3">Mindset</li>
+        <li data-i18n="tema4">Gestão</li>
+        <li data-i18n="tema5">Performance</li>
+        <li data-i18n="tema6">Propósito</li>
+      </ul>
+
+      <div class="esteira esteira-capas" aria-label="Os sete livros do catálogo">
+        <div class="esteira-trilho">
+          <img class="capa" src="livros/capa-comecepeloporque.jpg" width="169" height="240" alt="Comece pelo Porquê, de Simon Sinek" loading="lazy" />
+          <img class="capa" src="livros/capa-7habitos.jpg" width="169" height="240" alt="Os 7 Hábitos das Pessoas Altamente Eficazes, de Stephen R. Covey" loading="lazy" />
+          <img class="capa" src="livros/capa-poderdaacao.jpg" width="169" height="240" alt="O Poder da Ação, de Paulo Vieira" loading="lazy" />
+          <img class="capa" src="livros/capa-mindset.jpg" width="169" height="240" alt="Mindset, de Carol S. Dweck" loading="lazy" />
+          <img class="capa" src="livros/capa-coragemimperfeito.jpg" width="169" height="240" alt="A Coragem de Ser Imperfeito, de Brené Brown" loading="lazy" />
+          <img class="capa" src="livros/capa-comofazeramigos.jpg" width="169" height="240" alt="Como Fazer Amigos e Influenciar Pessoas, de Dale Carnegie" loading="lazy" />
+          <img class="capa" src="livros/capa-mongeexecutivo.jpg" width="169" height="240" alt="O Monge e o Executivo, de James C. Hunter" loading="lazy" />
+          <img class="capa" src="livros/capa-comecepeloporque.jpg" width="169" height="240" alt="" aria-hidden="true" loading="lazy" />
+          <img class="capa" src="livros/capa-7habitos.jpg" width="169" height="240" alt="" aria-hidden="true" loading="lazy" />
+          <img class="capa" src="livros/capa-poderdaacao.jpg" width="169" height="240" alt="" aria-hidden="true" loading="lazy" />
+          <img class="capa" src="livros/capa-mindset.jpg" width="169" height="240" alt="" aria-hidden="true" loading="lazy" />
+          <img class="capa" src="livros/capa-coragemimperfeito.jpg" width="169" height="240" alt="" aria-hidden="true" loading="lazy" />
+          <img class="capa" src="livros/capa-comofazeramigos.jpg" width="169" height="240" alt="" aria-hidden="true" loading="lazy" />
+          <img class="capa" src="livros/capa-mongeexecutivo.jpg" width="169" height="240" alt="" aria-hidden="true" loading="lazy" />
         </div>
-        <div class="curso-titulo-row">
-          <img src="images/livros/capa-comecepeloporque.jpg" alt="Comece pelo Porquê" class="curso-capa" />
-          <div class="curso-titulo-col">
-            <h3 class="curso-titulo">Comece pelo Porquê</h3>
-            <span class="curso-autor">Com Gabriel Bussinger · baseado na obra de Simon Sinek</span>
+      </div>
+    </section>
+
+  </div>
+  </section>
+
+  <!-- ============ FAIXA ESCURA: METODOLOGIA ============ -->
+  <div class="faixa corpo">
+    <section class="secao">
+      <span class="folio" data-i18n="fol3">pág. 04 — metodologia</span>
+      <h2 class="secao-titulo" data-i18n="modTit">Aprenda de um jeito mais prático e focado</h2>
+      <p class="secao-resumo" data-i18n="modLead">O que está incluído em cada curso.</p>
+
+      <ul class="itens">
+        <li class="item">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="5.5" width="14" height="13" rx="2.4"/><path d="M16.8 10.2l4.4-2.6v8.8l-4.4-2.6z"/></svg></span>
+          <span class="item-texto"><strong data-i18n="m1t">Vídeo-aulas</strong><small data-i18n="m1d">Conteúdo em alta qualidade, direto ao ponto.</small></span>
+        </li>
+        <li class="item">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 4.5l3 3L8 19l-4 1 1-4z"/><path d="M14.5 6.5l3 3"/></svg></span>
+          <span class="item-texto"><strong data-i18n="m2t">Exercícios práticos</strong><small data-i18n="m2d">Atividades aplicadas direto na sua rotina.</small></span>
+        </li>
+        <li class="item">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="8.5" cy="8" r="3"/><path d="M2.8 19c0-3.1 2.6-5.5 5.7-5.5S14.2 15.9 14.2 19"/><circle cx="17" cy="8.5" r="2.3"/><path d="M15.7 13.7c2.5.3 4.5 2.4 4.5 5"/></svg></span>
+          <span class="item-texto"><strong data-i18n="m3t">Comunidade</strong><small data-i18n="m3d">Troque experiências com outros treinadores.</small></span>
+        </li>
+        <li class="item">
+          <span class="tile tile-mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+          <span class="item-texto"><strong data-i18n="m4t">Liberdade total</strong><small data-i18n="m4d">Aprenda onde e quando quiser, no seu tempo.</small></span>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- ============ FAIXA CLARA 2: ESCOLHA ============ -->
+  <section class="zona-clara">
+  <div class="faixa corpo" id="cursos">
+
+    <section class="secao">
+      <span class="folio" data-i18n="fol4">pág. 05 — escolha o seu</span>
+      <h2 class="secao-titulo" data-i18n="cursosTit">Escolha o seu curso</h2>
+      <p class="secao-resumo" data-i18n="cursosLead">Um livro, um curso. Comece pelo que a sua carreira mais precisa agora.</p>
+
+      <article class="curso-card">
+        <div class="curso-midia">
+          <div class="curso-video">
+            <video controls preload="metadata" poster="poster-comece-pelo-porque.jpg">
+              <source src="curso-comece-pelo-porque.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="curso-livro">
+            <img src="livros/capa-comecepeloporque.jpg" width="169" height="240" alt="Comece pelo Porquê, de Simon Sinek" loading="lazy" />
           </div>
         </div>
-        <p class="curso-desc">Por que alguns treinadores conquistam a entrega total da equipe, enquanto outros só recebem obediência? A resposta está no "porquê", não no "como". Neste curso, Gabriel Bussinger mostra como grandes líderes do esporte mundial venderam propósito — e como você pode fazer o mesmo com o seu elenco.</p>
-        <ul class="curso-bullets">
-          <li><span class="check-circle icon-glass">✓</span> Como mobilizar uma equipe sob pressão, segundo Phil Jackson</li>
-          <li><span class="check-circle icon-glass">✓</span> Como desenvolver e aplicar uma filosofia de liderança, segundo Doc Rivers</li>
-          <li><span class="check-circle icon-glass">✓</span> Como liderar de forma totalmente diferente seguindo o Golden Circle</li>
-          <li><span class="check-circle icon-glass">✓</span> Como vender o propósito e chegar em níveis incríveis de performance</li>
-        </ul>
-        <span class="curso-duracao">Duração total: <strong>[preencher horas de conteúdo]</strong></span>
-        <div class="curso-preco-linha">
-          <span class="curso-valor">R$ 347</span>
-          <span class="curso-parcela">ou 12x de R$ 35,89</span>
+
+        <div class="curso-corpo">
+          <ul class="curso-selos">
+            <li data-i18n="selo1">Disponível agora</li>
+            <li data-i18n="selo2">Liderança</li>
+            <li data-i18n="selo3">Comunicação</li>
+          </ul>
+
+          <h3 class="curso-nome">Comece pelo Porquê</h3>
+          <p class="curso-autor" data-i18n="cursoAutor">Com Gabriel Bussinger, a partir da obra de Simon Sinek</p>
+
+          <p class="curso-texto" data-i18n="cursoTexto">Por que alguns treinadores conquistam a entrega total da equipe e outros só recebem obediência? A resposta está no porquê, não no como. O curso mostra como grandes líderes do esporte venderam propósito — e como fazer o mesmo com o seu elenco.</p>
+
+          <ul class="curso-topicos">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span data-i18n="top1">Como mobilizar uma equipe sob pressão, segundo Phil Jackson</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span data-i18n="top2">Como desenvolver e aplicar uma filosofia de liderança, segundo Doc Rivers</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span data-i18n="top3">Como liderar de forma totalmente diferente seguindo o Golden Circle</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span data-i18n="top4">Como vender o propósito e chegar a níveis altos de performance</span></li>
+          </ul>
+
+          <div class="curso-preco">
+            <b>R$ 347</b>
+            <span data-i18n="parcela">ou 12x de R$ 35,89</span>
+          </div>
+
+          <a class="curso-cta" href="https://pay.hotmart.com/W104537174A?checkoutMode=10&bid=1786499300981" target="_blank" rel="noopener noreferrer" data-i18n="cursoCta">Adquirir o curso</a>
         </div>
-        <a href="https://pay.hotmart.com/W104537174A?checkoutMode=10&bid=1786499300981" target="_blank" rel="noopener noreferrer" class="curso-comprar">Adquirir o Curso</a>
-      </div>
-    </div>
+      </article>
+
+      <p class="nota-cursos" data-i18n="notaCursos">Os demais títulos do catálogo entram em breve, um curso por livro.</p>
+    </section>
+
+    <div class="meio-campo" aria-hidden="true"></div>
+
+    <section class="secao">
+      <span class="folio" data-i18n="fol5">pág. 06 — dúvidas</span>
+      <h2 class="secao-titulo" data-i18n="faqTit">Perguntas frequentes</h2>
+
+      <ul class="faq">
+        <li>
+          <details>
+            <summary data-i18n="f1q">Preciso ter lido o livro antes de fazer o curso?</summary>
+            <p data-i18n="f1r">Não. O curso já traduz os principais conceitos da obra de forma direta e aplicada ao futebol — não é necessário ter lido o livro antes.</p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary data-i18n="f2q">Por quanto tempo tenho acesso ao conteúdo?</summary>
+            <p data-i18n="f2r">O acesso é válido conforme descrito na oferta no momento da compra. Consulte a página de checkout para os detalhes atualizados.</p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary data-i18n="f3q">O curso é ao vivo ou gravado?</summary>
+            <p data-i18n="f3r">É um curso 100% gravado, para você assistir no seu ritmo, quando e onde quiser.</p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary data-i18n="f4q">Serve para treinadores de qualquer categoria?</summary>
+            <p data-i18n="f4r">Sim. Os conceitos se aplicam a treinadores de base, do profissional e a outros profissionais do futebol que lideram pessoas no dia a dia.</p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary data-i18n="f5q">Como recebo acesso após a compra?</summary>
+            <p data-i18n="f5r">Assim que a compra é aprovada, você recebe por e-mail o acesso à plataforma com o conteúdo do curso.</p>
+          </details>
+        </li>
+      </ul>
+    </section>
+
+
+  </div>
   </section>
 
-  <!-- ================= FAQ ================= -->
-  <section class="faq-section">
-    <h2 class="section-h2">Perguntas Frequentes</h2>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>Preciso ter lido o livro antes de fazer o curso?</summary>
-        <p>Não. O curso já traduz os principais conceitos da obra de forma direta e aplicada ao futebol — não é necessário ter lido o livro previamente.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Por quanto tempo tenho acesso ao conteúdo?</summary>
-        <p>O acesso é válido conforme descrito na oferta no momento da compra. Consulte a página de checkout para os detalhes atualizados.</p>
-      </details>
-      <details class="faq-item">
-        <summary>O curso é ao vivo ou gravado?</summary>
-        <p>É um curso 100% gravado, para você assistir no seu ritmo, quando e onde quiser.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Serve para treinadores de qualquer categoria?</summary>
-        <p>Sim. Os conceitos são aplicáveis a treinadores de base, profissional e demais profissionais do futebol que lideram pessoas no dia a dia.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Como recebo acesso após a compra?</summary>
-        <p>Assim que a compra é aprovada, você recebe por e-mail o acesso à plataforma com o conteúdo do curso.</p>
-      </details>
-    </div>
-  </section>
+  <div class="faixa corpo">
+    <section class="secao fecho">
+      <h2 data-i18n="fechoTit">Comece sua jornada hoje</h2>
+      <p data-i18n="fechoTexto">Junte-se a centenas de treinadores e destrave o seu potencial de liderança.</p>
+      <a class="btn btn-primario" href="#cursos">
+        <span data-i18n="fechoCta">Ver os cursos</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+      </a>
+      <p class="fecho-eco"><span data-i18n="fechoEco">Quer acompanhamento ao vivo, todo mês?</span> <a href="mentoria.html" data-i18n="fechoEcoLink">Conheça a Mentoria Diário do Treinador</a></p>
+    </section>
+  </div>
 
-  <!-- ================= CTA FINAL ================= -->
-  <section class="cta-final">
-    <h3>Comece sua jornada hoje</h3>
-    <p>Junte-se a centenas de treinadores e desbloqueie o seu potencial de liderança.</p>
-    <div class="cta-buttons">
-      <a href="#curso" class="cta-primary">Inscrever-se →</a>
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="faixa rodape">
+    <img class="assinatura-rodape" src="assinatura-gabriel.png" width="726" height="300" alt="Gabriel Bussinger" />
+
+    <div class="sociais">
+      <a class="social" href="https://www.linkedin.com/in/gabriel-bussinger-66132370/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg></a>
+      <a class="social" href="https://www.instagram.com/gabrielbussinger/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social" href="https://open.spotify.com/show/1mE62qrGMhtvwLj2batf2o" target="_blank" rel="noopener" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.6 14.4a.78.78 0 01-1.07.26c-2.93-1.79-6.62-2.2-10.97-1.2a.78.78 0 11-.35-1.52c4.76-1.09 8.84-.62 12.13 1.39.37.22.49.7.26 1.07zm1.23-2.75a.97.97 0 01-1.34.32c-3.35-2.06-8.46-2.66-12.42-1.45a.97.97 0 11-.57-1.86c4.53-1.38 10.16-.71 14 1.65.46.28.6.88.33 1.34zm.11-2.86C14.92 8.4 8.72 8.2 5.28 9.24a1.17 1.17 0 11-.68-2.24C8.55 5.8 15.4 6.04 19.4 8.41a1.17 1.17 0 01-1.2 2.01c-.09-.05-.17-.1-.26-.15z"/></svg></a>
+      <a class="social" href="mailto:gabrieltreinador33@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.8 6.8L12 13l8.2-6.2"/></svg></a>
     </div>
 
-    <div class="footer-inner">
-      <strong id="footer-nome"></strong>
-      <div class="footer-social" id="footer-social"></div>
-      <span id="footer-ecossistema"></span>
-      <span id="footer-dev"></span>
-    </div>
-  </section>
+    <p class="creditos">
+      <span data-i18n="rodape">Ecossistema Diário do Treinador</span><br>
+      <span data-i18n="feitoPor">Feito por</span>
+      <a href="https://wa.me/5551991736138?text=Ol%C3%A1%20Luis%2C%20gostaria%20de%20saber%20sobre%20seus%20servi%C3%A7os" target="_blank" rel="noopener">Sttudio11WD</a>
+    </p>
+  </footer>
 
-  <script src="data/links.js?v=2"></script>
-  <script src="js/icons.js?v=2"></script>
-  <script src="js/main.js?v=2"></script>
+</main>
+
+<script>
+  /* Traduções feitas por mim — revisar antes de publicar. Preços em reais não mudam. */
+  var TEXTOS = {
+    pt: {
+          "notaCursos": "Os demais títulos do catálogo entram em breve, um curso por livro.",
+          "sub1": "A ponte entre o conhecimento de grandes mentes e o seu",
+          "sub2": "desenvolvimento como treinador",
+          "oqueTexto": "Best Sellers Aplicados ao Futebol é uma linha de cursos on-line baseada em grandes literaturas mundiais. Cada curso parte de um livro que já foi destrinchado na Mentoria Diário do Treinador e mostrou valor para conectarmos ao futebol.",
+          "oqueTexto2": "Nossa missão é traduzir essas ideias para a realidade de quem comanda um elenco: liderança, comunicação, mentalidade e gestão de pessoas, ditas na linguagem do vestiário.",
+          "oqueTexto3": "Não é resumo de livro. É a aplicação prática e real: exemplos do futebol de alto nível e ferramentas para usar já no próximo treino ou jogo.",
+          "metTit": "Como os cursos funcionam",
+          "quemTit": "Mudando mindsets através da leitura aplicada ao futebol",
+          "modTit": "Aprenda de um jeito mais prático e focado",
+          "fato2": "100% gravado",
+          "fato3": "Acesso imediato",
+          "fol0": "pág. 01 — o que é",
+          "oqueTit": "O que é o curso",
+          "fol1": "pág. 02 — o método",
+          "fol2": "pág. 03 — quem somos",
+          "fol3": "pág. 04 — metodologia",
+          "fol4": "pág. 05 — escolha o seu",
+          "fol5": "pág. 06 — dúvidas",
+          "voltar": "Voltar",
+          "h1a": "Leia. Aplique.",
+          "h1b": "Lidere.",
+          "ctaTopo": "Escolher um curso",
+          "metLead": "Todo curso parte de um livro que já provou valor fora do futebol, e o traduz para a realidade de quem comanda um elenco. São cinco passos, do primeiro capítulo ao resultado no campo.",
+          "p1t": "Escolha um livro",
+          "p1d": "Cada curso nasce de um best seller mundial, traduzido para o futebol.",
+          "p2t": "Aprenda no seu ritmo",
+          "p2d": "Vídeo-aulas gravadas para assistir quando e onde quiser.",
+          "p3t": "Aplique no campo",
+          "p3d": "Ferramentas práticas para usar direto na sua comissão técnica.",
+          "p4t": "Evolua sua liderança",
+          "p4d": "Uma liderança mais consciente e mais inspiradora.",
+          "p5t": "Alcance seus objetivos",
+          "p5d": "Resultados reais na sua carreira como treinador.",
+          "quemLead": "Todo treinador merece acesso à sabedoria dos maiores autores do mundo — traduzida para a realidade do futebol.",
+          "tema1": "Liderança",
+          "tema2": "Comunicação",
+          "tema3": "Mindset",
+          "tema4": "Gestão",
+          "tema5": "Performance",
+          "tema6": "Propósito",
+          "modLead": "O que está incluído em cada curso.",
+          "m1t": "Vídeo-aulas",
+          "m1d": "Conteúdo em alta qualidade, direto ao ponto.",
+          "m2t": "Exercícios práticos",
+          "m2d": "Atividades aplicadas direto na sua rotina.",
+          "m3t": "Comunidade",
+          "m3d": "Troque experiências com outros treinadores.",
+          "m4t": "Liberdade total",
+          "m4d": "Aprenda onde e quando quiser, no seu tempo.",
+          "cursosTit": "Escolha o seu curso",
+          "cursosLead": "Um livro, um curso. Comece pelo que a sua carreira mais precisa agora.",
+          "selo1": "Disponível agora",
+          "selo2": "Liderança",
+          "selo3": "Comunicação",
+          "cursoAutor": "Com Gabriel Bussinger, a partir da obra de Simon Sinek",
+          "cursoTexto": "Por que alguns treinadores conquistam a entrega total da equipe e outros só recebem obediência? A resposta está no porquê, não no como. O curso mostra como grandes líderes do esporte venderam propósito — e como fazer o mesmo com o seu elenco.",
+          "top1": "Como mobilizar uma equipe sob pressão, segundo Phil Jackson",
+          "top2": "Como desenvolver e aplicar uma filosofia de liderança, segundo Doc Rivers",
+          "top3": "Como liderar de forma totalmente diferente seguindo o Golden Circle",
+          "top4": "Como vender o propósito e chegar a níveis altos de performance",
+          "parcela": "ou 12x de R$ 35,89",
+          "cursoCta": "Adquirir o curso",
+          "faqTit": "Perguntas frequentes",
+          "f1q": "Preciso ter lido o livro antes de fazer o curso?",
+          "f1r": "Não. O curso já traduz os principais conceitos da obra de forma direta e aplicada ao futebol — não é necessário ter lido o livro antes.",
+          "f2q": "Por quanto tempo tenho acesso ao conteúdo?",
+          "f2r": "O acesso é válido conforme descrito na oferta no momento da compra. Consulte a página de checkout para os detalhes atualizados.",
+          "f3q": "O curso é ao vivo ou gravado?",
+          "f3r": "É um curso 100% gravado, para você assistir no seu ritmo, quando e onde quiser.",
+          "f4q": "Serve para treinadores de qualquer categoria?",
+          "f4r": "Sim. Os conceitos se aplicam a treinadores de base, do profissional e a outros profissionais do futebol que lideram pessoas no dia a dia.",
+          "f5q": "Como recebo acesso após a compra?",
+          "f5r": "Assim que a compra é aprovada, você recebe por e-mail o acesso à plataforma com o conteúdo do curso.",
+          "fechoTit": "Comece sua jornada hoje",
+          "fechoTexto": "Junte-se a centenas de treinadores e destrave o seu potencial de liderança.",
+          "fechoCta": "Ver os cursos",
+          "fechoEco": "Quer acompanhamento ao vivo, todo mês?",
+          "fechoEcoLink": "Conheça a Mentoria Diário do Treinador",
+          "rodape": "Ecossistema Diário do Treinador",
+          "feitoPor": "Feito por"
+    },
+    en: {
+          "notaCursos": "The remaining titles in the catalogue are coming soon, one course per book.",
+          "sub1": "The bridge between the thinking of great minds and your",
+          "sub2": "development as a coach",
+          "oqueTexto": "Best Sellers Applied to Football is a line of online courses built on the great books of the world. Each course starts from a book already taken apart in the Coach's Diary Mentorship, where it proved its worth for connecting to football.",
+          "oqueTexto2": "Our job is to translate those ideas into the reality of someone running a squad: leadership, communication, mindset and managing people, said in the language of the dressing room.",
+          "oqueTexto3": "It is not a book summary. It is real, practical application: examples from elite football and tools you can use in the very next session or match.",
+          "metTit": "How the courses work",
+          "quemTit": "Changing mindsets through reading applied to football",
+          "modTit": "Learn in a more practical, more focused way",
+          "fato2": "Fully recorded",
+          "fato3": "Immediate access",
+          "fol0": "p. 01 — what it is",
+          "oqueTit": "What the course is",
+          "fol1": "p. 02 — the method",
+          "fol2": "p. 03 — who we are",
+          "fol3": "p. 04 — methodology",
+          "fol4": "p. 05 — pick yours",
+          "fol5": "p. 06 — questions",
+          "voltar": "Back",
+          "h1a": "Read. Apply.",
+          "h1b": "Lead.",
+          "ctaTopo": "Choose a course",
+          "metLead": "Every course starts from a book that has already proved its worth outside football, and translates it for the person running a squad. Five steps, from the first chapter to the result on the pitch.",
+          "p1t": "Pick a book",
+          "p1d": "Every course comes from a world best seller, translated for football.",
+          "p2t": "Learn at your own pace",
+          "p2d": "Recorded video lessons to watch whenever and wherever you want.",
+          "p3t": "Apply it on the pitch",
+          "p3d": "Practical tools to use straight away with your coaching staff.",
+          "p4t": "Grow your leadership",
+          "p4d": "Leadership that is more conscious and more inspiring.",
+          "p5t": "Reach your goals",
+          "p5d": "Real results in your career as a coach.",
+          "quemLead": "Every coach deserves access to the wisdom of the world's great authors — translated into the reality of football.",
+          "tema1": "Leadership",
+          "tema2": "Communication",
+          "tema3": "Mindset",
+          "tema4": "Management",
+          "tema5": "Performance",
+          "tema6": "Purpose",
+          "modLead": "What is included in every course.",
+          "m1t": "Video lessons",
+          "m1d": "High quality content, straight to the point.",
+          "m2t": "Practical exercises",
+          "m2d": "Activities applied straight to your routine.",
+          "m3t": "Community",
+          "m3d": "Share experience with other coaches.",
+          "m4t": "Full freedom",
+          "m4d": "Learn where and when you want, in your own time.",
+          "cursosTit": "Choose your course",
+          "cursosLead": "One book, one course. Start with what your career needs most right now.",
+          "selo1": "Available now",
+          "selo2": "Leadership",
+          "selo3": "Communication",
+          "cursoAutor": "With Gabriel Bussinger, from the book by Simon Sinek",
+          "cursoTexto": "Why do some coaches get a squad's full commitment while others only get obedience? The answer is in the why, not the how. The course shows how great leaders in sport sold purpose — and how to do the same with your own squad.",
+          "top1": "How to mobilise a team under pressure, the Phil Jackson way",
+          "top2": "How to build and apply a leadership philosophy, the Doc Rivers way",
+          "top3": "How to lead in a wholly different way, using the Golden Circle",
+          "top4": "How to sell purpose and reach high levels of performance",
+          "parcela": "or 12x of R$ 35.89",
+          "cursoCta": "Get the course",
+          "faqTit": "Frequently asked questions",
+          "f1q": "Do I need to have read the book first?",
+          "f1r": "No. The course already translates the book's main ideas directly and applies them to football — reading it first is not required.",
+          "f2q": "How long do I have access to the content?",
+          "f2r": "Access runs as described in the offer at the time of purchase. Check the checkout page for the current details.",
+          "f3q": "Is the course live or recorded?",
+          "f3r": "It is fully recorded, so you can watch at your own pace, whenever and wherever you want.",
+          "f4q": "Does it work for coaches at any level?",
+          "f4r": "Yes. The ideas apply to youth coaches, professional coaches and anyone in football who leads people day to day.",
+          "f5q": "How do I get access after buying?",
+          "f5r": "As soon as the payment is approved, you receive an email with access to the platform and the course content.",
+          "fechoTit": "Start your journey today",
+          "fechoTexto": "Join hundreds of coaches and unlock your leadership potential.",
+          "fechoCta": "See the courses",
+          "fechoEco": "Want live guidance every month?",
+          "fechoEcoLink": "Discover the Diário do Treinador Mentorship",
+          "rodape": "Coach's Diary Ecosystem",
+          "feitoPor": "Built by"
+    },
+    es: {
+          "notaCursos": "Los demás títulos del catálogo llegan pronto, un curso por libro.",
+          "sub1": "El puente entre el conocimiento de grandes mentes y tu",
+          "sub2": "desarrollo como entrenador",
+          "oqueTexto": "Best Sellers Aplicados al Fútbol es una línea de cursos en línea basada en las grandes literaturas del mundo. Cada curso parte de un libro ya desmenuzado en la Mentoría Diario del Entrenador, donde demostró su valor para conectarlo al fútbol.",
+          "oqueTexto2": "Nuestra misión es traducir esas ideas a la realidad de quien dirige un plantel: liderazgo, comunicación, mentalidad y gestión de personas, dichas en el lenguaje del vestuario.",
+          "oqueTexto3": "No es un resumen del libro. Es la aplicación práctica y real: ejemplos del fútbol de alto nivel y herramientas para usar en el próximo entrenamiento o partido.",
+          "metTit": "Cómo funcionan los cursos",
+          "quemTit": "Cambiando mentalidades a través de la lectura aplicada al fútbol",
+          "modTit": "Aprende de una forma más práctica y enfocada",
+          "fato2": "100% grabado",
+          "fato3": "Acceso inmediato",
+          "fol0": "pág. 01 — qué es",
+          "oqueTit": "Qué es el curso",
+          "fol1": "pág. 02 — el método",
+          "fol2": "pág. 03 — quiénes somos",
+          "fol3": "pág. 04 — metodología",
+          "fol4": "pág. 05 — elige el tuyo",
+          "fol5": "pág. 06 — dudas",
+          "voltar": "Volver",
+          "h1a": "Lee. Aplica.",
+          "h1b": "Lidera.",
+          "ctaTopo": "Elegir un curso",
+          "metLead": "Cada curso parte de un libro que ya demostró su valor fuera del fútbol y lo traduce a la realidad de quien dirige un plantel. Cinco pasos, del primer capítulo al resultado en el campo.",
+          "p1t": "Elige un libro",
+          "p1d": "Cada curso nace de un best seller mundial, traducido al fútbol.",
+          "p2t": "Aprende a tu ritmo",
+          "p2d": "Videoclases grabadas para ver cuándo y dónde quieras.",
+          "p3t": "Aplícalo en el campo",
+          "p3d": "Herramientas prácticas para usar con tu cuerpo técnico.",
+          "p4t": "Evoluciona tu liderazgo",
+          "p4d": "Un liderazgo más consciente y más inspirador.",
+          "p5t": "Alcanza tus objetivos",
+          "p5d": "Resultados reales en tu carrera como entrenador.",
+          "quemLead": "Todo entrenador merece acceso a la sabiduría de los grandes autores del mundo — traducida a la realidad del fútbol.",
+          "tema1": "Liderazgo",
+          "tema2": "Comunicación",
+          "tema3": "Mentalidad",
+          "tema4": "Gestión",
+          "tema5": "Rendimiento",
+          "tema6": "Propósito",
+          "modLead": "Lo que incluye cada curso.",
+          "m1t": "Videoclases",
+          "m1d": "Contenido de alta calidad, directo al grano.",
+          "m2t": "Ejercicios prácticos",
+          "m2d": "Actividades aplicadas directamente a tu rutina.",
+          "m3t": "Comunidad",
+          "m3d": "Intercambia experiencias con otros entrenadores.",
+          "m4t": "Libertad total",
+          "m4d": "Aprende donde y cuando quieras, a tu ritmo.",
+          "cursosTit": "Elige tu curso",
+          "cursosLead": "Un libro, un curso. Empieza por lo que tu carrera más necesita ahora.",
+          "selo1": "Disponible ahora",
+          "selo2": "Liderazgo",
+          "selo3": "Comunicación",
+          "cursoAutor": "Con Gabriel Bussinger, a partir de la obra de Simon Sinek",
+          "cursoTexto": "¿Por qué algunos entrenadores consiguen la entrega total del equipo y otros solo obediencia? La respuesta está en el porqué, no en el cómo. El curso muestra cómo grandes líderes del deporte vendieron propósito — y cómo hacer lo mismo con tu plantel.",
+          "top1": "Cómo movilizar a un equipo bajo presión, según Phil Jackson",
+          "top2": "Cómo desarrollar y aplicar una filosofía de liderazgo, según Doc Rivers",
+          "top3": "Cómo liderar de forma totalmente distinta con el Golden Circle",
+          "top4": "Cómo vender el propósito y llegar a niveles altos de rendimiento",
+          "parcela": "o 12x de R$ 35,89",
+          "cursoCta": "Adquirir el curso",
+          "faqTit": "Preguntas frecuentes",
+          "f1q": "¿Necesito haber leído el libro antes del curso?",
+          "f1r": "No. El curso ya traduce los conceptos principales de la obra de forma directa y aplicada al fútbol — no hace falta haberlo leído antes.",
+          "f2q": "¿Cuánto tiempo tengo acceso al contenido?",
+          "f2r": "El acceso es el que se describe en la oferta en el momento de la compra. Consulta la página de pago para ver los detalles actualizados.",
+          "f3q": "¿El curso es en vivo o grabado?",
+          "f3r": "Está 100% grabado, para que lo veas a tu ritmo, cuándo y dónde quieras.",
+          "f4q": "¿Sirve para entrenadores de cualquier categoría?",
+          "f4r": "Sí. Los conceptos se aplican a entrenadores de base, del profesional y a otros profesionales del fútbol que lideran personas a diario.",
+          "f5q": "¿Cómo recibo el acceso tras la compra?",
+          "f5r": "En cuanto se aprueba la compra, recibes por correo el acceso a la plataforma con el contenido del curso.",
+          "fechoTit": "Empieza tu camino hoy",
+          "fechoTexto": "Únete a cientos de entrenadores y desbloquea tu potencial de liderazgo.",
+          "fechoCta": "Ver los cursos",
+          "fechoEco": "¿Quieres acompañamiento en vivo, cada mes?",
+          "fechoEcoLink": "Conoce la Mentoría Diário do Treinador",
+          "rodape": "Ecosistema Diario del Entrenador",
+          "feitoPor": "Desarrollado por"
+    }
+  };
+
+  var LOCALE = { pt:"pt-BR", en:"en", es:"es" };
+
+  function aplicarIdioma(lang){
+    var dic = TEXTOS[lang] || TEXTOS.pt;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var chave = el.getAttribute("data-i18n");
+      if (dic[chave]) el.textContent = dic[chave];
+    });
+    document.documentElement.lang = LOCALE[lang] || "pt-BR";
+    document.querySelectorAll(".idiomas button").forEach(function(b){
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem("gb-idioma", lang); } catch (e) {}
+  }
+
+  document.querySelectorAll(".idiomas button").forEach(function(b){
+    b.addEventListener("click", function(){ aplicarIdioma(b.dataset.lang); });
+  });
+
+  (function(){
+    var salvo = null;
+    try { salvo = localStorage.getItem("gb-idioma"); } catch (e) {}
+    if (salvo && TEXTOS[salvo]) aplicarIdioma(salvo);
+  })();
+</script>
+
 </body>
 </html>
