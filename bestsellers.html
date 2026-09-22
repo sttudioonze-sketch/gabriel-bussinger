@@ -2704,46 +2704,100 @@
     .curso-midia{order:2}
   }
 
+  /* O video entra sempre na proporcao original (16:9), sem corte, ocupando
+     toda a largura da coluna e centrado na altura dela. */
   .curso-midia{
     position:relative;
     background:linear-gradient(200deg,#0B3252,#001A2E 72%);
     display:flex;flex-direction:column;align-items:center;justify-content:center;
-    gap:24px;padding:24px 24px 28px;
+    padding:0;
   }
-  @media (min-width:1440px){ .curso-midia{gap:28px;padding:30px 30px 34px} }
-
-  /* O video e sempre horizontal (16:9) no desktop: a moldura reserva esse espaco. */
   .curso-video{
     width:100%;background:#00131F;
-    border-radius:12px;overflow:hidden;
+    overflow:hidden;
     box-shadow:0 18px 34px rgba(0,0,0,.42);
   }
   .curso-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 
-  .curso-livro{
-    width:156px;flex:none;
-    border-radius:3px 7px 7px 3px;overflow:hidden;
-    box-shadow:0 16px 30px rgba(0,0,0,.5);
-  }
-  @media (min-width:1440px){ .curso-livro{width:172px} }
-  .curso-livro img{display:block;width:100%;height:auto;aspect-ratio:169/240;object-fit:cover}
-
-  /* Mobile: video no topo, quadrado (o original horizontal e cortado nas
-     laterais); a capa do livro encosta no canto, atravessando as duas caixas. */
+  /* Mobile: o video sobe para o topo, sempre na proporcao original (16:9). */
   @media (max-width:879px){
     .curso-midia{display:block;padding:0}
     .curso-video{border-radius:0;box-shadow:none}
-    .curso-video video{aspect-ratio:1/1}
-    /* a capa desce para o corpo escuro, sem cobrir os controles do player */
-    .curso-livro{width:94px;margin:18px 0 0 22px;box-shadow:0 14px 26px rgba(0,0,0,.55)}
   }
+
+  /* Selo de disponibilidade sozinho na primeira linha; os temas vem abaixo,
+     numa linha so, cada um com o seu ponto de luz. */
+  .curso-temas{
+    list-style:none;
+    display:flex;
+    flex-wrap:nowrap;
+    gap:6px;
+    margin:9px 0 0;
+    padding:0;
+  }
+  .curso-temas li{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    white-space:nowrap;
+    border-radius:99px;
+    padding:5px 11px 5px 9px;
+    font-size:11.5px;
+    font-weight:600;
+    background:rgba(255,255,255,.07);
+    color:rgba(230,233,236,.9);
+  }
+  .curso-temas li::before{
+    content:"";
+    width:5px;height:5px;flex:none;
+    border-radius:50%;
+    background:var(--mint);
+    box-shadow:0 0 7px rgba(54,236,222,.95);
+  }
+  @media (min-width:1440px){
+    .curso-temas li{font-size:12.5px;padding:6px 13px 6px 10px}
+  }
+  @media (max-width:379px){
+    .curso-temas li{font-size:10.5px;padding:4px 9px 4px 7px;gap:5px}
+  }
+
+  /* A capa do livro ao lado do nome do curso e da linha de autoria. */
+  .curso-cabeca{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-top:18px;
+  }
+  .curso-livro{
+    width:74px;flex:none;
+    height:auto;
+    aspect-ratio:169/240;
+    object-fit:cover;
+    border-radius:2px 5px 5px 2px;
+    box-shadow:0 12px 24px rgba(0,0,0,.5);
+  }
+  @media (min-width:1440px){
+    .curso-cabeca{gap:18px}
+    .curso-livro{width:86px}
+  }
+
+  /* Preco e botao centralizados, como o fecho da compra. */
+  .curso-compra{
+    margin-top:26px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .curso-compra .curso-preco{margin:0;justify-content:center}
+  .curso-compra .curso-cta{margin-top:0;width:min(340px,100%)}
 
   .curso-corpo{padding:20px 22px 24px}
   @media (min-width:880px){ .curso-corpo{padding:32px 30px 30px} }
   @media (min-width:1440px){ .curso-corpo{padding:40px 38px 36px} }
 
   .curso-card .curso-selos li{background:var(--g-mint);color:#00203F}
-  .curso-card .curso-nome{color:#fff;margin-top:14px}
+  .curso-card .curso-nome{color:#fff;margin-top:0}
   .curso-card .curso-autor{color:rgba(230,233,236,.68)}
   .curso-card .curso-texto{color:rgba(230,233,236,.8)}
   .curso-card .curso-topicos li{color:rgba(230,233,236,.9)}
@@ -3120,20 +3174,25 @@
               <source src="curso-comece-pelo-porque.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="curso-livro">
-            <img src="livros/capa-comecepeloporque.jpg" width="169" height="240" alt="Comece pelo Porquê, de Simon Sinek" loading="lazy" />
-          </div>
         </div>
 
         <div class="curso-corpo">
           <ul class="curso-selos">
             <li data-i18n="selo1">Disponível agora</li>
+          </ul>
+          <ul class="curso-temas">
             <li data-i18n="selo2">Liderança</li>
             <li data-i18n="selo3">Comunicação</li>
+            <li data-i18n="selo4">Propósito</li>
           </ul>
 
-          <h3 class="curso-nome">Comece pelo Porquê</h3>
-          <p class="curso-autor" data-i18n="cursoAutor">Com Gabriel Bussinger, a partir da obra de Simon Sinek</p>
+          <div class="curso-cabeca">
+            <img class="curso-livro" src="livros/capa-comecepeloporque.jpg" width="169" height="240" alt="Comece pelo Porquê, de Simon Sinek" loading="lazy" />
+            <div>
+              <h3 class="curso-nome">Comece pelo Porquê</h3>
+              <p class="curso-autor" data-i18n="cursoAutor">Com Gabriel Bussinger, a partir da obra de Simon Sinek</p>
+            </div>
+          </div>
 
           <p class="curso-texto" data-i18n="cursoTexto">Por que alguns treinadores conquistam a entrega total da equipe e outros só recebem obediência? A resposta está no porquê, não no como. O curso mostra como grandes líderes do esporte venderam propósito — e como fazer o mesmo com o seu elenco.</p>
 
@@ -3144,12 +3203,14 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span data-i18n="top4">Como vender o propósito e chegar a níveis altos de performance</span></li>
           </ul>
 
-          <div class="curso-preco">
-            <b>R$ 347</b>
-            <span data-i18n="parcela">ou 12x de R$ 35,89</span>
-          </div>
+          <div class="curso-compra">
+            <div class="curso-preco">
+              <b>R$ 347</b>
+              <span data-i18n="parcela">ou 12x de R$ 35,89</span>
+            </div>
 
-          <a class="curso-cta" href="https://pay.hotmart.com/W104537174A?checkoutMode=10&bid=1786499300981" target="_blank" rel="noopener noreferrer" data-i18n="cursoCta">Adquirir o curso</a>
+            <a class="curso-cta" href="https://pay.hotmart.com/W104537174A?checkoutMode=10&bid=1786499300981" target="_blank" rel="noopener noreferrer" data-i18n="cursoCta">Adquirir o curso</a>
+          </div>
         </div>
       </article>
 
@@ -3290,6 +3351,7 @@
           "selo1": "Disponível agora",
           "selo2": "Liderança",
           "selo3": "Comunicação",
+          "selo4": "Propósito",
           "cursoAutor": "Com Gabriel Bussinger, a partir da obra de Simon Sinek",
           "cursoTexto": "Por que alguns treinadores conquistam a entrega total da equipe e outros só recebem obediência? A resposta está no porquê, não no como. O curso mostra como grandes líderes do esporte venderam propósito — e como fazer o mesmo com o seu elenco.",
           "top1": "Como mobilizar uma equipe sob pressão, segundo Phil Jackson",
@@ -3372,6 +3434,7 @@
           "selo1": "Available now",
           "selo2": "Leadership",
           "selo3": "Communication",
+          "selo4": "Purpose",
           "cursoAutor": "With Gabriel Bussinger, from the book by Simon Sinek",
           "cursoTexto": "Why do some coaches get a squad's full commitment while others only get obedience? The answer is in the why, not the how. The course shows how great leaders in sport sold purpose — and how to do the same with your own squad.",
           "top1": "How to mobilise a team under pressure, the Phil Jackson way",
@@ -3454,6 +3517,7 @@
           "selo1": "Disponible ahora",
           "selo2": "Liderazgo",
           "selo3": "Comunicación",
+          "selo4": "Propósito",
           "cursoAutor": "Con Gabriel Bussinger, a partir de la obra de Simon Sinek",
           "cursoTexto": "¿Por qué algunos entrenadores consiguen la entrega total del equipo y otros solo obediencia? La respuesta está en el porqué, no en el cómo. El curso muestra cómo grandes líderes del deporte vendieron propósito — y cómo hacer lo mismo con tu plantel.",
           "top1": "Cómo movilizar a un equipo bajo presión, según Phil Jackson",
